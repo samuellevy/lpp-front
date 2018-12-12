@@ -1,0 +1,57 @@
+extends tpl/simple.pug
+block var
+	- var title = "Home";
+block content
+	include ./includes/webdoor_home.pug
+	section.search_home
+		.wrapper
+			.search_result
+				h2 Procure os médicos, clínicas, laboratórios e hospitais credenciados mais perto de você:
+				form.form_home
+					input(type="text" placeholder="Prestador")
+					select
+						option(value="CONSULTORIOS / CLINICAS ESPECIALIZADAS / POLICLINICAS") CONSULTORIOS / CLINICAS ESPECIALIZADAS / POLICLINICAS
+					select
+						option(value="CONSULTORIOS / CLINICAS ESPECIALIZADAS / POLICLINICAS") CONSULTORIOS / CLINICAS ESPECIALIZADAS / POLICLINICAS
+					select
+						option(value="CONSULTORIOS / CLINICAS ESPECIALIZADAS / POLICLINICAS") CONSULTORIOS / CLINICAS ESPECIALIZADAS / POLICLINICAS
+					select
+						option(value="CONSULTORIOS / CLINICAS ESPECIALIZADAS / POLICLINICAS") CONSULTORIOS / CLINICAS ESPECIALIZADAS / POLICLINICAS
+					button(type="submit") Buscar
+			.result
+				.card
+					a(href="#")
+						h4 Atualizações na rede credenciada
+						p Confira as atualizações em nossa rede credenciada:
+						.media
+							img(src="images/box_1.png", alt="")
+				.card
+					a(href="/noticias")
+						h4 Notícias
+						p &nbsp;
+						.media
+							img(src="images/box_2.png", alt="")
+				.card
+					h4 Exames Periódicos
+					p Dando prosseguimento ao Exame Periódico dos servidores da CEDAE
+					.media
+						img(src="images/box_3.png", alt="")
+				.card
+					a(href="/noticias")
+						h4 Dicas de Saúde
+						p A verdade sobre o vírus H2N3 no Brasil
+						.media
+							img(src="images/box_4.png", alt="")
+			.result_small
+				.card
+					h4 Guia da Gestante - Parto Adequado
+					.media
+						img(src="images/thumb_1.png", alt="")
+				.card
+					h4 Normas da ANS
+					.media
+						img(src="images/thumb_2.png", alt="")
+				.card
+					h4 Reserva
+					.media
+						img(src="images/thumb_2.png", alt="")

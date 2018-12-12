@@ -1,0 +1,80 @@
+block var
+doctype html
+html(lang="pt-br")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no")
+		link(rel="shortcut icon" href="images/favicon.ico" type="image/x-icon")
+		link(rel="icon" href="images/favicon.ico" type="image/x-icon")
+		link(rel="stylesheet", href="css/main.css")
+		title Blog
+	body(class=bodyClass)
+		.loading
+			.lds-ellipsis(style='width:100%;height:100%;')
+				div
+					div
+				div
+					div
+				div
+					div
+				div
+					div
+				div
+					div
+		.global_Wrapper
+			include ./../includes/header.pug
+			block content
+			
+			footer#footer
+				.menu
+					.wrapper
+						.logo
+							img(src="images/logo.png", alt="")
+						.item_list
+							h5.title_footer Quem somos
+							ul.item
+								li
+									a(class="scrollSuave" href="#" ) Nossos números
+								li
+									a(class="scrollSuave" href="#") Sobre a Cedae Saúde
+								li
+									a(class="scrollSuave" href="#") Diretoria
+								li
+									a(class="scrollSuave" href="#") Missão
+								li
+									a(class="scrollSuave" href="#") Estatuto
+								li
+									a(class="scrollSuave" href="#") Regulamento
+								li
+									a(class="scrollSuave" href="#") Organograma
+								li
+									a(class="scrollSuave" href="#") Empresas Associadas
+								li
+									a(class="scrollSuave" href="#") Empresas Patrocinadoras
+								li
+									a(class="scrollSuave" href="#") Marca
+						.item_list
+							h5.title_footer Fale conosco
+							ul.item
+								li
+									a(class="scrollSuave" href="#") Trabalhe conosco
+								li
+									a(class="scrollSuave" href="#") Ouvidoria
+						.ad
+							h5.title_footer Patrocinadoras
+							.media
+								img(src="images/logo_footer.png", alt="")
+								img(src="images/prece.png", alt="")
+						.certificacion
+							.media
+								img(src="images/colorida.png", alt="")
+								img(src="images/ans.png", alt="")
+				.adress
+					.wrapper
+						p Endereço: Av. Presidente Vargas, 463 / 9º, 12º e 15º andares, Centro, Rio de Janeiro – RJ. CEP: 20071-908, Tel.: (21) 2126-7000, e-mail: cedaesaude@cedaesaude.org.br – Cedae Saúde – Caixa de Assistência dos Servidores da Cedae.
+				.copyright
+					.wrapper
+						a(href="http://www.ans.gov.br/" target="_blank"): img(src="images/santa-fe-ideias.png", alt="")
+						p ®Todos os direitos reservados
+		script(src="js/main.js")
+		script(src="https://code.jquery.com/ui/1.12.0/jquery-ui.js")

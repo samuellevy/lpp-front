@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+	head
+	link(rel="stylesheet", href="css/main.css")
+	meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+
+	title 123
+	body
+		style(type='text/css').
+		include ./includes/data.pug
+		h1 Paginas
+		ul(style="min-height: 640px; padding-top: 50px; margin: 0 auto; max-width: 600px;")
+			each page in pages
+				li(style="color: #404040; padding: 10px; background: #e8e4e4;text-transform: uppercase; border-top: solid 1px #fff;")
+					a(href=page + '.html') #{page}
