@@ -7,7 +7,7 @@ body {
     }
 }
 .wrapper {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     &.small{
         max-width: 735px;
@@ -32,6 +32,7 @@ body {
     }
 }
 #footer{
+    background-color: #1F4184;
     .menu{
         margin-top: 110px;
         padding: 50px 0;
@@ -41,7 +42,7 @@ body {
         }
         .wrapper{
             display: flex;
-            justify-content: space-between;
+            //justify-content: space-between;
             @include break-max(480px) {
                 display: block;
 
@@ -71,9 +72,8 @@ body {
                 }
             }
             .item_list{
-                border-right: 1px solid #9b9b9b;
                 padding-right: 25px;
-                padding: 0 50px;
+                padding: 0 60px;
                 margin-left: -90px;
                 &:first-child{
                     margin-left: 0;
@@ -86,9 +86,9 @@ body {
                 .item{
                     margin-top: 12px;
                     li{
-                        line-height: 1.27;
+                        line-height: 2.27;
                         a{
-                            color: #5a5d6e;
+                            color: #E6ECF2;
                             font-size: 14px;
                         }
                     }
@@ -168,4 +168,176 @@ body {
 }
 .oh {
     overflow: scroll;
+}
+
+.color-black{
+    color: #262C33;
+}
+
+.color-dark-grey{
+    color: #525B66;
+}
+
+.color-medium-grey{
+    color: #828C99;
+}
+
+.color-light-grey{
+    color: #B8C1CC;
+}
+
+.color-extra-light-grey{
+    color: #E6ECF2;
+}
+
+.color-white{
+    color: #F5F9FC;
+}
+
+.color-strong-dark-blue{
+    color: #11254D;
+}
+
+.color-navy-blue{
+    color: #1F3B72;
+}
+
+.color-strong-light-blue{
+    color: #3966BF;
+}
+
+.color-light-blue{
+    color: #57CFFF;
+}
+
+.color-dark-blue{
+    color: #1CA8E0;
+}
+
+.color-medium-blue{
+    color: #62CFCF;
+}
+
+.color-red{
+    color: #F95B53;
+}
+
+.color-orange{
+    color: #F47249;
+}
+
+h1{
+    font-family: Teko;
+    font-size: 46pt;
+    line-height: 54pt;
+    color: #3966BF;
+
+    @include break-max(480px){
+        color: #3966BF;
+        font-size: 34pt;
+        line-height: 42pt;
+    }
+}
+
+h2{
+    font-family: Teko;
+    font-size: 24pt;
+    line-height: 32pt;
+
+    @include break-max(480px){
+        font-size: 18pt;
+        line-height: 24pt;
+    }
+}
+
+p{
+    font-family: Asap, sans-serif;
+    font-size: 14pt;
+    line-height: 22pt;
+
+    @include break-max(480px){
+        line-height: 20pt;
+    }
+}
+
+.btn-blue{
+    padding: 0 10px 0 10px;
+    background-color: #57CFFF;
+    border-radius: 20px;
+    border-color: #57CFFF;
+    color: #ffffff;
+    cursor: pointer;
+    &:hover{
+        border-color: #3966BF;
+        background-color: #3966BF;
+        transition: 0.5s;
+    }
+}
+
+.btn-dark-blue{
+    padding: 0 10px 0 10px;
+    background-color: #3257A1;
+    border-radius: 20px;
+    border-color: #3257A1;
+    color: #ffffff;
+    cursor: pointer;
+    &:hover{
+        border-color: #3257A1;
+        background-color: #3257A1;
+        transition: 0.5s;
+    }
+}
+
+.btn-green{
+    padding: 0 10px 0 10px;
+    background-color: #62CFCF;
+    border-radius: 20px;
+    border-color: #62CFCF;
+    color: #ffffff;
+    cursor: pointer;
+    &:hover{
+        border-color: #55D9D9;
+        background-color: #55D9D9;
+        transition: 0.5s;
+    }
+}
+
+.div-strong-dark-blue{
+    background-color: #11254D;
+    float: right;
+    width: 288px;
+    border-radius: 5px;
+    position: relative;
+    top: -144px;
+    text-align: center;
+    right: 20px;
+    padding-bottom: 10px;
+}
+
+.content{
+    height: 430px;
+    .section_middle{
+        display: flex;
+        .item_middle{
+            border-radius: 10px;
+            border: 1px solid #666666;
+            width: 25%;
+            text-align: center;
+            p{
+                padding: 0 10px 20px 10px;
+            }
+            img{
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+            }
+        }
+        .space{
+            padding:50px;
+        }
+    }
+
+}
+
+.space_footer{
+    padding-bottom: 200px;
 }

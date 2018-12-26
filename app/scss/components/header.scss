@@ -1,11 +1,18 @@
 #header{
     width: 100%;
+    background-image: url("../../images/home.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 50%;
+    height: 0;
     .menu{
         display: flex;
         height: 100px;
         align-items: center;
+        background-image: linear-gradient(to top, rgba(0,0,0,0), rgba(1,1,1,1));;
         .logo{
-            padding: 0 25px 0 0;
+            padding: 70px 25px 0 0;
             width: 20%;
             display: flex;
             justify-content: flex-end;
@@ -20,72 +27,15 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: #58b149;
+            background: transparent;
+            position: relative;
             @include break-max(1025px) {
                 background: transparent;
                 width: 40%;
             }
             nav{
-                #menu-toogle{
-                    display: none;
-                    @include break-max(1025px) {
-                        display: block;
-                        position: absolute;
-                        right: 30px;
-                        top: 45px;
-                        margin-left: 30px;
-                        z-index: 20;
-                        user-select: none;
-                        span{
-                            display: block;
-                            width: 33px;
-                            height: 4px;
-                            margin-bottom: 5px;
-                            position: relative;
-                            background: #58b149;
-                            border-radius: 3px;
-                            z-index: 1;
-                            transform-origin: 4px 0px;
-                            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-                            &:first-child{
-                                transform-origin: 0% 0%;
-                            }
-                            &:nth-last-child(2){
-                                transform-origin: 0% 100%; 
-                            }
-                            &.active{
-                                display: block;
-                                background: #fff;
-                                opacity: 1;
-                                transform: rotate(45deg) translate(-2px, -1px);
-                                &:nth-last-child(2){
-                                    transform: rotate(-45deg) translate(0, -1px);
-                                }
-                                &:nth-last-child(3){
-                                    opacity: 0;
-                                    transform: rotate(0deg) scale(0.2, 0.2); 
-                                }
-                            }
-                        }
-                        input{
-                            display: block;
-                            width: 40px;
-                            height: 32px;
-                            position: absolute;
-                            top: -7px;
-                            left: -5px;
-                            cursor: pointer;
-                            opacity: 0;
-                            z-index: 2;
-                            -webkit-touch-callout: none;
-                            &:checked{
-                                ~ ul{
-                                    transform: none;
-                                }
-                            }
-                        }
-                    }
-                }
+                position: absolute;
+                right: 50px;
                 ul{
                     display: flex;
                     justify-content: space-between;
@@ -93,7 +43,6 @@
                     max-width: 1150px;
                     width: 100%;
                     list-style: none;
-                    background: #58b149;
                     @include break-max(1025px) {
                         display: none;;
                         position: absolute;
@@ -122,7 +71,7 @@
                         }
                         a{
                             font-family: 'Open Sans', sans-serif;
-                            color: #fff;
+                            color: #FFFFFF;
                             font-size: 14px;
                             &:after{
                                 content: ' ';
@@ -228,8 +177,20 @@
                             margin-top: 25px;
                         }
                     }
+                    a:hover{
+                        color: #3966BF;
+                    }
                 }
             }
         }
+    }
+    .section_header{
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        width: 369px;
+        position: relative;
+        right: 50px;
+        float:right;
+        padding: 30px;
     }
 }

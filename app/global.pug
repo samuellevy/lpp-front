@@ -1,0 +1,63 @@
+doctype html
+html(lang="en")
+    head
+    link(rel="stylesheet", href="css/main.css")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+
+    title Estrutura
+    body
+        style(type='text/css').
+            .container {
+                display: flex;
+            }
+
+            .fixed {
+                border: 1px #000 solid;
+                width: 350px;
+                margin-left: 3px;
+            }
+
+            .flex-item {
+                flex-grow: 1;
+                padding-left: 10px;
+            }
+        h1 Título 1
+        h2 Título 2
+        br
+        div.container
+            div.fixed
+                b
+                    p Apenas classe de cores "color:"
+                    p.color-dark-grey cinza escuro (.color-dark-grey)
+                    p.color-medium-grey cinza médio (.color-medium-grey)
+                    p.color-light-grey cinza claro (.color-light-grey)
+                    p.color-extra-light-grey cinza muito claro (.color-extra-light-grey)
+
+                    br
+
+                    p.color-black preto (.color-black)
+
+                    br
+
+                    p(style='background-color:red').color-white branco (.color-white)
+
+                    br
+
+                    p.color-strong-dark-blue Azul muito escuro (.color-strong-dark-blue)
+                    p.color-dark-blue Azul escuro (.color-dark-blue)
+                    p.color-navy-blue Azul marinho (.color-navy-blue)
+                    p.color-medium-blue azul médio (.color-medium-blue)
+                    p.color-strong-light-blue azul claro forte (.color-strong-light-blue)
+                    p.color-light-blue azul claro (.color-light-blue)
+
+                    br
+
+                    p.color-red vermelho (.color-red)
+
+                    br
+
+                    p.color-orange laranja (.color-orange)
+
+            div.flex-item
+                button.btn-blue .btn-blue
+                button.btn-green .btn-green
