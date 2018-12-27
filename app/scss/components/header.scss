@@ -1,196 +1,42 @@
 #header{
+    padding: 10px 0;
+    position: fixed;
     width: 100%;
-    background-image: url("../../images/home.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding-bottom: 50%;
-    height: 0;
-    .menu{
-        display: flex;
-        height: 100px;
-        align-items: center;
-        background-image: linear-gradient(to top, rgba(0,0,0,0), rgba(1,1,1,1));;
-        .logo{
-            padding: 70px 25px 0 0;
-            width: 20%;
-            display: flex;
-            justify-content: flex-end;
-            @include break-max(1025px) {
-                width: 60%;
-            }
-        }
-        .item{
-            width: 80%;
-            padding: 0 20px 0 25px;
-            height: 100%;
+    &.active{
+        background: linear-gradient(to bottom, white 0%,white 70%,#fff 70%,transparent 30%,transparent 100%);
+    }
+    .wrapper{
+        .menu{
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            background: transparent;
-            position: relative;
-            @include break-max(1025px) {
-                background: transparent;
-                width: 40%;
-            }
-            nav{
-                position: absolute;
-                right: 50px;
+            .list_menu{
+                width: 65%;
+                padding: 20px 0 0 0;
                 ul{
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    max-width: 1150px;
-                    width: 100%;
-                    list-style: none;
-                    @include break-max(1025px) {
-                        display: none;;
-                        position: absolute;
-                        z-index: 11;
-                        width: 100%;
-                        top: 0;
-                        left: 0;
-                        padding: 20px;
-                        &.active{
-                            display: block;
-                        }
-                    }
                     li{
-                        position: relative;
-                        &:hover{
-                            .dropdown-content {
-                                @include break-min(1025px) {
-                                    display: block;
-                                }
-                            }
-                        }
-                        @include break-max(1025px) {
-                            width: 100%;
-                            display: block;
-                            margin: 10px 0;
-                        }
                         a{
-                            font-family: 'Open Sans', sans-serif;
-                            color: #FFFFFF;
-                            font-size: 14px;
-                            &:after{
-                                content: ' ';
-                                display: inline-block;
-                                margin-left: 8px;
-                                margin-right: 8px;
-                                width: 11px;
-                                height: 7px;
-                                background: url(../images/seta_menu.png) no-repeat;
-                            }
-                            &.last_icon{
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                @include break-max(1025px) {
-                                    display: block;
-                                }
-                                &:before{
-                                    content: ' ';
-                                    display: inline-block;
-                                    margin-left: 10px;
-                                    width: 50px;
-                                    height: 36px;
-                                    background: url(../images/chat-menu.png) no-repeat;
-                                    margin-right: 10px;
-                                    @include break-max(1025px) {
-                                        display: none;
-                                    }
-                                }
-                                &:after{
-                                    display: none;
-                                }
+                            font-family: 'Teko', sans-serif;
+                            font-size: 20px;
+                            color: #fff;
+                            font-weight: normal;
+                            &.active-scroll{
+                                color: #828C99;
                             }
                         }
-                        .dropdown-content {
-                            display: none;
-                            position: absolute;
-                            padding: 10px 0px;
-                            z-index: 1;
-                            min-width: 250px;                            
-                            @include break-max(1025px) {
-                                position: relative;
-                                display: none;
-                                background: transparent;
-                                box-shadow: none;
-                                padding: 0;
-                                margin: 0;
-                                &.hover_me{
-                                    display: block;                                       
-                                }
-                            }
-                            ul{
-                                display: flex;
-                                flex-wrap: wrap;
-                                text-align: left;
-                                position: relative;
-                                background-color: #f9f9f9;
-                                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                                padding: 12px 10px;
-                                border-radius: 5px;
-                                @include break-max(1025px) {
-                                    padding: 10px 15px;
-                                    background: transparent;
-                                }
-                                li{
-                                    display: block;
-                                    position: relative;
-                                    padding: 2px 0px;
-                                    width: 100%;
-                                    @include break-max(1025px) {
-                                        padding: 0;
-                                    }
-                                    a{
-                                        font-family: 'Open Sans', sans-serif;
-                                        color: #666;
-                                        font-size: 14px;
-                                        text-align: left;
-                                        display: block;
-                                        font-weight: 600;
-                                        @include break-max(1025px) {
-                                            color: #fff;
-                                            font-weight: normal;
-                                        }
-                                        &:after{
-                                            display: none;
-                                        }
-                                    }
-                                }
+                        &:last-child{
+                            a{
+                                background: #1CA8E0;
+                                padding: 8px 35px 5px 35px;
+                                border-radius: 36px;
+                                color: #fff;
                             }
                         }
-                    }
-                    .login{
-                        background: #2e67b0;
-                        color: #fff;
-                        padding: 10px 30px;
-                        font-size: 14px;
-                        border-radius: 3px;
-                        margin-left: 10px;
-                        @include break-max(1025px) {
-                            display: block;
-                            max-width: 100px;
-                            margin-left: 0;
-                            margin-top: 25px;
-                        }
-                    }
-                    a:hover{
-                        color: #3966BF;
                     }
                 }
             }
         }
-    }
-    .section_header{
-        background-color: #FFFFFF;
-        border-radius: 10px;
-        width: 369px;
-        position: relative;
-        right: 50px;
-        float:right;
-        padding: 30px;
     }
 }
