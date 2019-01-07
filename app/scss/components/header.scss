@@ -2,6 +2,7 @@
     padding: 10px 0;
     position: fixed;
     width: 100%;
+    z-index: 2;
     &.active{
         background: linear-gradient(to bottom, white 0%,white 70%,#fff 70%,transparent 30%,transparent 100%);
     }

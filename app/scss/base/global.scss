@@ -1,10 +1,13 @@
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Asap', sans-serif;
     overflow: hidden;
     &.page-start {
         overflow: initial;
         overflow-x: hidden;
     }
+}
+.title-font{
+    font-family: 'Teko', sans-serif;
 }
 .wrapper {
     max-width: 1366px;

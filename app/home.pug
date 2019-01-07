@@ -2,34 +2,4 @@ extends tpl/simple.pug
 block var
 	- var title = "Home";
 block content
-
-	.content(style="background-color:#57CFFF; padding:50px")
-		h2.color-white(style="text-align: center") Vidas Transformadas
-		br
-		br
-		br
-		br
-		.section_middle
-			.item_middle
-				img(src="images/raissa.png")
-				.item
-					h2 Miriam Praga
-					p Aluna e Monitora de Boxe
-					br
-					p “Eu me dedico muito ao boxe e voltei a estudar em um dos programas de Educação da Luta pela Paz. Quero ser um exemplo para os meus filhos.”
-			div.space
-			.item_middle
-				img(src="images/raissa.png")
-				.item
-					h2 Thishan Rejendram
-			div.space
-			.item_middle
-				img(src="images/raissa.png")
-				.item
-					h2 Raissa Lima
-			div.space
-			.item_middle
-				img(src="images/raissa.png")
-				.item
-					h2 Anthony Ariri
-	.space_footer
+	include includes/webdoor_principal.pug
