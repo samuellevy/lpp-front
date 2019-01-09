@@ -1,0 +1,74 @@
+.section_lifes{
+    background: linear-gradient(to bottom, #57CFFF 45%, #57CFFF 45%, #57CFFF 47.4%, transparent 45%, transparent 100%);
+    .wrapper{
+        h2{
+            font-family: $teko;
+            color: #fff;
+            font-size: 46px;
+            font-weight: normal;
+            padding: 70px 0 25px 0;
+            text-align: center;
+        }
+        .box{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            .item{
+                max-width: 308px;
+                width: 100%;
+                border-radius: 10px;
+                border-bottom-right-radius: 0px;
+                .media{
+                    img{
+                        border-radius: 10px;
+                        border-bottom-right-radius: 0px;
+                        border-bottom-left-radius: 0px;
+                    }
+                }
+                .content{
+                    background: #fff;
+                    padding: 30px 27px;
+                    height: 300px;
+                    box-shadow: $shadow;
+                    border-bottom-left-radius: 10px;
+                    
+                    h3{
+                        font-family: $teko;
+                        color: #1CA8E0;
+                        font-size: 32px;
+                        font-weight: normal;
+                        line-height: 27px;
+                    }
+                    span{
+                        font-family: $asap;
+                        font-size: 14px;
+                        font-weight: normal;
+                        color: #B8C1CC;
+                        margin-top: -15px;
+                    }
+                    p{
+                        margin-top: 20px;
+                        font-family: $asap;
+                        font-size: 14px;
+                        font-style: italic;
+                        color:#828C99;
+                    }
+                }
+            }
+        }
+        .btn_more{
+            display: block;
+            width: 163px;
+            border-radius: 30px;
+            padding: 5px 20px;
+            margin: 50px auto;
+            background: #57CFFF;
+            font-family: $teko;
+            font-size: 22px;
+            font-weight: normal;
+            color: #F5F9FC;
+            text-align: center;
+            box-shadow: $shadow;
+        }
+    }
+}

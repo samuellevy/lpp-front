@@ -1,0 +1,46 @@
+.numbers_home{
+    .wrapper{
+        .display{
+            display: flex;
+            flex-wrap: wrap;
+            .item{
+                width: 30%;
+                &.first{
+                    width: 40%;
+                    background: #3966BF;
+                    padding: 80px 160px;
+                }
+                &.second{
+                    background: #62CFCF;
+                    padding: 70px 40px;
+                }
+                &.third{
+                    background: #F47249;
+                    padding: 70px 40px;
+                }
+                .media{
+                    img{
+
+                    }
+                }
+                .content_text{
+                    span{
+
+                    }
+                    h4{
+                        span{
+                            strong{
+
+                            }
+                        }
+                    }
+                    p{
+                        span{
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
