@@ -1,15 +1,16 @@
 .news {
     background-color: #F5F9FC;
     .wrapper {
-        .bg_news{
+        background-color: #FFF;
+        .bg_news {
             background: url("../images/home.png") no-repeat center/cover;
             height: 404px;
             width: 1366px;
             margin-left: -30px;
         }
-        background-color: #FFF;
         .content_title {
-            width: 1110px;
+            max-width: 1110px;
+            width: 100%;
             text-align: justify;
             margin: 0 auto;
             h1 {
@@ -27,13 +28,13 @@
             }
 
             .content_text {
-                width: 794px;
+                max-width: 794px;
+                width: 100%;
                 p {
                     padding: 10px 0;
                 }
             }
         }
-
         .media {
             display: flex;
             font-size: 14px;
@@ -65,6 +66,7 @@
         }
         .media-bottom {
             margin: 0 0 0 271px;
+            padding-bottom: 50px;
         }
     }
 }
