@@ -70,7 +70,7 @@ body {
 }
 
 .color-navy-blue{
-    color: #1F3B72;
+    color: #113273;
 }
 
 .color-strong-light-blue{
@@ -99,34 +99,35 @@ body {
 
 h1{
     font-family: Teko;
-    font-size: 46pt;
-    line-height: 54pt;
+    font-size: 46px;
+    line-height: 54px;
     color: #3966BF;
 
     @include break-max(480px){
         color: #3966BF;
-        font-size: 34pt;
-        line-height: 42pt;
+        font-size: 34px;
+        line-height: 42px;
     }
 }
 
 h2{
     font-family: Teko;
-    font-size: 24pt;
-    line-height: 32pt;
+    font-size: 24px;
+    line-height: 32px;
 
     @include break-max(480px){
-        font-size: 18pt;
-        line-height: 24pt;
+        font-size: 18px;
+        line-height: 24px;
     }
 }
 
 p{
     font-family: Asap, sans-serif;
-    font-size: 14pt;
+    font-size: 14px;
+    line-height: 22px;
 
     @include break-max(480px){
-        line-height: 20pt;
+        line-height: 20px;
     }
 }
 
@@ -180,6 +181,24 @@ p{
         }
     }
 
+}
+
+.square_content{
+    .square-red{
+        background-color: #F95B53;
+    }
+
+    .square-orange{
+        background-color: #F47249;
+    }
+
+    .square-blue{
+        background-color: #1CA8E0;
+    }
+
+    .square-light-blue{
+        background-color: #62CFCF;
+    }
 }
 
 .space_footer{
