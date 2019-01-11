@@ -5,18 +5,88 @@
             flex-wrap: wrap;
             .item{
                 width: 30%;
+                height: 337.5px;
                 &.first{
                     width: 40%;
                     background: #3966BF;
-                    padding: 80px 160px;
+                    padding: 80px 120px;
+                    height: 100%;
+                    .media{
+                        margin-bottom: 15px;
+                    }
+                    .content_text{
+                        h4{
+                            font-size: 83px;
+                            line-height: 61px;
+                            margin-top: 5px;
+                            span{
+                                font-size: 30px;
+                                line-height: 50px;
+                                letter-spacing: 0.8px;
+                            }
+                        }
+                    }
                 }
                 &.second{
                     background: #62CFCF;
-                    padding: 70px 40px;
+                    padding: 70px 40px 70px 40px;
+                    .media{
+                        float: left;
+                        width: 33%;
+                        margin-top: 11px;
+                    }
+                    .content_text{
+                        span{
+
+                        }
+                        h4{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            span{
+                                margin-left: 10px;
+                            }
+                        }
+                        &.box_1{
+                            width: 67%;
+                            float: left;
+                            margin-top: 10px;
+                            h4{
+                                display: block;
+                                line-height: 39px;
+                                span{
+                                    margin-top: 5px;
+                                    margin-left: 0px;
+                                }
+                            }
+                            span{
+                            }
+                        }
+                    }
                 }
                 &.third{
                     background: #F47249;
                     padding: 70px 40px;
+                    .content_text{
+                        h4{
+                            display: flex;
+                            justify-content: flex-start;
+                            span{
+                                line-height: 22px !important;
+                                
+                            }
+                        }
+                        span{
+                            &:first-child{
+                                line-height: 10px;
+                                display: flex;
+                                align-items: flex-end;
+                            }
+                            img{
+                                margin-left: 10px;
+                            }
+                        }
+                    }
                 }
                 .media{
                     img{
@@ -25,20 +95,58 @@
                 }
                 .content_text{
                     span{
-
+                        display: block;
+                        font-family: $sign;
+                        font-size: 16px;
+                        font-weight: normal;
+                        color: white;
+                        line-height: 22px;
+                        &.lighter{
+                            font-weight: 300;
+                        }
+                        &.bold{
+                            font-weight: bold;
+                            font-size: 18px;
+                        }
+                        &.bottom{
+                            margin-bottom: 10px;
+                            line-height: 10px;  
+                        }
                     }
                     h4{
+                        display: block;
+                        font-family: $asap;
+                        font-size: 60px;
+                        font-weight: bold;
+                        color: white;
                         span{
                             strong{
-
+                                font-size: 22px;
                             }
                         }
                     }
                     p{
+                        display: block;
+                        font-family: $sign;
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: white;
                         span{
 
                         }
                     }
+                }
+                .btn_numbers{
+                    display: block;
+                    border: 1px solid #fff;
+                    border-radius: 30px;
+                    padding: 8px 20px;
+                    text-align: center;
+                    color: #fff;
+                    font-family: $teko;
+                    font-size: 22px;
+                    letter-spacing: 0.7px;
+                    margin-top: 20px;
                 }
             }
         }
