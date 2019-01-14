@@ -69,3 +69,101 @@
     }
 
 }
+
+.container_form_map {
+    display: flex;
+    max-width: 1366px;
+    width: 100%;
+    #map {
+        margin: 0 auto;
+        ul {
+            width: 280px;
+            padding-top: 10px;
+            li {
+                list-style: square;
+                color: #3966BF;
+                font-size: 20px;
+                font-family: Teko;
+                &:last-child {
+                    color: #262C33;
+                    list-style: none;
+                    font-family: Asap;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .section_address {
+        margin: 0 -20px;
+        ul {
+            width: 280px;
+            padding-top: 20px;
+            border-bottom: solid #E6ECF2 1px;
+            &:last-child {
+                border: none;
+            }
+            li {
+                list-style: square;
+                color: #3966BF;
+                font-size: 20px;
+                font-family: Teko;
+                &:last-child {
+                    color: #262C33;
+                    list-style: none;
+                    font-family: Asap;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+}
+
+.section_bg {
+    background: url(../images/bg_contact.png) no-repeat center/cover;
+    width: 100%;
+    position: relative;
+    height: 768px;
+    z-index: 1;
+
+    .wrapper {
+        position: relative;
+        .content_text {
+            width: 370px;
+            padding: 40px;
+            background: #fff;
+            position: absolute;
+            right: 0;
+            top: 200px;
+            border-radius: 20px;
+            border-bottom-right-radius: 0px;
+            h2{
+                color: #F95B53;
+                font-size: 46px;
+                font-family: 'Teko', sans-serif;
+                font-weight: normal;
+            }
+            p{
+                color: #525B66;
+                font-size: 14px;
+                padding: 20px 0;
+                line-height: 22px;
+            }
+
+            a{
+                display: block;
+                background: #F95B53;
+                font-size: 22px;
+                font-family: 'Teko', sans-serif;
+                text-align: center;
+                padding: 10px;
+                color: #fff;
+                border-radius: 30px;
+                text-transform: uppercase;
+                margin-top: 10px;
+            }
+        }
+    }
+
+}
