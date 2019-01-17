@@ -1,0 +1,22 @@
+.gallery{
+    .box{
+        display: flex;
+        .media{
+            width: 60%;
+            img{
+                width: 100%;
+            }
+        }
+        .display{
+            width: 40%;
+            display: flex;
+            flex-wrap: wrap;
+            .item{
+                width: 50%;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
