@@ -123,4 +123,13 @@ document.addEventListener("DOMContentLoaded", function() {
             }, 500);
             return false;
         });
+        $('.timeline .box .wrapper .slider').slick({
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            centerMode: true,
+            variableWidth: true,
+            arrows: false
+        });
 });

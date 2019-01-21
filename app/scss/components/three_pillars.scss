@@ -1,0 +1,69 @@
+.three_pillars{
+    .wrapper{
+        .box{
+            display: flex;
+            padding: 70px 0;
+            .item{
+                padding-left: 90px;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                &:first-child{
+                    width: 60%;
+                    padding: 0;
+                }
+                .media{
+
+                }
+                .text{
+                    p{
+                        font-family: $asap;
+                        font-size: 14px;
+                        color: #525B66;
+                        margin-bottom: 25px;
+                    }
+                    ul{
+                        li{
+                            display: flex;
+                            align-items: center;
+                            color: #525B66;
+                            font-family: $asap;
+                            font-size: 14px;
+                            span{
+                                display: flex;
+                                align-items: center;
+                                height: 80px;
+                                padding: 20px 15px;
+                                font-family: $teko;
+                                font-size: 35px;
+                                color: #fff;
+                                margin-right: 20px;
+                            }
+                            &:first-child{
+                                background: rgba(98, 207, 207, 0.06);
+                                span{
+                                    background: #62CFCF;
+                                    font-size: 43px;
+                                }
+                            }
+                            &:nth-child(2){
+                                background: rgba(249, 91, 83, 0.06);
+                                span{
+                                    background: #F95B53;
+                                    font-size: 36px;
+                                }
+                            }
+                            &:nth-child(3){
+                                background: rgba(28, 168, 224, 0.06);
+                                span{
+                                    background: #1CA8E0;
+                                    font-size: 34px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

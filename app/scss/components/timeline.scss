@@ -1,0 +1,71 @@
+.timeline{
+    .wrapper{
+        h4{
+            color: #3966BF;
+            font-family: $teko;
+            font-size: 46px;
+            font-weight: normal;
+        }
+        p{
+            color: #262C33;
+            font-size: 14px;
+            font-family: $asap;
+            margin-bottom: 40px;
+        }
+    }
+    .box{
+        background:#8FAECE;
+        padding: 50px;
+        .slider{
+            position: relative;
+            display: block;
+            box-sizing: border-box;
+            .item{
+                display: block;
+                padding: 15px;
+                height: 100%;
+                min-height: 1px;
+                box-sizing: border-box;
+                background: #F5F9FC;
+                border-left: 10px solid #8FAECE;
+                .block_content{
+                    display: block;
+                    width: 280px;
+                    float: left;
+                    margin-left: 40px;
+                    &:first-child{
+                        margin-left: 0;
+                    }
+                    .media{
+                        display: block;
+                        width: 280px;
+                        height: 210px;  
+                        &:first-child{
+                            margin-bottom: 65px;
+                        }
+                    }
+                    .text{
+                        display: block;
+                        width: 280px;
+                        height: 210px;
+                        &:first-child{
+                            margin-bottom: 65px;
+                        }
+                        h5{
+                            color: #3966BF;
+                            font-family: $teko;
+                            font-size: 46px;
+                            font-weight: normal;
+                        }
+                        p{
+                            color: #262C33;
+                            font-size: 14px;
+                            font-family: $asap;
+                            line-height: 22px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
