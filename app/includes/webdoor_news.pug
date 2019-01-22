@@ -1,23 +1,25 @@
 .wrapper
-    .bg_news
-        .filter_bg
+    .filter_bg
     .content_title
         h1 Lorem ipsum dolor sit amet consectetur adipiscing elit, consectetur adipiscing elit.
         p Nam aliquet, ipsum commodo mollis lacinia, ex turpis dignissim ligula, ut pretium neque est sit amet eros.
         p Pellentesque nec diam condimentum, porttitor nibh sit amet, consectetur sem.
         .content_links
-            ul.media
-                li.publicado Publicado em 22/11/2018 às 11h45
-                li Compartilhe:
-                li
+            .publicado
+                span Publicado em 22/11/2018 às 11h45
+
+            .media
+                span Compartilhe:
+                .twitter
+                    img(src="images/twitter_news.png")
                     a(href="#") Twitter
-                        img(src="images/twitter_news.png")
-                li
+                .facebook     
+                    img(src="images/facebook_news.png")
                     a(href="#") Facebook
-                        img(src="images/facebook_news.png")
-                li
+                .whatsapp
+                    img(src="images/whatsapp_news.png")
                     a(href="#") Whatsapp
-                        img(src="images/whatsapp_news.png")
+
         .content_text
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel fermentum leo. Nam aliquet, ipsum commodo mollis lacinia, ex turpis dignissim ligula, ut pretium neque est sit amet eros. Pellentesque nec diam condimentum, porttitor nibh sit amet, consectetur sem. Vivamus sagittis dictum mi vel iaculis. Curabitur venenatis sapien lacus, nec efficitur ex fermentum et. Integer posuere elit nec mi tristique, vel gravida libero scelerisque. Nullam placerat enim lacus, sit amet malesuada metus hendrerit at. Phasellus rutrum dui eu lectus viverra, et congue quam faucibus. Nunc vel justo congue, aliquet ipsum eu, fermentum enim.
 
@@ -29,14 +31,16 @@
 
             p Nunc quis fermentum ipsum. Suspendisse potenti. Suspendisse magna leo, congue at ultricies eget, scelerisque non velit. Integer ante eros, fermentum nec congue et, venenatis in turpis. Nulla finibus imperdiet neque id gravida. Morbi ac condimentum magna. Nam lorem sapien, eleifend eget auctor a, bibendum et velit. Mauris augue diam, pulvinar ut dui sed, iaculis condimentum odio.
 
-            ul.media.media-bottom
-                li Compartilhe:
-                li
-                    a(href="#") Twitter
+            .content_links-bottom
+                .media
+                    span Compartilhe:
+                    .twitter
                         img(src="images/twitter_news.png")
-                li
-                    a(href="#") Facebook
+                        a(href="#") Twitter
+                    .facebook     
                         img(src="images/facebook_news.png")
-                li
-                    a(href="#") Whatsapp
+                        a(href="#") Facebook
+                    .whatsapp
                         img(src="images/whatsapp_news.png")
+                        a(href="#") Whatsapp
+
