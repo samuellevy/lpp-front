@@ -1,6 +1,15 @@
+.wrapper{
+    h1{
+        font-weight: 100;
+    }
+    p{
+        color:#525B66;
+
+    }
+}
 .contato {
     width: 470px;
-    padding: 20px 0;
+    margin-top: 58px;
 
     form {
         .form-pad {
@@ -9,6 +18,7 @@
 
         input {
             width: 230px;
+            height: 40px;
             padding: 5px 10px;
             background-color: #EDF3F7;
             border-radius: 5px;
@@ -21,12 +31,13 @@
             background-color: #EDF3F7;
             border-radius: 5px;
             border: none;
+            height: 40px;
         }
 
         textarea {
             width: 100%;
-            height: 100px;
-            padding: 5px 10px;
+            height: 140px;
+            padding: 15px 20px;
             background-color: #EDF3F7;
             border-radius: 5px;
             border: none;
@@ -52,19 +63,22 @@
             font-size: 19px;
             position: relative;
             cursor: pointer;
+            height: 40px;
         }
 
         .btn-send {
-            background: #3257A1;
+            background: #3966BF;
             padding: 9px 35px 7px 35px;
             font-family: 'Teko', sans-serif;
             font-size: 20px;
+            width: 145px;
             font-weight: 500;
             letter-spacing: 0.9px;
             border-radius: 30px;
             border: 0;
             color: #fff;
             cursor: pointer;
+            margin-top: 10px;
         }
     }
 
@@ -73,46 +87,90 @@
 .container_form_map {
     display: flex;
     max-width: 1366px;
-    width: 100%;
+    width: 85%;
+    justify-content: space-between;
+    margin-bottom: 80px;
     #map {
-        margin: 0 auto;
-        ul {
-            width: 280px;
-            padding-top: 10px;
-            li {
-                list-style: square;
-                color: #3966BF;
-                font-size: 20px;
-                font-family: Teko;
-                &:last-child {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        .map{
+            width: 308px;
+            text-align: justify;
+            height: 100%;
+            .lppaddress{
+                background-color: #e5f6fa;
+                padding: 30px 20px; 
+                span{
+                    font-size: 20px;
+                    font-family: 'Teko';
+                    color: #3966BF;
+                    display: inline-block;
+                    margin-right: -3px;
+                    &::before {
+                        content: "";
+                        display: inline-block;
+                        width: 6px;
+                        height: 6px;
+                        background: #3966BF;
+                        margin-right: 8px;
+                        margin-bottom: 3px;
+                    }
+                }
+                p {
+                    margin-top: 0;
+                    font-family: 'Asap';
+                    font-size:14px;
                     color: #262C33;
-                    list-style: none;
-                    font-family: Asap;
-                    font-size: 14px;
+                    width: 308px;
+                    margin-left: 15px;
+                    
                 }
             }
         }
-    }
 
+    }
     .section_address {
-        margin: 0 -20px;
-        ul {
-            width: 280px;
-            padding-top: 20px;
-            border-bottom: solid #E6ECF2 1px;
-            &:last-child {
-                border: none;
-            }
-            li {
-                list-style: square;
-                color: #3966BF;
-                font-size: 20px;
-                font-family: Teko;
+        width: 170px;   
+        height: 380px;
+        display: flex;
+        .address{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 40px;
+
+            ul {
+                width: 300px;
+                padding-top: 15px;
+                
                 &:last-child {
-                    color: #262C33;
-                    list-style: none;
-                    font-family: Asap;
-                    font-size: 14px;
+                    border: none;
+                    padding: 0px;
+                    margin-bottom: 7px;
+                }
+                li {
+                    list-style: square;
+                    color: #3966BF;
+                    font-size: 20px;
+                    font-family: Teko;
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 1px;
+                        background-color: #E6ECF2; 
+                        margin-bottom: 20px;
+                        margin-right: 50px;
+                    }
+                    span {
+                        display: block;
+                        color: #262C33;
+                        list-style: none;
+                        font-family: Asap;
+                        font-size: 14px;
+                        padding-bottom: 10px;
+                    }
                 }
             }
         }
