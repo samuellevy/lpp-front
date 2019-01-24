@@ -1,0 +1,80 @@
+.partners{
+    .wrapper{
+        padding: 40px 0;
+        h4{
+
+        }
+        .box{
+            .menu_partners{
+                display: flex;
+                justify-content: space-between;
+                .item{
+                    width: 25%;
+                    padding: 40px 34px 20px 34px;
+                    .media_title{
+                        display: flex;
+                        flex-wrap: nowrap;
+                        align-items: center;
+                        img{
+                            margin-right: 20px;
+                            width: 32px;
+                            height: 32px;
+                        }
+                    }
+                    span{
+                        font-family: $teko;
+                        font-size: 28px;
+                        font-weight: normal;
+                        color: #fff;
+                    }
+                    a{
+                        display: flex;
+                        font-family: $teko;
+                        font-size: 18px;
+                        font-weight: normal;
+                        color: #fff;
+                        justify-content: flex-end;
+                        margin-top: 15px;
+                        align-items: center;
+                        img{
+                            width: 19px;
+                            height: 19px;
+                            margin-left: 5px;
+                        }
+                    }
+                    &#global{
+                        background: #1CA8E0;
+                    }
+                    &#brasil{
+                        background: #F47249;
+                    }
+                    &#reino{
+                        background: #62CFCF;
+                    }
+                    &#internacional{
+                        background: #3966BF;
+                    }
+                    &.active{
+                        
+                    }
+
+                }
+            }
+            .content_partners{
+                padding: 45px 90px;
+                background: #F5F9FC;
+                span{
+                    color: #828C99;
+                    font-size: 16px;
+                    font-family: $asap;
+                    display: block;
+                    margin-bottom: 30px;
+                }
+                .media{
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+.programs{
+    background: #F5F9FC;
+    padding: 50px 0;
+    .wrapper{
+        .box{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            box-shadow: 1px 13px 42px -13px rgba(0,0,0,0.75);
+            margin-bottom: 30px;
+            padding: 60px;
+            &.inverter{
+                flex-direction: row-reverse;
+            }
+            .item{
+                width: 50%;
+                .media{
+
+                }
+                .text{
+                    padding: 0 100px;
+                    h4{
+                        font-family: $teko;
+                        font-size: 46px;
+                        color: #F95B53;
+                        font-weight: normal;
+                    }
+                    p{
+                        font-size: 14px;
+                        font-weight: normal;
+                        color: #525B66;
+                        font-family: $asap;
+                    }
+                    a{
+                        margin-top: 30px;
+                        width: 85%;
+                        border-radius: 30px;
+                        background: #F95B53;
+                        padding: 7px 10px;
+                        display: block;
+                        color: #F5F9FC;
+                        font-family: $teko;
+                        font-size: 20px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
