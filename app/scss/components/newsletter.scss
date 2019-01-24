@@ -1,0 +1,46 @@
+.newsletter{
+    width: 100%;
+    background: #dcf1fa;
+    .wrapper{
+        .box{
+            display: flex;
+            width: 100%;
+            .news-title{
+                padding: 40px;
+                display: flex;
+                img{
+                    margin-right: 30px;
+                    display: inline-block;
+                    align-self: center;
+                }
+                h4{
+                    font-family: 'Teko';
+                    font-size: 36px;
+                    color: #F95B53;
+                    font-weight: 500;
+                }
+                span{
+                    font-family: 'Asap';
+                    font-size: 16px;
+                    color: #828C99;
+                }
+            }
+            .newsletter-input{
+                form{ 
+                }
+                .e-mail{
+                    input{
+                    }
+                }
+                .senha{
+                    input{ 
+                    }
+                }
+                .enviar{
+                    button{  
+                    }
+                }
+            }
+        }
+    }
+}
