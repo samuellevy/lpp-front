@@ -1,0 +1,56 @@
+.section_partnership{
+    background: url(../images/form-lpp.png) no-repeat top center;
+    width: 100%;
+    position: relative;
+    .wrapper{
+        .box-container{
+            display: flex;
+            justify-content: space-between;
+            text-align: justify;
+            margin-bottom: 60px;
+            .box-content{
+                width: 60%;
+                padding: 50px 100px;
+                margin-top: 380px;
+                p{
+                    margin-bottom: 30px;
+                    font-family: 'Asap';
+                    font-size: 14px;
+                    color: #525B66;
+                }
+            }
+            .box-form{
+                width: 550px;
+                box-shadow: -6px 8px 49px -13px rgba(0,0,0,0.55);
+                height: 550px;
+                border-radius: 15px;
+                padding: 30px 50px;
+                margin-top: 300px;
+                background: #fff;
+                border-bottom-right-radius: 0px;
+                h4{
+                    font-family: 'Teko';
+                    font-size: 46px;
+                    color: #F47249;
+                    font-weight: 100;
+                    margin-bottom: 15px;
+                }
+                img {
+                    display: inline-block;
+                    margin-right: 10px;
+                }
+                span {
+                    font-family: 'Teko';
+                    font-size: 20px;
+                    color: #F47249;
+                }
+                p{
+                  font-family:'Asap';
+                  font-size: 14px;
+                  margin-bottom: 20px;
+                  color: #525B66;
+                }
+            }
+        }
+    }
+}
