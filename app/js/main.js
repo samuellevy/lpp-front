@@ -170,4 +170,10 @@ document.addEventListener("DOMContentLoaded", function() {
             $('.nav-box .item').removeClass('active');
             $(this).addClass('active');
         });
+        $('.transparency .box .slide-title .slider_transparencia').slick({
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            arrows: true
+        });
 });
