@@ -79,21 +79,21 @@ document.addEventListener("DOMContentLoaded", function() {
         $(this).toggleClass('active');
         $('#header .wrapper_menu').toggleClass('active');
     });
-    $(window).scrollTop(1);
+   /* $(window).scrollTop(1);
     $(window).scroll(function () { 
-        $('.watching').each(function (index, element) {
+        $('#header').each(function (index, element) {
             var top_of_element = $(this).offset().top;
             var bottom_of_element = $(this).offset().top + $(this).outerHeight();
             var bottom_of_screen = $(window).scrollTop() + window.innerHeight;
             var top_of_screen = $(window).scrollTop();
             if((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
-                $(this).addClass('fade');
+                $(this).addClass('active');
             }
             //else {
             //     $(this).removeClass('fade');
             // }            
         });
-    });
+    });*/
     //SITE CEDAE
     $(".item nav ul li").click(function(){
         console.log('clicked');
@@ -128,8 +128,21 @@ document.addEventListener("DOMContentLoaded", function() {
             infinite: true,
             speed: 300,
             slidesToShow: 1,
-            centerMode: true,
+            centerMode: false,
             variableWidth: true,
+            centerPadding: '40px',
             arrows: false
         });
+        $(document).scroll(function() {
+
+            var scrollTop = $(window).scrollTop();
+                  if (scrollTop >= 100 ) {
+                      $('#header').addClass("active");
+                      console.log('entrou');
+                  }
+                  else{
+                      $('#header').removeClass("active");
+                      console.log('saiu');
+                  }
+          });
 });

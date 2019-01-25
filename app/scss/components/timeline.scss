@@ -18,7 +18,8 @@
         padding: 50px;
         .slider{
             position: relative;
-            display: block;
+            display: flex;
+            justify-content: space-between;
             box-sizing: border-box;
             .item{
                 display: block;
@@ -27,7 +28,9 @@
                 min-height: 1px;
                 box-sizing: border-box;
                 background: #F5F9FC;
-                border-left: 10px solid #8FAECE;
+                box-shadow: 7px 4px 42px -3px rgba(0,0,0,0.5);
+                margin-bottom: 30px;
+                margin-left: 20px;
                 .block_content{
                     display: block;
                     width: 280px;
