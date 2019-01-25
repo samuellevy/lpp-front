@@ -153,5 +153,7 @@ document.addEventListener("DOMContentLoaded", function() {
             var data_id = $(this).attr('data-id');
             $('.content_partners').hide();
             $('.content_partners#'+data_id).show();
+            $('.menu_partners .item').removeClass('active');
+            $(this).addClass('active');
         });
 });
