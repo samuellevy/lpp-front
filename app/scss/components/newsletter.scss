@@ -1,0 +1,81 @@
+.newsletter{
+    width: 100%;
+    background: #dcf1fa;
+    height: auto;
+    .wrapper{
+        .box{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            .news-title{
+                padding: 20px 0 0 20px;
+                margin-bottom: 30px;
+                img{
+                    margin-right: 30px;
+                    align-self: center;
+                    float: left;
+                    margin-top: 15px;
+                }
+                h4{
+                    font-family: 'Teko';
+                    font-size: 36px;
+                    color: #F95B53;
+                    font-weight: 500;
+                }
+                span{
+                    font-family: 'Asap';
+                    font-size: 16px;
+                    color: #828C99;
+                    display: block;
+                    margin-left: 63px;
+                }
+            }
+            .newsletter-input{
+                display: flex;
+                flex-direction: row;
+                width: 60%;
+                align-items: center;
+                justify-content: center;
+                margin-top: 20px;
+                form{ 
+                    input{
+                        font-family: 'Asap';
+                        font-size: 14px;
+                        color: #828C99;
+                    }
+                    button{
+                        font-family: 'Teko';
+                        font-size: 20px;
+                    }
+                    .e-mail{
+                        width: 300px;
+                        height: 40px;
+                        border-radius: 30px;
+                        border: 0;
+                        padding-left: 20px;
+                        margin-right: 10px;
+                    }
+                    .senha{
+                        width: 300px;
+                        height: 40px;
+                        border-radius: 30px;
+                        border: 0;
+                        padding-left: 20px;
+                        margin-right: 10px;
+                    }
+                    .enviar{
+                        width: 145px;
+                        height: 40px;
+                        border-radius: 30px;
+                        border: 0;
+                        text-transform: uppercase;
+                        background: #F95B53;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+    }
+}
