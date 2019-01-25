@@ -11,6 +11,15 @@
                 .item{
                     width: 25%;
                     padding: 40px 34px 20px 34px;
+                    height: 120px;
+                    margin-top: 20px;
+                    transition: all 0.2s linear;
+                    cursor: pointer;
+                    &.active{
+                        height: 140px;
+                        margin-top: 0;
+                        transition: all 0.2s linear;
+                    }
                     .media_title{
                         display: flex;
                         flex-wrap: nowrap;
@@ -27,7 +36,7 @@
                         font-weight: normal;
                         color: #fff;
                     }
-                    a{
+                    p{
                         display: flex;
                         font-family: $teko;
                         font-size: 18px;
