@@ -1,5 +1,5 @@
 .section_lifetransform{
-    background: #F5F9FC;
+    background: #FFF;
     padding: 50px 0;
     .wrapper{
         h3{
@@ -67,6 +67,20 @@
                     }
                 }
             }
+        }
+        button{
+            width: 308px;
+            background: #3966BF;
+            color: #fff;
+            padding: 10px 0;
+            border-radius: 30px;
+            border: 0;
+            font-family: 'Teko';
+            font-size: 20px;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 0 auto;
+            display: block;
         }
     }
 }

@@ -1,5 +1,6 @@
 .transparency{
     background: #F5F9FC;
+    padding: 45px 0 80px 0;
     .wrapper{
         .box{
             h4{
@@ -10,9 +11,20 @@
                 color: #1F3B72;
                 margin-bottom: 20px;
             }
+            .slide-title{
+                h5{
+                    color: #1F3B72;
+                    font-family: 'Teko';
+                    font-size: 30px;
+                    font-weight: 100;
+                    margin-bottom: 15px;
+                }
+            }
             .content{
                 display: flex;
                 justify-content: center;
+                height: auto;
+                margin-bottom: 45px;
                 .item{
                     display: flex;
                     flex-direction: row;
