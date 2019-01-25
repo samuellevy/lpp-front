@@ -144,5 +144,14 @@ document.addEventListener("DOMContentLoaded", function() {
                       $('#header').removeClass("active");
                       console.log('saiu');
                   }
-          });
+        });
+
+        //** */
+        $('.content_partners').hide();
+        $('.content_partners#tabs-1').show();
+        $('.menu_partners .item').click(function(event){
+            var data_id = $(this).attr('data-id');
+            $('.content_partners').hide();
+            $('.content_partners#'+data_id).show();
+        });
 });
