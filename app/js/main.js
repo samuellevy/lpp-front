@@ -149,11 +149,25 @@ document.addEventListener("DOMContentLoaded", function() {
         //** */
         $('.content_partners').hide();
         $('.content_partners#tabs-1').show();
+        $('.menu_partners .item[data-id=tabs-1]').addClass('active');
         $('.menu_partners .item').click(function(event){
             var data_id = $(this).attr('data-id');
             $('.content_partners').hide();
             $('.content_partners#'+data_id).show();
             $('.menu_partners .item').removeClass('active');
+            $(this).addClass('active');
+        });
+
+        //nossos programas
+                //** */
+        $('.content_item').hide();
+        $('.content_item#tabs-1').show();
+        $('.box-content .nav-box .item[data-id=tabs-1]').addClass('active');
+        $('.box-content .nav-box .item').click(function(event){
+            var data_id = $(this).attr('data-id');
+            $('.content_item').hide();
+            $('.content_item#'+data_id).show();
+            $('.nav-box .item').removeClass('active');
             $(this).addClass('active');
         });
 });
