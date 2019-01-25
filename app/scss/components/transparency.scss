@@ -1,0 +1,46 @@
+.transparency{
+    background: #F5F9FC;
+    .wrapper{
+        .box{
+            h4{
+                text-align: center;
+                font-family: 'Teko';
+                font-size: 46px;
+                font-weight: 100;
+                color: #1F3B72;
+                margin-bottom: 20px;
+            }
+            .content{
+                display: flex;
+                .item{
+                    display: flex;
+                    flex-direction: row;
+                    width: 288px;
+                    height: 146px;
+                    background: #fff;
+                    border: solid 1px #E6ECF2;
+                    .item-content{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        width: 100%;
+                        padding: 20px;
+                        .title{
+                            img{
+                                float:right;
+                            }
+                        }
+                        .date{
+                            a{
+                                float:right;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+    
