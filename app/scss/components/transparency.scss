@@ -12,6 +12,7 @@
             }
             .content{
                 display: flex;
+                justify-content: center;
                 .item{
                     display: flex;
                     flex-direction: row;
@@ -28,13 +29,31 @@
                         .title{
                             img{
                                 float:right;
+                                align-self: center;
+                            }
+                            h5{
+                                font-family: 'Asap';
+                                font-size: 16px;
+                                color: #525B66;
                             }
                         }
                         .date{
                             a{
                                 float:right;
+                                font-family: 'Teko';
+                                font-size: 18px;
+                                text-transform: uppercase;
+                                color: #3966BF;
                             }
-
+                            img{
+                                float:right;
+                                align-self: center;
+                            }
+                            span{
+                                color: #B8C1CC;
+                                font-family: 'Asap';
+                                font-size: 14px;
+                            }
                         }
                     }
                 }
