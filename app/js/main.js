@@ -185,9 +185,10 @@ document.addEventListener("DOMContentLoaded", function() {
 function webdoor_config(){
     $('.webdoor_principal figure').hide();
 
+    var float_obj = $('.webdoor_principal figure').css('float');
     var img = "<img src='"+$('.webdoor_principal figure img').attr('src')+"'/>";
     var title = "<h2>"+$('.webdoor_principal figure figcaption strong').html()+"</h2>";
     var description = "<p>"+$('.webdoor_principal figure figcaption em').html()+"</p>";
     var filter = '<div class="filter_bg"></div>';
-    $('.webdoor_principal').append(img+filter+"<div class='wrapper'>"+"<div class='conntent_text'>"+title+description+"</div></div>");
+    $('.webdoor_principal').append(img+filter+"<div class='wrapper'>"+"<div class='content_text "+float_obj+"'>"+title+description+"</div></div>");
 }
