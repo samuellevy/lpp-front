@@ -13,31 +13,54 @@
                 padding: 50px 100px;
                 margin-top: 380px;
                 p{
-                    margin-bottom: 30px;
+                    margin: 12px 0 18px;
                     font-family: 'Asap';
                     font-size: 14px;
-                    color: #525B66;
+                    color: #707070;
+                }
+                h4{
+                    color: #62CFCF;
+                    font-family: 'Teko';
+                    font-size: 46px;
+                    font-weight: 100; 
+                }
+                span{
+                    margin: 18px 0 13px;
+                    font-family: 'Asap';
+                    font-size: 14px;
+                    color: #707070;
+                    margin-bottom: 13px;
+                    display: block;
+                }
+                ul{
+                    li{
+                        list-style-type: square;
+                        color: #62CFCF; 
+                        padding-top: 10px;
+                        margin-left: 45px;
+                        span{
+                            color: #707070;
+                            font-family: 'Asap';
+                            font-size: 14px;
+                            display: inline;
+                        }
+                    }
                 }
             }
             .box-form{
                 width: 550px;
                 box-shadow: -6px 8px 49px -13px rgba(0,0,0,0.55);
-                height: 550px;
+                height: 600px;
                 border-radius: 15px;
                 padding: 30px 50px;
-                margin-top: 300px;
+                margin-top: 350px;
                 background: #fff;
                 border-bottom-right-radius: 0px;
                 h4{
                     font-family: 'Teko';
                     font-size: 46px;
-                    color: #F47249;
+                    color: #62CFCF;
                     font-weight: 100;
-                    margin-bottom: 15px;
-                }
-                img {
-                    display: inline-block;
-                    margin-right: 10px;
                 }
                 span {
                     font-family: 'Teko';
@@ -45,10 +68,83 @@
                     color: #F47249;
                 }
                 p{
-                  font-family:'Asap';
-                  font-size: 14px;
-                  margin-bottom: 20px;
-                  color: #525B66;
+                    font-family:'Asap';
+                    font-size: 14px;
+                    margin-bottom: 20px;
+                    color: #525B66;
+                }
+                form {
+                    .form-pad {
+                        padding: 10px;
+                    }
+                    
+                    input {
+                        width: 100%;
+                        height: 40px;
+                        padding: 5px 10px;
+                        background-color: #EDF3F7;
+                        border-radius: 5px;
+                        border: none;
+                    }
+                    
+                    select {
+                        width: 100%;
+                        padding: 5px 10px;
+                        background-color: #EDF3F7;
+                        border-radius: 5px;
+                        border: none;
+                        height: 40px;
+                    }
+                    
+                    textarea {
+                        width: 100%;
+                        resize: none;
+                        height: 140px;
+                        padding: 15px 20px;
+                        background-color: #EDF3F7;
+                        border-radius: 5px;
+                        border: none;
+                    }
+                    
+                    img {
+                        margin: -25px 0 0 135px;
+                        width: 20px;
+                    }
+                    
+                    .email {
+                    }
+                    
+                    .anexo {
+                        width: 100%;
+                        padding: 5px 10px;
+                        background-color: #EDF3F7;
+                        border-radius: 5px;
+                        border: none;
+                        color: #62CFCF;
+                        font-family: Teko;
+                        font-size: 19px;
+                        position: relative;
+                        cursor: pointer;
+                        height: 40px;
+                    }
+                    
+                    .btn-send {
+                        background: #62CFCF;
+                        padding: 9px 35px 7px 35px;
+                        font-family: 'Teko', sans-serif;
+                        font-size: 20px;
+                        width: 80%;
+                        font-weight: 500;
+                        letter-spacing: 0.9px;
+                        border-radius: 30px;
+                        border: 0;
+                        color: #fff;
+                        cursor: pointer;
+                        margin: 0 0 0 45px;
+                    }
+                    .name{
+                        margin-bottom: 16px;
+                    }
                 }
             }
         }
