@@ -21,15 +21,20 @@
     }
     .wrapper{
         position: relative;
-        .conntent_text{
+        .conntent_text, .content_text{
             width: 370px;
             padding: 40px;
             background: #fff;
             position: absolute;
-            right: 0;
             top: 200px;
             border-radius: 10px;
             border-bottom-right-radius: 0px;
+            &.left{
+                left: 0;
+            }
+            &.right{
+                right: 0;
+            }
             h2{
                 color: #3966BF;
                 font-size: 46px;
