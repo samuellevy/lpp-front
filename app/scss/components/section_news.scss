@@ -5,13 +5,13 @@
   h1 {
     font-weight: normal;
     text-align: center;
-}
+  }
   .box {
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
     padding-bottom: 50px;
-
+    
     .item {
       max-width: 308px;
       width: 100%;
@@ -23,8 +23,8 @@
           border-bottom-right-radius: 0px;
           border-bottom-left-radius: 0px;
           background-color: #FFF;
+        }
       }
-    }
       .content {
         background: #fff;
         padding: 0 27px;
@@ -32,12 +32,12 @@
         border-bottom-left-radius: 10px;
         h3, p {
           padding: 10px 0;
-      }
+        }
         span {
           font-family: 'Teko';
           font-size: 18px;
           cursor: pointer;
-      }
+        }
         .square_content {
           display: flex;
           padding-bottom: 15px;
@@ -45,16 +45,18 @@
             font-family: 'Asap';
             font-size: 10px;
             cursor: text;
-        }
+          }
           .square {
             width: 10px;
             height: 10px;
             margin-right: 10px;
+          }
         }
+        
       }
-
     }
   }
+  @include break-max (1024px){
+    display: none;
 }
-
 }
