@@ -185,7 +185,7 @@ document.addEventListener("DOMContentLoaded", function() {
 function webdoor_config(){
     $('.webdoor_principal figure').hide();
 
-    var img = $('.webdoor_principal figure img').attr('src');
+    var img = "<img src='"+$('.webdoor_principal figure img').attr('src')+"'/>";
     var title = "<h2>"+$('.webdoor_principal figure figcaption strong').html()+"</h2>";
     var description = "<p>"+$('.webdoor_principal figure figcaption em').html()+"</p>";
     var filter = '<div class="filter_bg"></div>';
