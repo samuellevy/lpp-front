@@ -30,6 +30,9 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    webdoor_config();
+    
+
     $('.webdoor .media').slick({
         appendArrows: $('.webdoor .arrows_wrap'),
         fade: true
@@ -177,3 +180,14 @@ document.addEventListener("DOMContentLoaded", function() {
             arrows: true
         });
 });
+
+
+function webdoor_config(){
+    $('.webdoor_principal figure').hide();
+
+    var img = $('.webdoor_principal figure img').attr('src');
+    var title = "<h2>"+$('.webdoor_principal figure figcaption strong').html()+"</h2>";
+    var description = "<p>"+$('.webdoor_principal figure figcaption em').html()+"</p>";
+    var filter = '<div class="filter_bg"></div>';
+    $('.webdoor_principal').append(img+filter+"<div class='wrapper'>"+"<div class='conntent_text'>"+title+description+"</div></div>");
+}
