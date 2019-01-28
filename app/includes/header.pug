@@ -1,19 +1,23 @@
 header#header
-        .wrapper
-            .menu
+    .wrapper
+        nav(role="navigation")
+            #menuToggle
+                input(type="checkbox")
+                span
+                span
+                span
                 .logo
                     img(src="images/logo.png" alt="")
-                nav.list_menu
-                    ul
-                        li
-                            a(href="#") QUEM SOMOS
-                        li
-                            a(href="#") O QUE FAZEMOS
-                        li
-                            a(href="#") NOSSAS CONQUISTAS
-                        li
-                            a(href="#") FALE CONOSCO
-                        li
-                            a(href="#") COMO COLABORAR
-                        li
-                            a(href="") APOIE NOSSA LUTA
+                ul#menu
+                    li
+                        a(href="#") QUEM SOMOS
+                    li
+                        a(href="#") O QUE FAZEMOS
+                    li
+                        a(href="#") NOSSAS CONQUISTAS
+                    li
+                        a(href="#") FALE CONOSCO
+                    li
+                        a(href="#") COMO COLABORAR
+                    li
+                        a(href="") APOIE NOSSA LUTA

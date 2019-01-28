@@ -11,15 +11,17 @@
         background: linear-gradient(to bottom, rgba(255,255,255,1) 1%,rgba(255,255,255,1) 70%,rgba(255,255,255,1) 70%,transparent 30%,transparent 100%);
         transition: all 0.7s linear;
         .wrapper{
-            .menu{
-                .logo{
-                    img{
-                        width: 100px;
-                        transition: all 0.7s linear;
+            nav{
+                #menuToggle{
+                    .logo{
+                        img{
+                            width: 100px;
+                            transition: all 0.7s linear;
+                        }
                     }
-                }
-                .list_menu{
-                    ul{
+                    #menu{
+                        margin-top: -23px;
+                        transition: all 0.7s linear;
                         li{
                             a{
                                 color: #828C99;
@@ -35,20 +37,85 @@
         }
     }
     .wrapper{
-        .menu{
-            display: flex;
-            justify-content: space-between;
-            img{
-                width: 149px;
-                transition: all 0.7s linear;
-            }
-            .list_menu{
-                width: 65%;
-                padding: 20px 0 0 0;
-                ul{
+        nav{
+            #menuToggle{
+                display: flex;
+                justify-content: space-between;
+                top: 50px;
+                left: 50px;
+                z-index: 1;
+                -webkit-user-select: none;
+                user-select: none;
+                @include break-max(1025px) {
+                    display: block;
+                    position: relative;
+                }
+                input{
+                    display: none;
+                    @include break-max(1025px) {
+                        display: block;
+                        width: 40px;
+                        height: 32px;
+                        position: absolute;
+                        top: -7px;
+                        left: -5px;
+                        cursor: pointer;
+                        opacity: 0; /* hide this */
+                        z-index: 2; /* and place it over the hamburger */
+                        -webkit-touch-callout: none;
+                        &:checked ˜ span{
+                            opacity: 1;
+                            transform: rotate(45deg) translate(-2px, -1px);
+                            background: #232323;
+                            &:nth-last-child(3){
+                                opacity: 0;
+                                transform: rotate(0deg) scale(0.2, 0.2);
+                            }
+                            &::nth-last-child(2){
+                                transform: rotate(-45deg) translate(0, -1px);
+                            }
+                        }
+                        &:checked ˜ ul{
+                            transform: none;
+                        }
+                    }
+                }
+                span{
+                    display: none;
+                    @include break-max(1025px) {
+                        display: block;
+                        width: 33px;
+                        height: 4px;
+                        margin-bottom: 5px;
+                        position: relative;
+                        background: #cdcdcd;
+                        border-radius: 3px;
+                        z-index: 1;
+                        transform-origin: 4px 0px;
+                        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+                        background: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+                        opacity: 0.55s ease;
+                        &:first-child{
+                            transform-origin: 0% 0%;
+                        }
+                        &:nth-last-child(2){
+                            transform-origin: 0% 100%;
+                        }
+
+                    }
+                }
+                .logo{
+                    img{
+                        width: 149px;
+                        transition: all 0.7s linear;
+                    }
+                }
+                #menu{
+                    width: 65%;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    transition: all 0.7s linear;
                     li{
                         a{
                             font-family: 'Teko', sans-serif;
@@ -70,8 +137,21 @@
                             }
                         }
                     }
+                    @include break-max(1025px) {
+                        position: absolute;
+                        width: 300px;
+                        padding: 50px;
+                        padding-top: 125px;
+                        background: #ededed;
+                        list-style-type: none;
+                        -webkit-font-smoothing: antialiased;
+                        transform-origin: 0% 0%;
+                        transform: translate(-100%, 0);
+                        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+                    }
                 }
             }
         }
+            
     }
 }
