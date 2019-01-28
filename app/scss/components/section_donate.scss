@@ -1,0 +1,135 @@
+.section_donate{
+    background: #FFF;
+    padding: 50px 0;
+    .wrapper{
+        .box{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            .item{
+                width: 50%;
+                h3{
+                    font-family: 'Teko';
+                    font-size: 46px;
+                    color: #F95B53;
+                    font-weight: 100;
+                }
+                .media{
+                    img{
+                    }
+                    
+                }
+                .text{
+                    padding: 0 30px;
+                    p{
+                        font-size: 14px;
+                        font-weight: normal;
+                        color: #525B66;
+                        font-family: 'Asap';
+                        margin-top: 25px;
+                    }
+                }
+            }
+        }
+        .box-donate{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            padding: 60px;
+            &.inverso{
+                display: flex;
+                flex-direction: row-reverse;
+                .item{
+                    margin: 110px 200px 0 0;
+                }
+                .item-2{
+                    background:#1CA8E0;
+                    box-shadow: 0px -1px 15px 0px rgba(0,0,0,0.3);
+                    button{
+                        background: #1CA8E0;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+            .item{
+                width: 41.5%;
+                .text{
+                    h4{
+                        font-family: 'Teko';
+                        font-size: 46px;
+                        color: #3966BF;
+                        font-weight: 300;
+                        line-height: 45px;
+                        margin-bottom: 6px;                       
+                    }
+                    ul{
+                        font-family: 'Asap';
+                        font-size: 14px;
+                        font-weight: 100;
+                        li{
+                            list-style-type: square;
+                            color: #3966BF;
+                            margin-top: 10px;
+                        }
+                    }
+                    span{
+                        margin-bottom: 15px;
+                        font-family: 'Asap';
+                        font-size: 14px;
+                        color: #525B66;
+                    }
+                    p{
+                        font-family: 'Asap';
+                        font-size: 14px;
+                        color: #525B66;
+                    }
+                }
+            }
+            .item-2{
+                background: #3966BF;
+                width: 390px;
+                height: 422px;
+                display: flex;
+                flex-direction: column;
+                border-radius: 15px;
+                border-bottom-right-radius: 0;
+                box-shadow: 0px -1px 15px 0px rgba(0,0,0,0.3);
+                .text{
+                    h3{
+                        color: #fff;
+                        font-family:'Teko';
+                        font-size: 46px;
+                        font-weight: 100;
+                        padding: 45px 109px 0 39px; 
+                    }
+                    p{
+                        color: #fff;
+                        font-family: 'Asap';
+                        font-size: 14px;
+                        padding: 0 40px;
+                    }
+                    button{
+                        margin: 24px 40px;
+                        border: 1px solid #fff;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+        button{
+            width: 308px;
+            background: #3966BF;
+            color: #fff;
+            padding: 10px 0;
+            border-radius: 30px;
+            border: 0;
+            font-family: 'Teko';
+            font-size: 20px;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+}
