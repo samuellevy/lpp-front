@@ -193,7 +193,11 @@ function webdoor_config(){
         var img = "<img src='"+$('.webdoor_principal[data-id='+data_id+'] figure img').attr('src')+"'/>";
         var title = "<h2>"+$('.webdoor_principal[data-id='+data_id+'] figure figcaption strong').html()+"</h2>";
         var description = "<p>"+$('.webdoor_principal[data-id='+data_id+'] figure figcaption em').html()+"</p>";
-        var button = $('.webdoor_principal[data-id='+data_id+'] figure figcaption a')[0].outerHTML;
+        try {
+            var button = $('.webdoor_principal[data-id='+data_id+'] figure figcaption a')[0].outerHTML;
+        }catch(err){
+            
+        }
         var filter = '<div class="filter_bg"></div>';
         $('.webdoor_principal[data-id='+data_id+']').append(img+filter+"<div class='wrapper'>"+"<div class='content_text "+float_obj+"'>"+title+description+button+"</div></div>");
     });
