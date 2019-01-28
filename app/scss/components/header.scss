@@ -36,6 +36,9 @@
             }
         }
     }
+    @include break-max(1025px){
+        display: none !important;
+    }
     .wrapper{
         nav{
             #menuToggle{
@@ -85,7 +88,7 @@
         @include break-max(1025px){
             #menuToggle
             {
-            display: block !important;
+            display: none !important;
             position: relative;
             top: 0;
             left: 0;

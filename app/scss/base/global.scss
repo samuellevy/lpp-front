@@ -24,6 +24,9 @@ body {
     &.medium{
         max-width: 1180px;
     }
+    @include break-max(768px){
+        padding: 0 15px;
+    }
 }
 .watching {
     transition: all 0.7s;

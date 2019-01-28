@@ -179,6 +179,13 @@ document.addEventListener("DOMContentLoaded", function() {
             slidesToScroll: 1,
             arrows: true
         });
+        if (window.matchMedia("(max-width: 768px)").matches) {
+            /* the viewport is less than 768 pixels wide */
+            $('.section_lifes .wrapper .box').slick({
+                arrows: false,
+                dots: true
+            });
+          } 
 });
 
 
@@ -191,3 +198,6 @@ function webdoor_config(){
     var filter = '<div class="filter_bg"></div>';
     $('.webdoor_principal').append(img+filter+"<div class='wrapper'>"+"<div class='conntent_text'>"+title+description+"</div></div>");
 }
+
+
+

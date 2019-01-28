@@ -1,9 +1,14 @@
 .numbers_home{
     .box{
         display: flex;
+        @include break-max(768px){
+            flex-wrap: wrap;
+        }
         .destaque{
             width: 40%;
-            height: 684px;
+            @include break-max(768px){
+                width: 100%;
+            }
             .first{
                 width: 100%;
                 height: 100%;
@@ -13,6 +18,9 @@
                 flex-wrap: wrap;
                 justify-content: center;
                 align-items: center;
+                @include break-max(768px){
+                    padding: 10px;
+                }
                 .btn_numbers{
                     display: block;
                     font-family: $teko;
@@ -30,6 +38,10 @@
             width: 60%;
             display: flex;
             flex-wrap: wrap;
+            @include break-max(768px){
+                order: -1;
+                width: 100%;
+            }
             .second{
                 width: 50%;
                 height: 50%;
@@ -39,6 +51,9 @@
                 flex-wrap: wrap;
                 justify-content: center;
                 align-items: center;
+                @include break-max(768px){
+                    padding: 10px;
+                }
             }
             .third{
                 width: 50%;
@@ -49,6 +64,9 @@
                 flex-wrap: wrap;
                 justify-content: center;
                 align-items: center;
+                @include break-max(768px){
+                    padding: 10px;
+                }
             }
             .quarter{
                 width: 50%;
@@ -59,6 +77,9 @@
                 flex-wrap: wrap;
                 justify-content: center;
                 align-items: center;
+                @include break-max(768px){
+                    padding: 10px;
+                }
             }
             .fifth{
                 width: 50%;
@@ -69,6 +90,9 @@
                 flex-wrap: wrap;
                 justify-content: center;
                 align-items: center;
+                @include break-max(768px){
+                    padding: 10px;
+                }
             }
         }
     }
