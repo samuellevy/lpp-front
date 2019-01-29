@@ -1,8 +1,14 @@
 .gallery{
     .box{
         display: flex;
+        @include break-max(768px){
+            flex-wrap: wrap;
+        }
         .media{
             width: 37.6%;
+            @include break-max(768px){
+                width: 100%;
+            }
             img{
                 width: 100%;
             }
@@ -11,8 +17,14 @@
             width: 75%;
             display: flex;
             flex-wrap: wrap;
+            @include break-max(768px){
+                width: 100%;
+            }
             .item{
                 width: 25%;
+                @include break-max(768px){
+                    width: 33.3%;
+                }
                 img{
                     width: 100%;
                 }

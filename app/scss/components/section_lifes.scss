@@ -108,6 +108,7 @@
             box-shadow: $shadow;
             @include break-max(768px){
                 margin: 20px auto 50px;
+                width: 75%;
             }
         }
     }
