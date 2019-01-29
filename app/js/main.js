@@ -189,6 +189,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 arrows: false,
                 dots: true
             });
+            $('.section_news .wrapper .box').slick({
+                arrows: false,
+                dots: true
+            });
+            
           } 
 });
 

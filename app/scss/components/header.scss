@@ -6,6 +6,9 @@
     z-index: 2;
     background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 00%,transparent 00%,transparent 0%);
     transition: all 0.5s linear;
+    @include break-max(1025px){
+        padding: 0;
+    }
     
     &.active, &.always_active{
         background: linear-gradient(to bottom, rgba(255,255,255,1) 1%,rgba(255,255,255,1) 70%,rgba(255,255,255,1) 70%,transparent 30%,transparent 100%);
@@ -93,7 +96,7 @@
                         }
                         &:last-child{
                             @include break-max(1025px){
-                                margin-top: 30px;
+                                margin-top: 20px;
                                 border-bottom: none;
                             }
                             li{
@@ -101,13 +104,18 @@
                                 padding: 8px 35px 5px 35px;
                                 border-radius: 36px;
                                 color: #fff;
+                                @include break-max(1025px){
+                                    border-radius: 8px;
+                                    width: 60%;
+                                    text-align: center;
+                                    margin-bottom: 20px;
+                                }
                             }
                         }
                         @include break-max(1025px){
                             padding: 10px 30px;
                             border-bottom: 1px solid #3966BF;
                             display: block;
-                            order: -1;
                         }
                     }
                 }
@@ -181,28 +189,30 @@
             {
             transform-origin: 0% 100%;
             }
-        
             #menuToggle input:checked ~ span
             {
             opacity: 1;
             transform: rotate(45deg) translate(-2px, -1px);
-            background: #232323;
+            -webkit-transform: rotate(45deg) translate(-2px, -1px);
+            background: #fff;
+            }
+
+            #menuToggle input:checked ~ span:nth-last-child(2)
+            {
+                opacity: 0;
+            }
+
+            #menuToggle input:checked ~ span:nth-last-child(3)
+            {
+            opacity: 0;
+            transform: rotate(0deg) scale(0.2, 0.2);
             }
             #menuToggle input:checked ~ .logo
             {
                 opacity: 0;
                 transition: all 0.5s linear;
             }
-            #menuToggle input:checked ~ span:nth-last-child(3)
-            {
-            opacity: 0;
-            transform: rotate(0deg) scale(0.2, 0.2);
-            }
         
-            #menuToggle input:checked ~ span:nth-last-child(2)
-            {
-            transform: rotate(-45deg) translate(0, -1px);
-            }
             #menu
             {
                 position: absolute;
