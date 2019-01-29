@@ -4,11 +4,17 @@
     position: relative;
     height: 768px;
     z-index: 1;
+    @include break-max(768px){
+        height: 651px;
+    }
     img{
         object-fit: cover;
         width: 100%;
         height: 768px;
         position: absolute;
+        @include break-max(768px){
+            height: 336px;
+        }
     }
     .filter_bg{
         display: block;
@@ -18,6 +24,9 @@
         height: 768px;
         opacity: 0.3;
         top: 0;
+        @include break-max(768px){
+            height: 336px;
+        }
     }
     .wrapper{
         position: relative;
@@ -40,6 +49,9 @@
                 font-size: 46px;
                 font-family: 'Teko', sans-serif;
                 font-weight: normal;
+                @include break-max(768px){
+                    font-size: 34px;
+                }
             }
             p{
                 color: #525B66;
@@ -58,6 +70,14 @@
                 border-radius: 30px;
                 text-transform: uppercase;
                 margin-top: 10px;
+                @include break-max(768px){
+                   font-size: 18px;
+                }
+            }
+            @include break-max(768px){
+                width: 100%;
+                border-radius: 0px;
+                top: 337px;
             }
         }
     }

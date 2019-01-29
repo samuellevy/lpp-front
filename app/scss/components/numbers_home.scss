@@ -31,6 +31,10 @@
                     border-radius: 30px;
                     text-transform: uppercase;
                     margin-top: 20px;
+                    @include break-max(768px){
+                        font-size: 18px;
+                        letter-spacing: 1px;
+                    }
                 }
             }
         }

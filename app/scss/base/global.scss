@@ -25,7 +25,7 @@ body {
         max-width: 1180px;
     }
     @include break-max(768px){
-        padding: 0 15px;
+        padding: 0;
     }
 }
 .watching {
