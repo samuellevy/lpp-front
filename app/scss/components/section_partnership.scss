@@ -8,6 +8,9 @@
             justify-content: space-between;
             text-align: justify;
             margin-bottom: 60px;
+            @include break-max(1024px){
+                display: block;
+            }
             .box-content{
                 width: 60%;
                 padding: 50px 100px;
