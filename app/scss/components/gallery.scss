@@ -24,6 +24,12 @@
                 width: 25%;
                 @include break-max(768px){
                     width: 33.3%;
+                    &:nth-child(7){
+                        display: none;
+                    }
+                    &:nth-child(8){
+                        display: none;
+                    }
                 }
                 img{
                     width: 100%;

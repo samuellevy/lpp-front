@@ -215,10 +215,16 @@ p{
             display: flex;
             justify-content: space-between;
             padding: 0;
+            @include break-max(768px){
+                flex-wrap: wrap;
+            }
             .item_list{
                 width: 35%;
                 display: flex;
                 justify-content: flex-start;
+                @include break-max(768px){
+                    display: none;
+                }
 
                 .item{
                     max-width: 150px;
@@ -240,17 +246,33 @@ p{
             }
             .media{
                 width: 30%;
+                @include break-max(768px){
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 30px;
+                }
                 .logo{
                     width: 100%;
                     margin: 10px auto;
+                    @include break-max(768px){
+                        width: 50%;
+                    }
                     img{
                         width: 70px;
                         height: auto;
                         margin-left: 40px;
+                        @include break-max(768px){
+                            margin-left: 0;
+                            margin: 0 auto;
+                        }
                     }
                 }
                 .social{
                     margin-top: 30px;
+                    @include break-max(768px){
+                        width: 50%;
+                    }
                     img{
                         float: left;
                         margin-left: 10px;
@@ -259,6 +281,12 @@ p{
             }
             .box{
                 width: 30%;
+                @include break-max(768px){
+                    width: 100%;
+                    order: -1;
+                    display: flex;
+                    justify-content: center;
+                }
                 .div-strong-dark-blue{
                     background-color: #11254D;
                     max-width: 300px;
@@ -269,6 +297,9 @@ p{
                     display: flex;
                     justify-content: center;
                     flex-wrap: wrap;
+                    @include break-max(768px){
+                        float: inherit;
+                    }
                     p{
                         font-size: 14px;
                         color: #E6ECF2;

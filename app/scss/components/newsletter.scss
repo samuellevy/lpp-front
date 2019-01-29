@@ -9,6 +9,9 @@
             justify-content: space-between;
             align-items: center;
             flex-direction: row;
+            @include break-max(768px){
+                flex-wrap: wrap;
+            }
             .news-title{
                 padding: 20px 0 0 20px;
                 margin-bottom: 30px;
@@ -17,12 +20,19 @@
                     align-self: center;
                     float: left;
                     margin-top: 15px;
+                    @include break-max(768px){
+                        float: inherit;
+                        margin: 15px auto 5px;
+                    }
                 }
                 h4{
                     font-family: 'Teko';
                     font-size: 36px;
                     color: #F95B53;
                     font-weight: 500;
+                    @include break-max(768px){
+                        text-align: center;
+                    }
                 }
                 span{
                     font-family: 'Asap';
@@ -30,6 +40,11 @@
                     color: #828C99;
                     display: block;
                     margin-left: 63px;
+                    @include break-max(768px){
+                        margin: 0;
+                        padding: 0 70px;
+                        text-align: center;
+                    }
                 }
             }
             .newsletter-input{
@@ -39,16 +54,31 @@
                 align-items: center;
                 justify-content: center;
                 margin-top: 20px;
+                @include break-max(768px){
+                    width: 100%;
+                }
                 form{ 
+                    @include break-max(768px){
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                    }
                     input{
                         font-family: 'Asap';
                         font-size: 14px;
                         color: #828C99;
                         background: #fff;
+                        @include break-max(768px){
+                            margin-bottom: 20px;
+                        }
+                        
                     }
                     button{
                         font-family: 'Teko';
                         font-size: 20px;
+                        @include break-max(768px){
+                            margin-bottom: 30px;
+                        }
                     }
                     .e-mail{
                         width: 300px;
