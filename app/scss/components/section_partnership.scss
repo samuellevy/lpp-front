@@ -2,6 +2,9 @@
     background: url(../images/form-lpp.png) no-repeat top center;
     width: 100%;
     position: relative;
+    @include break-max(1024px){
+        padding-top: 400px;
+    }
     .wrapper{
         .box-container{
             display: flex;
@@ -15,6 +18,11 @@
                 width: 60%;
                 padding: 50px 100px;
                 margin-top: 380px;
+                @include break-max(1024px){
+                    margin: 0;
+                    padding: 0 30px;
+                    width: 100%;
+                }
                 p{
                     margin: 12px 0 18px;
                     font-family: 'Asap';
@@ -41,6 +49,9 @@
                         color: #62CFCF; 
                         padding-top: 10px;
                         margin-left: 45px;
+                        @include break-max(1024px){
+                            margin-left: 25px;
+                        }
                         span{
                             color: #707070;
                             font-family: 'Asap';
@@ -59,11 +70,19 @@
                 margin-top: 350px;
                 background: #fff;
                 border-bottom-right-radius: 0px;
+                @include break-max(1024px){
+                    width: 100%;
+                    margin-top: 50px; 
+                    box-shadow: none;
+                }
                 h4{
                     font-family: 'Teko';
                     font-size: 46px;
                     color: #62CFCF;
                     font-weight: 100;
+                    @include break-max(1024px){
+                        font-size: 34px;
+                    }
                 }
                 span {
                     font-family: 'Teko';
@@ -112,6 +131,9 @@
                     img {
                         margin: -25px 0 0 135px;
                         width: 20px;
+                        @include break-max(1024px){
+                            margin: -25px 0 0 55px;
+                        }
                     }
                     
                     .email {
@@ -144,6 +166,11 @@
                         color: #fff;
                         cursor: pointer;
                         margin: 0 0 0 45px;
+                        @include break-max(1024px){
+                            display: block;
+                            margin: 0 auto;
+                            width: 100%;
+                        }
                     }
                     .name{
                         margin-bottom: 16px;
