@@ -137,16 +137,17 @@ document.addEventListener("DOMContentLoaded", function() {
             arrows: false
         });
         $(document).scroll(function() {
-
-            var scrollTop = $(window).scrollTop();
-                  if (scrollTop >= 100 ) {
-                      $('#header').addClass("active");
-                      console.log('entrou');
-                  }
-                  else{
-                      $('#header').removeClass("active");
-                      console.log('saiu');
-                  }
+            if (window.matchMedia("(min-width: 1026px)").matches) {
+                var scrollTop = $(window).scrollTop();
+                if (scrollTop >= 100 ) {
+                    $('#header').addClass("active");
+                    console.log('entrou');
+                }
+                else{
+                    $('#header').removeClass("active");
+                    console.log('saiu');
+                }
+            }
         });
 
         //** */
