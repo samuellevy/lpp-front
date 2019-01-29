@@ -45,7 +45,7 @@
                 display: flex;
                 justify-content: space-between;
                 @include break-max(1025px){
-                    padding: 10px 15px;
+                    padding: 20px 15px;
                 }
                 .logo{
                     @include break-max(1025px){
@@ -54,6 +54,7 @@
                         position: absolute;
                         top: 0;
                         left: 75px;
+                        padding: 10px 0;
                     }
                     img{
                         width: 149px;
@@ -83,6 +84,10 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    @include break-max(1025px){
+                        padding: 60px 0 0 0;
+                        height: 768px;
+                    }
                     a{
                         li{
                             font-family: 'Teko', sans-serif;
@@ -92,12 +97,14 @@
                             transition: all 0.5s linear;
                             &.active-scroll{
                                 color: #828C99;
+                                @include break-max(1025px){
+                                    color: #fff;
+                                }
                             }
                         }
-                        &:last-child{
+                        &.btn_desktop{
                             @include break-max(1025px){
-                                margin-top: 20px;
-                                border-bottom: none;
+                                margin-top: 0px;
                             }
                             li{
                                 background: #1CA8E0;
@@ -105,10 +112,9 @@
                                 border-radius: 36px;
                                 color: #fff;
                                 @include break-max(1025px){
-                                    border-radius: 8px;
-                                    width: 60%;
-                                    text-align: center;
-                                    margin-bottom: 20px;
+                                    background: none;
+                                    padding: 0;
+                                    margin-top: 0;
                                 }
                             }
                         }
@@ -116,6 +122,21 @@
                             padding: 10px 30px;
                             border-bottom: 1px solid #3966BF;
                             display: block;
+                        }
+                        &.mobile{
+                            display: none;
+                            &.btn{
+                                border-radius: 8px;
+                                width: 60%;
+                                text-align: center;
+                                margin-bottom: 20px;
+                                background: #1CA8E0;
+                                margin-left: 25px;
+                                margin-top: 15px;
+                            }
+                            @include break-max(1025px){
+                                display: block;
+                            }
                         }
                     }
                 }
@@ -193,19 +214,18 @@
             {
             opacity: 1;
             transform: rotate(45deg) translate(-2px, -1px);
-            -webkit-transform: rotate(45deg) translate(-2px, -1px);
             background: #fff;
-            }
-
-            #menuToggle input:checked ~ span:nth-last-child(2)
-            {
-                opacity: 0;
             }
 
             #menuToggle input:checked ~ span:nth-last-child(3)
             {
             opacity: 0;
             transform: rotate(0deg) scale(0.2, 0.2);
+            }
+
+            #menuToggle input:checked ~ span:nth-last-child(2)
+            {
+            transform: rotate(-45deg) translate(0, -1px);
             }
             #menuToggle input:checked ~ .logo
             {
