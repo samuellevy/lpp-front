@@ -33,6 +33,10 @@
                         font-size: 46px;
                         color: #F95B53;
                         font-weight: 100;
+                        @include break-max(1024px){
+                            line-height: 40px;
+                            padding-top: 20px;
+                        }
                     }
                 }
             }
@@ -54,6 +58,16 @@
                     button{
                         background: #1CA8E0;
                         text-transform: uppercase;
+                    }
+                }
+                @include break-max(1024px){
+                    display: block;
+                    .item{
+                        margin: 0;
+                        padding-bottom: 20px;
+                    }
+                    .item-2{
+                        box-shadow: -1px 7px 13px 0px rgba(0,0,0,0.07);;
                     }
                 }
             }
@@ -99,14 +113,20 @@
                     @include break-max(1024px){
                         padding: 10px;
                         h4{
-                            color: #62CFCF;
                             font-size: 34px;
+                            margin: 0;
+                            line-height: 30px;
                         }
                         ul{
                             margin-left: 15px;
+                            padding-bottom: 30px;
                             li{
                                 color: #62CFCF;
                             }
+                        }
+                        span{
+                            display: block;
+                            margin: 20px 0;
                         }
                     }
                 }
@@ -123,6 +143,7 @@
                 @include break-max(1024px){
                     width: 100%;
                     height: auto;
+                    box-shadow: -1px 7px 13px 0px rgba(0,0,0,0.07);
                 }
                 .text{
                     h3{
