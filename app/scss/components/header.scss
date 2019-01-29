@@ -36,18 +36,42 @@
             }
         }
     }
-    @include break-max(1025px){
-        display: none !important;
-    }
     .wrapper{
         nav{
             #menuToggle{
                 display: flex;
                 justify-content: space-between;
+                @include break-max(1025px){
+                    padding: 10px 15px;
+                }
                 .logo{
+                    @include break-max(1025px){
+                        float: left;
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        left: 75px;
+                    }
                     img{
                         width: 149px;
                         transition: all 0.5s linear;
+                        @include break-max(1025px){
+                            width: 48px;
+                            float: left;
+                        }
+                    }
+                    p{
+                        display: none;
+                        @include break-max(1025px){
+                            display: block;
+                            float: left;
+                            margin-left: 15px;
+                            font-size: 20px;
+                            color: #1CA8E0;
+                            margin-top: 2px;
+                            border-left: 2px solid rgba(255,255,255,0.7);
+                            padding: 10px;
+                        }
                     }
                 }
                 #menu{
@@ -68,12 +92,22 @@
                             }
                         }
                         &:last-child{
+                            @include break-max(1025px){
+                                margin-top: 30px;
+                                border-bottom: none;
+                            }
                             li{
                                 background: #1CA8E0;
                                 padding: 8px 35px 5px 35px;
                                 border-radius: 36px;
                                 color: #fff;
                             }
+                        }
+                        @include break-max(1025px){
+                            padding: 10px 30px;
+                            border-bottom: 1px solid #3966BF;
+                            display: block;
+                            order: -1;
                         }
                     }
                 }
@@ -88,13 +122,13 @@
         @include break-max(1025px){
             #menuToggle
             {
-            display: none !important;
-            position: relative;
-            top: 0;
-            left: 0;
-            z-index: 1;
-            -webkit-user-select: none;
-            user-select: none;
+                display: block !important;
+                position: relative;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                -webkit-user-select: none;
+                user-select: none;
             }
             #menuToggle .logo{
                 opacity: 1;
