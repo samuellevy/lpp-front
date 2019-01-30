@@ -207,6 +207,7 @@ function webdoor_config(){
         try {
             var data_id = $(this).attr('data-id');
             var data_class = $(this).attr('data-class');
+            var data_size = $(this).attr('data-size');
 
             $('.webdoor_principal[data-id='+data_id+'] figure').hide();
             var float_obj = $('.webdoor_principal[data-id='+data_id+'] figure').css('float');
@@ -222,7 +223,7 @@ function webdoor_config(){
             }
        
             var filter = '<div class="filter_bg"></div>';
-            $('.webdoor_principal[data-id='+data_id+']').append(img+filter+"<div class='wrapper'>"+"<div class='content_text "+float_obj+"'>"+title+description+button+"</div></div>");
+            $('.webdoor_principal[data-id='+data_id+']').append(img+filter+"<div class='wrapper'>"+"<div class='content_text "+float_obj+" "+data_size+"'>"+title+description+button+"</div></div>");
         }catch(err){
                 
         }
