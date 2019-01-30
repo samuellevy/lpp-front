@@ -46,31 +46,6 @@
             width: 100%;
             justify-content: space-between;
             padding: 60px;           
-            &.inverso{
-                display: flex;
-                flex-direction: row-reverse;
-                .item{
-                    margin: 110px 200px 0 0;
-                }
-                .item-2{
-                    background:#1CA8E0;
-                    box-shadow: 0px -1px 15px 0px rgba(0,0,0,0.3);
-                    button{
-                        background: #1CA8E0;
-                        text-transform: uppercase;
-                    }
-                }
-                @include break-max(1024px){
-                    display: block;
-                    .item{
-                        margin: 0;
-                        padding-bottom: 20px;
-                    }
-                    .item-2{
-                        box-shadow: -1px 7px 13px 0px rgba(0,0,0,0.07);;
-                    }
-                }
-            }
             @include break-max(1024px){
                 display: block;
                 padding: 10px;
@@ -140,6 +115,7 @@
                 border-radius: 15px;
                 border-bottom-right-radius: 0;
                 box-shadow: 0px -1px 15px 0px rgba(0,0,0,0.3);
+                margin-top: 40px;
                 @include break-max(1024px){
                     width: 100%;
                     height: auto;
@@ -151,26 +127,71 @@
                         font-family:'Teko';
                         font-size: 46px;
                         font-weight: 100;
-                        padding: 45px 109px 0 39px;
+                        padding: 45px 109px 0 45px;
                         @include break-max(1024px){
-                            padding: 35px 0 0 38px;
+                            padding: 35px 0 0 30px;
                         } 
                     }
                     p{
                         color: #fff;
                         font-family: 'Asap';
                         font-size: 14px;
-                        padding: 0 40px;
+                        padding: 0 46px;
                     }
                     button{
-                        margin: 24px 40px;
-                        border: 1px solid #fff;
+                        margin: 35px 40px;
+                        border: 2px solid #fff;
                         text-transform: uppercase;
                         @include break-max(1024px){
                             margin: 24px 25px;
                         }
                     }
-
+                    
+                }
+            }
+            &.inverso{
+                display: flex;
+                flex-direction: row-reverse;
+                .item{
+                    margin: 140px 200px 0 0;
+                }
+                .item-2{
+                    background:#1CA8E0;
+                    height: 384px;
+                    box-shadow: 0px -1px 15px 0px rgba(0,0,0,0.3);
+                    @include break-max(1024px){
+                        height: 344px;
+                        .text{
+                            h3{
+                                padding: 35px 0 0 30px;
+                            }
+                            p{
+                                padding: 0 30px;
+                                margin: 5px 0 50px;
+                            }
+                            button{
+                                margin: -15px 25px;
+                            }
+                        }
+                    }
+                    button{
+                        background: #1CA8E0;
+                        text-transform: uppercase;
+                        padding: 10px 0 6px;
+                    }
+                    p{
+                        margin: 5px 0 50px;
+                    }
+                }
+                @include break-max(1024px){
+                    display: block;
+                    .item{
+                        margin: 0;
+                        padding-bottom: 20px;
+                    }
+                    .item-2{
+                        box-shadow: -1px 7px 13px 0px rgba(0,0,0,0.07);
+                    }
                 }
             }
             @include break-max(1024px){
@@ -181,7 +202,7 @@
             width: 308px;
             background: #3966BF;
             color: #fff;
-            padding: 10px 0;
+            padding: 10px 0 6px;;
             border-radius: 30px;
             border: 0;
             font-family: 'Teko';

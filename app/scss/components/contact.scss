@@ -11,6 +11,14 @@
         }
         p{
             color:#525B66;
+            position: relative; 
+            top: 15px; 
+            @include break-max(768px){
+                position: unset;
+                br{
+                    display: none;
+                }
+            }
         }
         .contato {
             width: 470px;
