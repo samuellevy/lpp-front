@@ -27,6 +27,30 @@ body {
     @include break-max(768px){
         padding: 0;
     }
+    h4{
+        font-family: $teko !important;
+        font-size: 48px !important;
+        font-weight: normal !important;
+        @include break-max(1025px){
+            font-size: 34px !important;
+        }
+    }
+    h3{
+        font-family: $teko !important;
+        font-size: 48px !important;
+        font-weight: normal !important;
+        @include break-max(1025px){
+            font-size: 34px !important;
+        }
+    }
+    h2{
+        font-family: $teko !important;
+        font-size: 48px !important;
+        font-weight: normal !important;
+        @include break-max(1025px){
+            font-size: 34px !important;
+        }
+    }
 }
 .watching {
     transition: all 0.7s;

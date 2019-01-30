@@ -5,12 +5,17 @@
             font-family: $teko;
             font-size: 46px;
             font-weight: normal;
+            padding: 0 30px;
         }
         p{
             color: #262C33;
             font-size: 14px;
             font-family: $asap;
             margin-bottom: 40px;
+            padding: 0 30px;
+            @include break-max(1025px){
+                padding: 20px  30px;
+            }
         }
     }
     .box{
@@ -65,6 +70,7 @@
                             font-size: 14px;
                             font-family: $asap;
                             line-height: 22px;
+                            padding: 0 !important;
                         }
                     }
                 }

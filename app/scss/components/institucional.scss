@@ -1,19 +1,31 @@
 .institucional{
-    padding: 80px 0;
+    padding: 50px 0;
     .wrapper{
         h4{
             color: #3966BF;
             font-family: $teko;
             font-size: 46px;
             font-weight: normal;
+            @include break-max(768px){
+                padding: 0 30px;
+            }
         }
         .box{
             display: flex;
             justify-content: space-between;
+            @include break-max(768px){
+                flex-wrap: wrap;
+            }
             .item{
                 width: 50%;
+                @include break-max(768px){
+                    width: 100%;
+                }
                 &:first-child{
                     width: 40%;
+                    @include break-max(768px){
+                        width: 100%;
+                    }
                 }
                 span{
                     display: block;
@@ -23,6 +35,10 @@
                     color: #828C99;
                     margin-bottom: 20px;
                     margin-top: 30px;
+                    @include break-max(768px){
+                        padding: 0 30px;
+                        margin-bottom: 0;
+                    }
                 }
                 .equipe_media{
                     display: flex;
@@ -31,6 +47,10 @@
                     .person{
                         width: 150px;
                         margin-left: 15px;
+                        @include break-max(768px){
+                            margin-left: 0;
+                            width: 100%;
+                        }
                         &:first-child{
                             margin-left: 0;
                         }
@@ -38,7 +58,9 @@
                             margin-left: 0;
                         }
                         img{
-
+                            @include break-max(768px){
+                                display: none;
+                            }
                         }
                         h5{
                             font-family: $asap;
@@ -46,6 +68,9 @@
                             font-weight: bold;
                             color: #525B66;
                             margin-top: 20px;
+                            @include break-max(768px){
+                                padding: 0 30px;
+                            }
                         }
                         span{
                             display: block;
@@ -60,6 +85,9 @@
                             font-size: 14px;
                             color: #828C99;
                             margin-top: 10px;
+                            @include break-max(768px){
+                                padding: 0 30px;
+                            }
                             &::before{
                                 content: ' ';
                                 display: block;
@@ -86,6 +114,9 @@
                             font-size: 18px;
                             font-weight: bold;
                             color: #525B66;
+                            @include break-max(768px){
+                                padding: 0 30px;
+                            }
                         }
                         span{
                             color: #828C99;

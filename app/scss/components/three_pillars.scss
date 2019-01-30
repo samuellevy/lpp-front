@@ -8,9 +8,17 @@
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
+                @include break-max(768px){
+                    width: 100%;
+                    padding-left: 0;
+                    padding: 0 30px;
+                }
                 &:first-child{
                     width: 60%;
                     padding: 0;
+                    @include break-max(768px){
+                        display: none;
+                    }
                 }
                 .media{
 

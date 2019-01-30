@@ -1,20 +1,40 @@
 .ambassadors{
     background: #F5F9FC;
     padding: 80px 0;
+    @include break-max(768px){
+        background: #fff;
+        padding: 60px 0 10px 0;
+    }
     .wrapper{
         .box{
             display: flex;
             justify-content: space-between;
+            @include break-max(768px){
+                flex-wrap: wrap;
+                position: relative;
+            }
             .media{
                 width: 40%;
+                @include break-max(768px){
+                    width: 100%;
+                    margin-bottom: 25px;
+                }
             }
             .content_text{
                 width: 55%;
+                @include break-max(768px){
+                    width: 100%;
+                    padding: 0 30px;
+                }
                 h4{
                     font-family: $teko;
                     font-size: 46px;
                     font-weight: normal;
                     color: #3966BF;
+                    @include break-max(768px){
+                        position: absolute;
+                        top: -70px;
+                    }
                 }
                 span{
                     font-family: $teko;
