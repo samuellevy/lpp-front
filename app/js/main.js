@@ -213,6 +213,8 @@ function webdoor_config(){
             var img = "<img src='"+$('.webdoor_principal[data-id='+data_id+'] figure img').attr('src')+"'/>";
             var title = "<h2 class='"+data_class+"'>"+$('.webdoor_principal[data-id='+data_id+'] figure figcaption strong').html()+"</h2>";
             var description = "<p>"+$('.webdoor_principal[data-id='+data_id+'] figure figcaption em').html()+"</p>";
+            
+            $('.webdoor_principal[data-id='+data_id+'] figure figcaption a').addClass(data_class);
             var button = $('.webdoor_principal[data-id='+data_id+'] figure figcaption a')[0].outerHTML;
        
             var filter = '<div class="filter_bg"></div>';
