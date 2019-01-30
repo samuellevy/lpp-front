@@ -102,6 +102,7 @@
                     }
                     .item_media{
                         width: 25%;
+                        margin-top: 10px;
                         @include break-max(1025px){
                             width: 49%;
                             margin-top: 7px;
