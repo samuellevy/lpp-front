@@ -204,13 +204,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function webdoor_config(){
     $(".webdoor_principal").each(function(index) {
-        var data_id = $(this).attr('data-id');
-
         try {
+            var data_id = $(this).attr('data-id');
+            var data_class = $(this).attr('data-class');
+
             $('.webdoor_principal[data-id='+data_id+'] figure').hide();
             var float_obj = $('.webdoor_principal[data-id='+data_id+'] figure').css('float');
             var img = "<img src='"+$('.webdoor_principal[data-id='+data_id+'] figure img').attr('src')+"'/>";
-            var title = "<h2>"+$('.webdoor_principal[data-id='+data_id+'] figure figcaption strong').html()+"</h2>";
+            var title = "<h2 class='"+data_class+"'>"+$('.webdoor_principal[data-id='+data_id+'] figure figcaption strong').html()+"</h2>";
             var description = "<p>"+$('.webdoor_principal[data-id='+data_id+'] figure figcaption em').html()+"</p>";
             var button = $('.webdoor_principal[data-id='+data_id+'] figure figcaption a')[0].outerHTML;
        
