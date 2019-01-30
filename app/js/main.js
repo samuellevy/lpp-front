@@ -216,6 +216,10 @@ function webdoor_config(){
             
             $('.webdoor_principal[data-id='+data_id+'] figure figcaption a').addClass(data_class);
             var button = $('.webdoor_principal[data-id='+data_id+'] figure figcaption a')[0].outerHTML;
+
+            if($('.webdoor_principal[data-id='+data_id+'] figure figcaption a').html()==""){
+                button="";
+            }
        
             var filter = '<div class="filter_bg"></div>';
             $('.webdoor_principal[data-id='+data_id+']').append(img+filter+"<div class='wrapper'>"+"<div class='content_text "+float_obj+"'>"+title+description+button+"</div></div>");
