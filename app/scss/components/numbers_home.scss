@@ -21,6 +21,20 @@
                 @include break-max(768px){
                     padding: 30px;
                 }
+                .media{
+                    .desktop{
+                        display: block;
+                        @include break-max(768px){
+                            display: none;
+                        }
+                    }
+                    .mobile{
+                        display: none;
+                        @include break-max(768px){
+                            display: block;
+                        }
+                    }
+                }
                 .btn_numbers{
                     display: block;
                     font-family: $teko;
@@ -32,7 +46,7 @@
                     text-transform: uppercase;
                     margin-top: 20px;
                     @include break-max(768px){
-                        font-size: 18px;
+                        font-size: 16px;
                         letter-spacing: 1px;
                     }
                 }
@@ -58,6 +72,20 @@
                 @include break-max(768px){
                     padding: 10px;
                 }
+                .media{
+                    .desktop{
+                        display: block;
+                        @include break-max(768px){
+                            display: none;
+                        }
+                    }
+                    .mobile{
+                        display: none;
+                        @include break-max(768px){
+                            display: block;
+                        }
+                    }
+                }
             }
             .third{
                 width: 50%;
@@ -70,6 +98,20 @@
                 align-items: center;
                 @include break-max(768px){
                     padding: 10px;
+                }
+                .media{
+                    .desktop{
+                        display: block;
+                        @include break-max(768px){
+                            display: none;
+                        }
+                    }
+                    .mobile{
+                        display: none;
+                        @include break-max(768px){
+                            display: block;
+                        }
+                    }
                 }
             }
             .quarter{
@@ -84,6 +126,20 @@
                 @include break-max(768px){
                     padding: 10px;
                 }
+                .media{
+                    .desktop{
+                        display: block;
+                        @include break-max(768px){
+                            display: none;
+                        }
+                    }
+                    .mobile{
+                        display: none;
+                        @include break-max(768px){
+                            display: block;
+                        }
+                    }
+                }
             }
             .fifth{
                 width: 50%;
@@ -96,6 +152,20 @@
                 align-items: center;
                 @include break-max(768px){
                     padding: 10px;
+                }
+                .media{
+                    .desktop{
+                        display: block;
+                        @include break-max(768px){
+                            display: none;
+                        }
+                    }
+                    .mobile{
+                        display: none;
+                        @include break-max(768px){
+                            display: block;
+                        }
+                    }
                 }
             }
         }

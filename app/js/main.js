@@ -194,8 +194,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 arrows: false,
                 dots: true
             });
-            
-          } 
+          }
+          $('.programs .wrapper .programs_slider').slick({
+            arrows: false,
+            dots: true
+        });
 });
 
 

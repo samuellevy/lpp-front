@@ -43,7 +43,7 @@
             height: 768px;
             img{
                 object-fit: cover;
-                width: 100%;
+                width: 100vw;
                 height: 768px;
                 position: absolute;
                 @include break-max(768px){
@@ -84,6 +84,7 @@
                         font-size: 46px;
                         font-family: 'Teko', sans-serif;
                         font-weight: normal;
+                        line-height: 48px;
                         @include break-max(768px){
                             font-size: 34px;
                             color: #fff;

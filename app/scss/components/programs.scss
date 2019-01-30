@@ -10,21 +10,68 @@
             box-shadow: 1px 13px 42px -13px rgba(0,0,0,0.75);
             margin-bottom: 30px;
             padding: 60px;
+            @include break-max(1024px){
+                padding: 0;
+                flex-wrap: wrap;
+            }
             &.inverter{
                 flex-direction: row-reverse;
             }
+            &.programs_slider{
+                display: flex;
+                flex-wrap: wrap;
+                .item_slider{
+                    display: flex !important;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    .item{
+                        width: 50%;
+                    }
+                }
+                .slick-dots{
+                    display: flex !important;
+                    justify-content: center;
+                    margin: 30px auto;
+                    position: absolute;
+                    bottom: -70px;
+                    left: 45%;
+                    li{
+                        font-size: 0;
+                        width: 45px;
+                        height: 6px;
+                        background: rgba(130,140,153,0.5);
+                        margin-left: 10px;
+                        &:first-child{
+                            margin-left: 0;
+                        }
+                        &.slick-active{
+                            background: rgba(130,140,153,1);
+                        }
+                        button{
+                            border: 0;
+                        }
+                    }
+                }
+            }
             .item{
                 width: 50%;
-                .media{
-
+                @include break-max(1024px){
+                    width: 100%;
                 }
                 .text{
                     padding: 0 100px;
+                    @include break-max(1024px){
+                        padding: 30px;
+                    }
                     h4{
                         font-family: $teko;
                         font-size: 46px;
                         color: #F95B53;
                         font-weight: normal;
+                        @include break-max(1024px){
+                            font-size: 34px;
+                        }
                     }
                     p{
                         font-size: 14px;
