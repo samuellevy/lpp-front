@@ -78,7 +78,7 @@
                 }
             }
             .content_partners{
-                padding: 45px 90px;
+                padding: 45px  0 45px 90px;
                 background: #F5F9FC;
                 @include break-max(1025px){
                     padding: 30px;
@@ -102,7 +102,33 @@
                     }
                     .item_media{
                         width: 25%;
+                        margin-top: 20px;
+                        @include break-max(1025px){
+                            width: 49%;
+                            margin-top: 7px;
+                            &:first-child{
+                                margin-right: 7px;
+                            }
+                        }
+                    }
+                    .type_title{
+                        width: 100%;
+                        padding: 30px 0;
+                        color: #525B66;
+                        font-family: $asap;
+                    }
+                }
+                .parceiros_7{
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                    @include break-max(1025px){
+                        flex-wrap: wrap;
+                    }
+                    .item_media{
+                        width: 14%;
                         margin-top: 10px;
+                        margin-right: 20px;
                         @include break-max(1025px){
                             width: 49%;
                             margin-top: 7px;
