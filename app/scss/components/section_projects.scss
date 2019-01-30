@@ -94,10 +94,11 @@
                 justify-content: space-between;
                 padding: 50px 80px;
                 .media{
+                    max-width: 50%;
                     img{
-                    padding: 13px;
-                    align-self: center;
-                        
+                        max-width: 100%;
+                        padding: 13px;
+                        align-self: center;
                     }
                 }
                 .text{
