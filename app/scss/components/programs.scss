@@ -27,6 +27,9 @@
                     width: 100%;
                     .item{
                         width: 50%;
+                        @include break-max(1024px){
+                            width: 100%;
+                        }
                     }
                 }
                 .slick-dots{
@@ -36,6 +39,9 @@
                     position: absolute;
                     bottom: -70px;
                     left: 45%;
+                    @include break-max(1024px){
+                        left: 25%;
+                    }
                     li{
                         font-size: 0;
                         width: 45px;
@@ -68,8 +74,11 @@
                         font-family: $teko;
                         font-size: 46px;
                         font-weight: normal;
+                        line-height: 48px;
+                        margin-bottom: 20px;
                         @include break-max(1024px){
                             font-size: 34px;
+                            line-height: 34px;
                         }
                         &.red{
                             color: #F95B53;
