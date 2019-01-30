@@ -200,8 +200,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 function webdoor_config(){
-
-    $( ".webdoor_principal" ).each(function( index ) {
+    $(".webdoor_principal").each(function(index) {
         var data_id = $(this).attr('data-id');
 
         try {

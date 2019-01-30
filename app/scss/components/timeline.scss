@@ -41,15 +41,27 @@
                     width: 280px;
                     float: left;
                     margin-left: 40px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    &.reverse{
+                        flex-direction: column-reverse;
+                    }
                     &:first-child{
                         margin-left: 0;
+                    }
+                    .bar{
+                        background: #b8c1cc;
+                        width: 5px;
+                        height: 60px;
+                        align-self: center;
                     }
                     .media{
                         display: block;
                         width: 280px;
                         height: 210px;  
                         &:first-child{
-                            margin-bottom: 65px;
+                            // margin-bottom: 65px;
                         }
                     }
                     .text{
@@ -57,7 +69,7 @@
                         width: 280px;
                         height: 210px;
                         &:first-child{
-                            margin-bottom: 65px;
+                            // margin-bottom: 65px;
                         }
                         h5{
                             color: #3966BF;
