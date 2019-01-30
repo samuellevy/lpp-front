@@ -27,30 +27,6 @@ body {
     @include break-max(768px){
         padding: 0;
     }
-    h4{
-        font-family: $teko !important;
-        font-size: 48px !important;
-        font-weight: normal !important;
-        @include break-max(1025px){
-            font-size: 34px !important;
-        }
-    }
-    h3{
-        font-family: $teko !important;
-        font-size: 48px !important;
-        font-weight: normal !important;
-        @include break-max(1025px){
-            font-size: 34px !important;
-        }
-    }
-    h2{
-        font-family: $teko !important;
-        font-size: 48px !important;
-        font-weight: normal !important;
-        @include break-max(1025px){
-            font-size: 34px !important;
-        }
-    }
 }
 .watching {
     transition: all 0.7s;
@@ -134,17 +110,6 @@ h1{
         color: #3966BF;
         font-size: 34px;
         line-height: 42px;
-    }
-}
-
-h2{
-    font-family: Teko;
-    font-size: 24px;
-    line-height: 32px;
-
-    @include break-max(480px){
-        font-size: 18px;
-        line-height: 24px;
     }
 }
 

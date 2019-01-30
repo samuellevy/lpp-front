@@ -32,7 +32,7 @@
         position: relative;
         .conntent_text, .content_text{
             width: 370px;
-            padding: 40px;
+            padding: 30px;
             background: #fff;
             position: absolute;
             top: 200px;
@@ -51,6 +51,21 @@
                 font-weight: normal;
                 @include break-max(768px){
                     font-size: 34px;
+                }
+                &.blue{
+                    color: #1CA8E0;
+                }
+                &.red{
+                    color: #F95B53;
+                }
+                &.green{
+                    color: #62CFCF;
+                }
+                &.dark_blue{
+                    color: #3966BF;
+                }
+                &.orange{
+                    color: #F47249;
                 }
             }
             p{
