@@ -67,10 +67,18 @@
                     h4{
                         font-family: $teko;
                         font-size: 46px;
-                        color: #F95B53;
                         font-weight: normal;
                         @include break-max(1024px){
                             font-size: 34px;
+                        }
+                        &.red{
+                            color: #F95B53;
+                        }
+                        &.blue{
+                            color: #1CA8E0;
+                        }
+                        &.green{
+                            color: #62CFCF;
                         }
                     }
                     p{
