@@ -115,6 +115,7 @@
                 border-radius: 15px;
                 border-bottom-right-radius: 0;
                 box-shadow: 0px -1px 15px 0px rgba(0,0,0,0.3);
+                margin-top: 40px;
                 @include break-max(1024px){
                     width: 100%;
                     height: auto;
@@ -152,7 +153,7 @@
                 display: flex;
                 flex-direction: row-reverse;
                 .item{
-                    margin: 110px 200px 0 0;
+                    margin: 140px 200px 0 0;
                 }
                 .item-2{
                     background:#1CA8E0;
