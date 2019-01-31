@@ -203,9 +203,10 @@ p{
         .wrapper{
             display: flex;
             justify-content: space-between;
-            padding: 0;
+            padding: 0 30px;
             @include break-max(768px){
                 flex-wrap: wrap;
+                padding: 0;
             }
             .item_list{
                 width: 35%;

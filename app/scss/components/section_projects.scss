@@ -29,12 +29,15 @@
                     font-family: 'Teko';
                     font-size: 24px;
                     color: #B8C1CC;
+                    cursor: pointer;
                     &.active{
                         color: #3966BF;
                         background: #fff;
                     }
                     &:hover{
                         cursor: pointer;
+                        color: #3966BF;
+                        background: #fff;
                     }
                 }
             }
