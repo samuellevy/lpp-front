@@ -109,6 +109,7 @@
             color: #F5F9FC;
             text-align: center;
             box-shadow: $shadow;
+            text-transform: uppercase;
             @include break-max(768px){
                 margin: 20px auto 50px;
                 width: 75%;
