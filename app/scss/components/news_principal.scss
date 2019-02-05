@@ -71,6 +71,7 @@
                         width: 103px;
                         justify-content: center;
                         border-radius: 5px;
+                        cursor: pointer;
                         @include break-max (1024px){
                             border: none;
                             width: 30px;
@@ -93,6 +94,7 @@
                         border-radius: 5px;
                         justify-content: center;
                         width: 112px;
+                        cursor: pointer;
                         @include break-max (1024px){
                             border: none;
                             width: 30px;
@@ -115,6 +117,7 @@
                         width: 113px;
                         border-radius: 5px;
                         justify-content: center;
+                        cursor: pointer;
                         @include break-max (1024px){
                             border: none;
                             width: 30px;
