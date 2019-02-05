@@ -29,6 +29,7 @@
                             li{
                                 color: #828C99;
                                 transition: all 0.5s linear;
+                                text-transform: uppercase;
                                 &:hover{
                                     color: #1CA8E0;
                                 }
@@ -95,6 +96,7 @@
                             color: #fff;
                             font-weight: normal;
                             transition: all 0.5s linear;
+                            text-transform: uppercase;
                             &.active-scroll{
                                 color: #828C99;
                                 @include break-max(1025px){

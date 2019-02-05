@@ -1,4 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
+
+    /** map */
+    $('.map-action').hover(function(){
+        var id = $(this).attr('id');
+        $('.item-office[data-target='+id+']').addClass('active');
+        
+    }, function(){
+        $('.item-office').removeClass('active');
+    });
+
     $('.select_cidade').change(function(){
         var cidade = $(this).val();
         var csrfToken = $('#csrfToken').val();
@@ -218,7 +228,7 @@ function webdoor_config(){
             $('.webdoor_principal[data-id='+data_id+'] figure figcaption a').addClass(data_class);
             var button = $('.webdoor_principal[data-id='+data_id+'] figure figcaption a')[0].outerHTML;
 
-            if($('.webdoor_principal[data-id='+data_id+'] figure figcaption a').html()==""){
+            if($('.webdoor_principal[data-id='+data_id+'] figure figcaption a').html()=="" || $('.webdoor_principal[data-id='+data_id+'] figure figcaption a').html()=="&nbsp;" || $('.webdoor_principal[data-id='+data_id+'] figure figcaption a').html()==" "){
                 button="";
             }
        

@@ -111,6 +111,165 @@
                     }
                 }
             }
+            
+            &.map-section{
+                position: relative;
+                margin-top: 70px;
+                .item-office{
+                    display: none;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    position: absolute;
+                    background: #fff;
+                    box-shadow: 1px 13px 42px -13px rgba(0,0,0,0.75);
+                    margin-bottom: 30px;
+                    padding: 40px;
+                    border-top-left-radius: 25px;
+                    border-top-right-radius: 25px;
+                    border-bottom-left-radius: 25px;
+                    top: 330px;
+                    left: -30px;
+                    &.active{
+                        display: flex;
+                    }
+                    &::before{
+                        position: absolute;
+                        width: 40px;
+                        height: 40px;
+                        background-color: #FFFFFF;
+                        content: "";
+                        transform: rotateZ(45deg);                        
+                        top: 50%;
+                        right: -20px;
+                        box-shadow: 15px -15px 25px -10px rgba(0,0,0,0.75);
+                    }
+                    
+                    &[data-target="AFEGANISTAO"]{
+                        top: 270px;
+                        left: 200px;
+                    }
+                    &[data-target="NEPAL"]{
+                        top: 270px;
+                        left: 200px;
+                    }
+                    &[data-target="BANGLADESH"]{
+                        top: 270px;
+                        left: 200px;
+                    }
+                    &[data-target="LUTA_PELA_PAZ"]{
+                        top: 270px;
+                        left: 200px;
+                    }
+                    &[data-target="GRA_BRETANHA"]{
+                        top: 270px;
+                        left: 200px;
+                    }
+                    &[data-target="IRLANDA"]{
+                        top: 270px;
+                        left: 200px;
+                    }
+                    &[data-target="COSTA_RICA"]{
+                        top: 270px;
+                        left: 200px;
+                    }
+                    &[data-target="TRINDAD_TOBAGO"]{
+                        top: 270px;
+                        left: 200px;
+                    }
+                    &[data-target="COLOMBIA"]{
+                        top: 270px;
+                        left: 200px;
+                    }
+                    &[data-target="PERU"]{
+                        top: 270px;
+                        left: 200px;
+                    }
+                    &[data-target="SURINAME"]{
+                        top: 270px;
+                        left: 200px;
+                    }
+                    &[data-target="BRASIL"]{
+                        top: 270px;
+                        left: 200px;
+                    }
+                    &[data-target="DOMINICA"]{
+                        top: 270px;
+                        left: 200px;
+                    }
+                    &[data-target="BELIZE"]{
+                        top: 270px;
+                        left: 200px;
+                    }
+                    &[data-target="MEXICO"]{
+                        top: 270px;
+                        left: 200px;
+                    }
+                    &[data-target="EUA"]{
+                        top: 270px;
+                        left: 200px;
+                    }
+                    &[data-target="LIBADO"]{
+                        top: 270px;
+                        left: 200px;
+                    }
+                    &[data-target="GANA"]{
+                        top: 270px;
+                        left: 200px;
+                    }
+                    &[data-target="SERRA_LEOA"]{
+                        top: 270px;
+                        left: 200px;
+                    }
+                    &[data-target="CONGO"]{
+                        top: 270px;
+                        left: 200px;
+                    }
+                    &[data-target="EGITO"]{
+                        top: 270px;
+                        left: 200px;
+                    }
+                    &[data-target="UGANDA"]{
+                        top: 270px;
+                        left: 200px;
+                    }
+                    &[data-target="UENIA"]{
+                        top: 270px;
+                        left: 200px;
+                    }
+                    &[data-target="BOTSWANA"]{
+                        top: 270px;
+                        left: 200px;
+                    }
+                    &[data-target="AFRICA_DO_SUL"]{
+                        top: 270px;
+                        left: 200px;
+                    }
+                    &[data-target="ZIMBABUE"]{
+                        top: 270px;
+                        left: 200px;
+                    }
+                    
+                    .title{
+                        font-family: $teko;
+                        font-size: 20px;
+                        color: #F95B53;
+                        letter-spacing: 1px;
+                        text-transform: capitalize;
+                    }
+                    
+                    .body{
+                        padding-left: 20px;
+                        p::before {
+                            content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+                            color: red; /* Change the color */
+                            font-weight: bold; /* If you want it to be bold */
+                            display: inline-block; /* Needed to add space between the bullet and the text */
+                            width: 1em; /* Also needed for space (tweak if needed) */
+                            margin-left: -1em; /* Also needed for space (tweak if needed) */
+                          }
+                    }
+                }
+            }
         }
     }
 }
