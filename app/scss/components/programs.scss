@@ -143,110 +143,121 @@
                         right: -20px;
                         box-shadow: 15px -15px 25px -10px rgba(0,0,0,0.75);
                     }
+                    &.invert::before{
+                        position: absolute;
+                        width: 40px;
+                        height: 40px;
+                        background-color: #FFFFFF;
+                        content: "";
+                        transform: rotateZ(45deg);                        
+                        top: 50%;
+                        left: -20px;
+                        box-shadow: -15px 15px 25px -8px rgba(0,0,0,0.75);
+                    }
                     
                     &[data-target="AFEGANISTAO"]{
-                        top: 270px;
-                        left: 200px;
+                        top: 250px;
+                        left: 410px;
                     }
                     &[data-target="NEPAL"]{
-                        top: 270px;
-                        left: 200px;
+                        top: 250px;
+                        left: 520px;
                     }
                     &[data-target="BANGLADESH"]{
-                        top: 270px;
-                        left: 200px;
+                        top: 280px;
+                        left: 580px;
                     }
                     &[data-target="LUTA_PELA_PAZ"]{
                         top: 270px;
                         left: 200px;
                     }
                     &[data-target="GRA_BRETANHA"]{
-                        top: 270px;
-                        left: 200px;
+                        top: 120px;
+                        left: 260px;
                     }
                     &[data-target="IRLANDA"]{
-                        top: 270px;
-                        left: 200px;
+                        top: 90px;
+                        left: 170px;
                     }
                     &[data-target="COSTA_RICA"]{
-                        top: 270px;
-                        left: 200px;
+                        top: 320px;
+                        left: 70px;
                     }
-                    &[data-target="TRINDAD_TOBAGO"]{
+                    &[data-target="TRINDAD_TOBAGO"]{ //not running
                         top: 270px;
                         left: 200px;
                     }
                     &[data-target="COLOMBIA"]{
-                        top: 270px;
-                        left: 200px;
+                        top: 240px;
+                        left: 420px;
                     }
                     &[data-target="PERU"]{
-                        top: 270px;
-                        left: 200px;
+                        top: 390px;
+                        left: 410px;
                     }
                     &[data-target="SURINAME"]{
-                        top: 270px;
-                        left: 200px;
+                        top: 340px;
+                        left: 180px;
                     }
                     &[data-target="BRASIL"]{
-                        top: 270px;
-                        left: 200px;
+                        top: 400px;
+                        left: 220px;
                     }
-                    &[data-target="DOMINICA"]{
-                        top: 270px;
-                        left: 200px;
+                    &[data-target="REPUBLICA_DOMINICANA"]{
+                        top: 310px;
+                        left: 90px;
                     }
                     &[data-target="BELIZE"]{
-                        top: 270px;
-                        left: 200px;
+                        top: 300px;
+                        left: 340px;
                     }
                     &[data-target="MEXICO"]{
                         top: 270px;
-                        left: 200px;
+                        left: 60px;
                     }
                     &[data-target="EUA"]{
-                        top: 270px;
-                        left: 200px;
+                        top: 160px;
+                        left: 450px;
                     }
-                    &[data-target="LIBADO"]{
-                        top: 270px;
-                        left: 200px;
+                    &[data-target="LIBANO"]{
+                        top: 260px;
+                        left: 220px;
                     }
                     &[data-target="GANA"]{
-                        top: 270px;
-                        left: 200px;
+                        top: 340px;
+                        left: 330px;
                     }
                     &[data-target="SERRA_LEOA"]{
-                        top: 270px;
-                        left: 200px;
+                        top: 245px;
+                        left: 170px;
                     }
                     &[data-target="CONGO"]{
-                        top: 270px;
-                        left: 200px;
+                        top: 360px;
+                        left: 250px;
                     }
                     &[data-target="EGITO"]{
-                        top: 270px;
-                        left: 200px;
+                        top: 290px;
+                        left: 140px;
                     }
                     &[data-target="UGANDA"]{
-                        top: 270px;
-                        left: 200px;
+                        top: 340px;
+                        left: 320px;
                     }
-                    &[data-target="UENIA"]{
-                        top: 270px;
-                        left: 200px;
+                    &[data-target="QUENIA"]{
+                        top: 260px;
+                        left: 330px;
                     }
                     &[data-target="BOTSWANA"]{
-                        top: 270px;
-                        left: 200px;
+                        top: 430px;
+                        left: 370px;
                     }
                     &[data-target="AFRICA_DO_SUL"]{
-                        top: 270px;
-                        left: 200px;
+                        top: 310px;
+                        left: 210px;
                     }
                     &[data-target="ZIMBABUE"]{
-                        top: 270px;
-                        left: 200px;
+                        top: 420px;
+                        left: 260px;
                     }
                     
                     .title{
