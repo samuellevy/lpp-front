@@ -41,6 +41,14 @@
         }
         .item{
             height: 768px;
+            video{
+                width: 100%;
+                min-height: 100%;
+                margin: 0;
+                padding: 0;
+                object-fit: cover;
+                object-position: center;
+            }
             img{
                 object-fit: cover;
                 width: 100vw;
