@@ -171,8 +171,8 @@
             #menuToggle input
             {
             display: block;
-            width: 40px;
-            height: 32px;
+            width: 70px;
+            height: 70px;
             position: absolute;
             top: -7px;
             left: -5px;
@@ -217,7 +217,7 @@
             #menuToggle input:checked ~ span
             {
             opacity: 1;
-            transform: rotate(45deg) translate(-2px, -1px);
+            
             background: #fff;
             }
 

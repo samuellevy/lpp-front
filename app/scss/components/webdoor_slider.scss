@@ -41,6 +41,10 @@
         }
         .item{
             height: 768px;
+            width: 100%;
+            display: inline-block;
+            overflow: hidden;
+            position: relative;
             video{
                 width: 100%;
                 min-height: 100%;
@@ -122,11 +126,11 @@
                         text-transform: uppercase;
                         margin-top: 10px;
                         @include break-max(768px){
-                           font-size: 18px;
-                           border: 1px solid #fff;
-                           letter-spacing: 1.5px;
-                           width: 70%;
-                           margin: 93px auto 0;
+                            font-size: 18px;
+                            border: 1px solid #fff;
+                            letter-spacing: 1.5px;
+                            width: 70%;
+                            margin: 93px auto 0;
                         }
                     }
                     @include break-max(768px){
