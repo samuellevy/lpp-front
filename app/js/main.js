@@ -192,7 +192,8 @@ document.addEventListener("DOMContentLoaded", function() {
         });
         $('.webdoor_slider .box_slider').slick({
             arrows: false,
-            dots: true
+            dots: true,
+            infinite: false
         });
         if (window.matchMedia("(max-width: 768px)").matches) {
             /* the viewport is less than 768 pixels wide */
