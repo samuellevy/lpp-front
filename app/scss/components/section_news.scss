@@ -18,16 +18,21 @@
       border-radius: 10px;
       border-bottom-right-radius: 0px;
       .media {
+        height: 165px;
         img {
+          height: 100%;
           border-radius: 10px;
           border-bottom-right-radius: 0px;
           border-bottom-left-radius: 0px;
           background-color: #FFF;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
         }
       }
       .content {
         background: #fff;
-        padding: 0 27px;
+        padding: 30px 27px 0 27px;
         height: 300px;
         border-bottom-left-radius: 10px;
         h3, p {
