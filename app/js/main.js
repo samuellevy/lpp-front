@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", function() {
             centerMode: false,
             variableWidth: true,
             centerPadding: '40px',
-            arrows: false
+            arrows: true
         });
         $(document).scroll(function() {
             if (window.matchMedia("(min-width: 1026px)").matches) {

@@ -26,6 +26,38 @@
             display: flex;
             justify-content: space-between;
             box-sizing: border-box;
+            .slick-arrow{
+                font-size: 0;
+                border: 0;
+                
+                &.slick-next{
+                    &:before{
+                        content: ' ';
+                        position: absolute;
+                        display: block;
+                        width: 40px;
+                        height: 70px;
+                        background: url('../images/setagrande.png') no-repeat;
+                        right: -100px;
+                        top: 210px;
+
+                    }
+                }
+                &.slick-prev{
+                    &:before{
+                        content: ' ';
+                        position: absolute;
+                        display: block;
+                        width: 40px;
+                        height: 70px;
+                        background: url('../images/setagrande.png') no-repeat;
+                        transform: rotate(180deg);
+                        left: -100px;
+                        top: 210px;
+
+                    }
+                }
+            }
             .item{
                 display: block;
                 padding: 15px;
