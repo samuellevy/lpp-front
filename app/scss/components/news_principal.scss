@@ -39,6 +39,8 @@
                 font-weight: 600;
                 padding: 10px 0;
                 font-weight: normal;
+                line-height: 22px;
+                font-family: $asap;
             }
             @include break-max (1024px){
                 text-align: left;
