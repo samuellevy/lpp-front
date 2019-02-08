@@ -33,6 +33,13 @@
                 color: #828C99;
                 font-weight: 600;
             }
+            div{
+                font-size: 14px;
+                color: #828C99;
+                font-weight: 600;
+                padding: 10px 0;
+                font-weight: normal;
+            }
             @include break-max (1024px){
                 text-align: left;
             }
