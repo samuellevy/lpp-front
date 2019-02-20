@@ -263,6 +263,22 @@
                         top: 370px;
                         left: 180px;
                     }
+                    &[data-target="flag_BRASIL"]{
+                        top: 500px;
+                        left: 200px;
+                    }
+                    &[data-target="flag_AFRICA_DO_SUL"]{
+                        top: 510px;
+                        left: 250px;
+                    }
+                    &[data-target="flag_JAMAICA"]{
+                        top: 330px;
+                        left: -50px;
+                    }
+                    &[data-target="flag_GRA_BETANHA"]{
+                        top: 190px;
+                        left: 340px;
+                    }
                     
                     .title{
                         font-family: $teko;
@@ -291,19 +307,19 @@
                     width: 30px;
                     height: 40px;
                     position: absolute;
-                    &#BRASIL{
-                        top: 490px;
+                    &#flag_BRASIL{
+                        top: 540px;
                         left: 470px;
                     }
-                    &#JAMAICA{
+                    &#flag_JAMAICA{
                         top: 400px;
                         left: 355px;
                     }
-                    &#GRA_BETANHA{
+                    &#flag_GRA_BETANHA{
                         top: 240px;
                         left: 595px;
                     }
-                    &#AFRICA_DO_SUL{
+                    &#flag_AFRICA_DO_SUL{
                         top: 560px;
                         left: 660px;
                     }
