@@ -156,108 +156,112 @@
                     }
                     
                     &[data-target="AFEGANISTAO"]{
-                        top: 250px;
+                        top: 300px;
                         left: 410px;
                     }
                     &[data-target="NEPAL"]{
-                        top: 250px;
+                        top: 300px;
                         left: 520px;
                     }
                     &[data-target="BANGLADESH"]{
-                        top: 280px;
+                        top: 310px;
                         left: 580px;
                     }
                     &[data-target="LUTA_PELA_PAZ"]{
-                        top: 270px;
+                        top: 320px;
                         left: 200px;
                     }
                     &[data-target="GRA_BRETANHA"]{
-                        top: 120px;
+                        top: 160px;
                         left: 260px;
                     }
                     &[data-target="IRLANDA"]{
-                        top: 90px;
+                        top: 140px;
                         left: 170px;
                     }
                     &[data-target="COSTA_RICA"]{
-                        top: 320px;
+                        top: 370px;
                         left: 70px;
                     }
                     &[data-target="TRINDAD_TOBAGO"]{ //not running
-                        top: 270px;
-                        left: 200px;
+                        top: 330px;
+                        left: 470px;
                     }
                     &[data-target="COLOMBIA"]{
-                        top: 240px;
+                        top: 310px;
                         left: 420px;
                     }
                     &[data-target="PERU"]{
-                        top: 390px;
+                        top: 440px;
                         left: 410px;
                     }
                     &[data-target="SURINAME"]{
-                        top: 340px;
-                        left: 180px;
+                        top: 395px;
+                        left: 190px;
                     }
                     &[data-target="BRASIL"]{
-                        top: 400px;
+                        top: 450px;
                         left: 220px;
                     }
                     &[data-target="REPUBLICA_DOMINICANA"]{
-                        top: 310px;
+                        top: 360px;
                         left: 90px;
                     }
                     &[data-target="BELIZE"]{
-                        top: 300px;
+                        top: 350px;
                         left: 340px;
                     }
                     &[data-target="MEXICO"]{
-                        top: 270px;
+                        top: 310px;
                         left: 60px;
                     }
                     &[data-target="EUA"]{
-                        top: 160px;
+                        top: 200;
                         left: 450px;
                     }
                     &[data-target="LIBANO"]{
-                        top: 260px;
+                        top: 310px;
                         left: 220px;
                     }
                     &[data-target="GANA"]{
-                        top: 340px;
+                        top: 390px;
                         left: 330px;
                     }
                     &[data-target="SERRA_LEOA"]{
-                        top: 245px;
+                        top: 300px;
                         left: 170px;
                     }
                     &[data-target="CONGO"]{
-                        top: 360px;
+                        top: 410px;
                         left: 250px;
                     }
                     &[data-target="EGITO"]{
-                        top: 290px;
+                        top: 340px;
                         left: 140px;
                     }
                     &[data-target="UGANDA"]{
-                        top: 340px;
+                        top: 390px;
                         left: 320px;
                     }
                     &[data-target="QUENIA"]{
-                        top: 260px;
+                        top: 310px;
                         left: 330px;
                     }
                     &[data-target="BOTSWANA"]{
-                        top: 430px;
+                        top: 480px;
                         left: 370px;
                     }
                     &[data-target="AFRICA_DO_SUL"]{
-                        top: 310px;
+                        top: 360px;
                         left: 210px;
                     }
                     &[data-target="ZIMBABUE"]{
-                        top: 420px;
+                        top: 470px;
                         left: 260px;
+                    }
+                    &[data-target="JAMAICA"]{
+                        top: 370px;
+                        left: 180px;
                     }
                     
                     .title{
@@ -278,6 +282,30 @@
                             width: 1em; /* Also needed for space (tweak if needed) */
                             margin-left: -1em; /* Also needed for space (tweak if needed) */
                           }
+                    }
+                }
+                .flag-lpp{
+                    background-image: url('../images/pin-lpp.png');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    width: 30px;
+                    height: 40px;
+                    position: absolute;
+                    &#BRASIL{
+                        top: 490px;
+                        left: 470px;
+                    }
+                    &#JAMAICA{
+                        top: 400px;
+                        left: 355px;
+                    }
+                    &#GRA_BETANHA{
+                        top: 240px;
+                        left: 595px;
+                    }
+                    &#AFRICA_DO_SUL{
+                        top: 560px;
+                        left: 660px;
                     }
                 }
             }
