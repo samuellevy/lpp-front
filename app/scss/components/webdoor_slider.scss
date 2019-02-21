@@ -145,8 +145,8 @@
         }
         .button-play{
             position: absolute;
-            top: 0;
-            left: 0;
+            bottom: 70px;
+            left: calc(100vw / 2 - 272px / 2);
             z-index: 9999;
             color: #FFF;
             border: solid 1px #FFFFFF;
@@ -154,6 +154,7 @@
             border-radius: 30px;
             text-align: left;
             background: #F95B53;
+            cursor: pointer;
             &:hover{
                 background: #000;
             }
