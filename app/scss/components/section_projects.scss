@@ -9,6 +9,9 @@
         color: #3966BF;
         font-weight: 500;
         padding-bottom: 25px;
+        @include break-max(768px){
+            display: none;
+        }
     }
     .wrapper{
         .box-content{
@@ -46,40 +49,73 @@
                 width: 100%;
                 justify-content: space-between;
                 padding: 40px 100px 40px 80px;
+                @include break-max(768px){
+                    flex-wrap: wrap;
+                    padding: 30px;
+                }
                 .item-title{
+                    @include break-max(768px){
+                        width: 100%;
+                    }
                     h5{
                         font-family: 'Teko';
                         font-size: 20px;
                         color:#11254D;
+                        @include break-max(768px){
+                            font-size: 16px;
+                            text-transform: uppercase;
+                            font-weight: 500;
+                        }
                     }
                     span{
                         font-family: 'Asap';
                         font-size: 30px;
                         color: #3966BF;
-                        font-weight: bold;                        
+                        font-weight: bold; 
+                        @include break-max(768px){
+                            font-size: 22px;
+                        }                       
                     }
                 }
                 .item{
+                    @include break-max(768px){
+                        width: 40%;
+                        margin-top: 15px; 
+                    }
                     h5{
                         font-family: 'Teko';
                         font-size: 20px;
                         color:#11254D;
+                        @include break-max(768px){
+                            font-size: 16px;
+                            font-weight: 500; 
+                        }
                     }
                     .content{
                         display: flex;
                         justify-content: space-between;
                         height: 45px;
+                        @include break-max(768px){
+                            flex-direction: column;
+                        }
                         span{
                             font-family: 'Asap';
                             font-size: 14px;
                             color: #3966BF;
                             font-weight: 600; 
                             margin-top: 15px;
-                            margin-right: 18px;          
+                            margin-right: 18px;   
+                            @include break-max(768px){
+                                margin: 0;
+                                font-size: 12px;
+                            }       
                         }
                         img{
                             align-self: center;
                             margin-right: 7px;
+                            @include break-max(768px){
+                                display: none;
+                            }
                         }
                     }
                 }
@@ -90,23 +126,41 @@
                 margin: 0 auto;
                 display: flex;
                 justify-content: center;
+                @include break-max(768px){
+                    display: none;
+                }
             }
             .article-box{
                 display: flex;
                 width: 100%;
                 justify-content: space-between;
                 padding: 50px 80px;
+                @include break-max(768px){
+                    display: block;
+                    padding: 0;
+                }
                 .media{
                     max-width: 50%;
+                    @include break-max(768px){
+                        max-width: 100%;
+                    }
                     img{
                         max-width: 100%;
                         padding: 13px;
                         align-self: center;
+                        @include break-max(768px){
+                            width: 100%;
+                            padding: 0;
+                        }
                     }
                 }
                 .text{
                     width: 50%;
                     padding:8px;
+                    @include break-max(768px){
+                        padding: 20px;
+                        width: 100%;
+                    }
                     p{
                         margin-bottom: 30px;
                         font-family: 'Asap';

@@ -8,10 +8,16 @@
             justify-content: space-between;
             text-align: justify;
             margin-bottom: 60px;
+            @include break-max(768px){
+                flex-direction: column;
+            }
             .item_1{
                 width: 60%;
                 padding: 50px 100px;
                 margin-top: 300px;
+                @include break-max(768px){
+                    display: none;
+                }
                 p{
                     margin-bottom: 30px;
                     font-family: 'Asap';
@@ -28,6 +34,22 @@
                 margin-top: 130px;
                 background: #fff;
                 border-bottom-right-radius: 0px;
+                .mobile{
+                    display: none;
+                }
+                @include break-max(768px){
+                    width: 350px;
+                    box-shadow: -6px 8px 49px -13px rgba(0,0,0,0.55);
+                    height: auto;
+                    border-radius: 15px;
+                    padding: 30px;
+                    margin: 220px 0 0 15px;
+                    background: #fff;
+                    border-bottom-right-radius: 0px;
+                    .mobile{
+                        display: block;
+                    }
+                }
                 h4{
                     font-family: 'Teko';
                     font-size: 46px;
