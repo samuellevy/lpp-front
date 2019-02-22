@@ -10,6 +10,7 @@
             margin-bottom: 60px;
             @include break-max(768px){
                 flex-direction: column;
+                margin-bottom: -20px;
             }
             .item_1{
                 width: 60%;
