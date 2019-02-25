@@ -95,6 +95,7 @@
                         border: solid 1px #E6ECF2;
                         border-right: none;
                         border-left: none;
+                        cursor: pointer;
                         #arrow{
                             align-self: center;
                         }
@@ -107,9 +108,11 @@
                     }
                     .bottom{
                         padding: 25px 25px;
-                        height: 0;
+                        opacity: 0;
+                        transition: all linear 0.5s;
                         &.active{
-                            height: auto;
+                            opacity: 1;
+                            transition: all linear 0.5s;
                         }
                         p{
                             color: #525B66;

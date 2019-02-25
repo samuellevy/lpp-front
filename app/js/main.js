@@ -172,7 +172,13 @@ document.addEventListener("DOMContentLoaded", function() {
             $(this).addClass('active');
         });
 
-        //nossos programas
+        //nossos pilares mobile
+                //** */
+        $('.mobile-box .item .top').click(function(event){
+            console.log('cliquei');
+            $(this).find('.bottom').addClass('active');
+        });
+                //nossos programas
                 //** */
         $('.content_item').hide();
         $('.content_item#tabs-1').show();
