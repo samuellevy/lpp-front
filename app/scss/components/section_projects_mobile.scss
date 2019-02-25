@@ -1,0 +1,23 @@
+.section_projects_mobile{
+    .wrapper{
+        .box-content{
+            .item{
+                .title{
+                    padding: 15px 25px;
+                }
+                .description{
+                    padding: 15px 25px;
+                    display: flex;
+                    border-bottom: solid 1px #E6ECF2;
+                    width: 100%;
+                }
+                .article-box{
+                    padding: 15px 25px;
+                    p{
+                        margin: 10px 0;
+                    }
+                }
+            }
+        }
+    }
+}
