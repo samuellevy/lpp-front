@@ -39,12 +39,12 @@
                     display: none;
                 }
                 @include break-max(768px){
-                    width: 350px;
+                    width: 95%;
                     box-shadow: -6px 8px 49px -13px rgba(0,0,0,0.55);
                     height: auto;
                     border-radius: 15px;
                     padding: 30px;
-                    margin: 220px 0 0 15px;
+                    margin: 220px auto 0;
                     background: #fff;
                     border-bottom-right-radius: 0px;
                     .mobile{
