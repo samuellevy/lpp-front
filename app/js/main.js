@@ -174,9 +174,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
         //nossos pilares mobile
                 //** */
+        $('.mobile-box .item .bottom#tabs-1').addClass('active');
+        $('.mobile-box .item .top[data-id=tabs-1]').addClass('active');
         $('.mobile-box .item .top').click(function(event){
-            console.log('cliquei');
-            $(this).find('.bottom').addClass('active');
+            var data_id = $(this).attr('data-id');
+            $('.mobile-box .item .top').removeClass('active');
+            $('.mobile-box .item .bottom').removeClass('active');
+            $('.mobile-box .item .bottom#'+data_id).addClass('active');
+            $(this).addClass('active');
         });
                 //nossos programas
                 //** */

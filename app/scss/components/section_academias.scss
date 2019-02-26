@@ -108,11 +108,13 @@
                     }
                     .bottom{
                         padding: 25px 25px;
-                        opacity: 0;
-                        transition: all linear 0.5s;
+                        display: none;
+                        height: 0;
+                        transition: all linear 1s;
                         &.active{
-                            opacity: 1;
-                            transition: all linear 0.5s;
+                            display: block;
+                            height: auto;
+                            transition: all linear 1s;
                         }
                         p{
                             color: #525B66;
