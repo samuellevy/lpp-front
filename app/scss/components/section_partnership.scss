@@ -70,6 +70,18 @@
                 margin-top: 350px;
                 background: #fff;
                 border-bottom-right-radius: 0px;
+                .success{
+                    display: block;
+                    margin-bottom:10px;
+                    color: #62CFCF;
+                    font-size: 16px;
+                    font-weight: normal;
+                    font-family: 'Asap';
+                    @include break-max(1024px){
+                        font-size: 15px;
+                        margin-bottom: 10px;
+                    }
+                }
                 @include break-max(1024px){
                     width: 100%;
                     margin-top: 50px; 
