@@ -183,6 +183,18 @@ document.addEventListener("DOMContentLoaded", function() {
             $('.mobile-box .item .bottom#'+data_id).addClass('active');
             $(this).addClass('active');
         });
+                //nossos programs mobile
+                //** */
+                
+        $('.section_projects_mobile .wrapper .box-content .item .item-content#tabs-1').addClass('active');
+        $('.section_projects_mobile .wrapper .box-content .item .media[data-id=tabs-1]').addClass('active');
+        $('.section_projects_mobile .wrapper .box-content .item .media').click(function(event){
+            var data_id = $(this).attr('data-id');
+            $('.section_projects_mobile .wrapper .box-content .item .media').removeClass('active');
+            $('.section_projects_mobile .wrapper .box-content .item .item-content').removeClass('active');
+            $('.section_projects_mobile .wrapper .box-content .item .item-content#'+data_id).addClass('active');
+            $(this).addClass('active');
+        });
                 //nossos programas
                 //** */
         $('.content_item').hide();

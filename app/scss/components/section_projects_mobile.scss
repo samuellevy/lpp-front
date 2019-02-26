@@ -5,48 +5,91 @@
         .wrapper{
             .box-content{
                 .item{
-                    .title{
-                        padding: 15px 25px;
-                        h5{
-                            font-family: 'Teko';
-                            color:#11254D;
-                            font-size: 16px;
-                            text-transform: uppercase;
-                            font-weight: 500;
+                    .media{
+                        position: relative;
+                        height: 250px;
+                        img{
+                            object-fit: cover;
+                            width: 100%;
+                            position: absolute;
+                            height: 250px;
+                        }
+                        .overlay{
+                            display: block;
+                            position: absolute;
+                            background-image: linear-gradient(to top, #11254d, #11254d, #11254d, transparent, transparent);
+                            width: 100%;
+                            height: 250px;
+                            opacity: 0.3;
+                            top: 0;
+                            transition: all linear 0.5s;
                         }
                         span{
-                            font-family: 'Asap';
-                            font-size: 22px;
-                            color: #3966BF;
-                            font-weight: bold; 
+                            font-family: $teko;
+                            font-size: 30px;
+                            font-weight: normal;
+                            color: #fff;
+                            position: absolute;
+                            bottom: 10px;
+                            left: 20px;
+                            opacity: 1;
+                            transition: all linear 0.5s;
+                        }
+                        &.active{
+                            .overlay,span{
+                                opacity: 0;
+                                transition: all linear 0.5s;
+                            }
                         }
                     }
-                    .description{
-                        padding: 15px 25px;
-                        display: flex;
-                        border-bottom: solid 1px #E6ECF2;
-                        width: 90%;
-                        justify-content: space-between;
-                        h5{
-                            font-family: 'Teko';
-                            color:#11254D;
-                            font-size: 16px;
-                            text-transform: uppercase;
-                            font-weight: 500;
-                        }
-                        span{
-                            font-family: 'Asap';
-                            font-size: 14px;
-                            color: #3966BF;
-                            font-weight: normal; 
+                    .item-content{
+                        display: none;
+                        &.active{
                             display: block;
                         }
-                    }
-                    .article-box{
-                        padding: 15px 22px;
-                        p{
-                            margin: 10px 0;
-                            color: #525B66;
+                        .title{
+                            padding: 15px 25px;
+                            h5{
+                                font-family: 'Teko';
+                                color:#11254D;
+                                font-size: 16px;
+                                text-transform: uppercase;
+                                font-weight: 500;
+                            }
+                            span{
+                                font-family: 'Asap';
+                                font-size: 22px;
+                                color: #3966BF;
+                                font-weight: bold; 
+                            }
+                        }
+                        .description{
+                            padding: 15px 25px;
+                            display: flex;
+                            border-bottom: solid 1px #E6ECF2;
+                            width: 90%;
+                            justify-content: space-between;
+                            h5{
+                                font-family: 'Teko';
+                                color:#11254D;
+                                font-size: 16px;
+                                text-transform: uppercase;
+                                font-weight: 500;
+                            }
+                            span{
+                                font-family: 'Asap';
+                                font-size: 14px;
+                                color: #3966BF;
+                                font-weight: normal; 
+                                display: block;
+                            }
+                        }
+                        .article-box{
+                            padding: 15px 22px;
+                            p{
+                                margin: 10px 0;
+                                color: #525B66;
+                            }
                         }
                     }
                 }
