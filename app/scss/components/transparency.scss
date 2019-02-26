@@ -1,6 +1,10 @@
 .transparency{
     background: #F5F9FC;
     padding: 45px 0 80px 0;
+    @include break-max(1024px){
+        padding-top: 20px;
+        background: #fff;
+    }
     .wrapper{
         .box{
             h4{
@@ -10,6 +14,11 @@
                 font-weight: 100;
                 color: #1F3B72;
                 margin-bottom: 20px;
+                @include break-max(1024px){
+                    font-size: 34px;
+                    text-align: left;
+                    margin-left: 24px;
+                }
             }
             .slide-title{
                 h5{
@@ -18,12 +27,29 @@
                     font-size: 30px;
                     font-weight: 100;
                     margin-bottom: 15px;
+                    @include break-max(1024px){
+                        background-color: #3966BF; 
+                        padding: 10px 0 10px 24px; 
+                        margin: 0;
+                        color: #fff;
+                        font-size: 24px;
+                        &.red{
+                            background-color: #F95B53;
+                        }
+                        &.lightblue{
+                            background-color: #1CA8E0;
+                        }
+                    }
                 }
             }
             .content{
                 height: auto;
                 margin-bottom: 45px;
                 display: flex;
+                @include break-max(1024px){
+                    flex-direction: column;
+                    margin-bottom: 20px;
+                }
                 .slick-arrow{
                     background: #A1E1FA;
                     border: 0;
@@ -60,12 +86,18 @@
                     height: 146px;
                     background: #fff;
                     border: solid 1px #E6ECF2;
+                    @include break-max(1024px){
+                        width: 100%;
+                    }
                     .item-content{
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
                         width: 100%;
                         padding: 20px;
+                        @include break-max(1024px){
+                            
+                        }
                         .title{
                             img{
                                 float:right;
@@ -75,6 +107,15 @@
                                 font-family: 'Asap';
                                 font-size: 16px;
                                 color: #525B66;
+                                @include break-max(1024px){
+                                    background: #fff;
+                                    padding: 0;
+                                    font-weight: bold;
+                                    color: #828C99;
+                                    br{
+                                        display: none;
+                                    }
+                                }
                             }
                         }
                         .date{
@@ -95,6 +136,31 @@
                                 font-family: 'Asap';
                                 font-size: 14px;
                             }
+                        }
+                    }
+                }
+                .mobile-button{
+                    display: none;
+                    @include break-max(1024px){
+                        display: flex;
+                        justify-content: center;
+                        margin-top: 20px;
+                        span{
+                            font-family: 'Teko';
+                            font-size: 20px;
+                            text-transform: uppercase;
+                            &.blue{
+                                color: #3966BF;
+                            }
+                            &.red{
+                                color: #F95B53;
+                            }
+                            &.lightblue{
+                                color: #1CA8E0;
+                            }
+                        }
+                        img{
+                            float: right;
                         }
                     }
                 }

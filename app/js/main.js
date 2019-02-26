@@ -211,7 +211,13 @@ document.addEventListener("DOMContentLoaded", function() {
             infinite: true,
             slidesToShow: 4,
             slidesToScroll: 1,
-            arrows: true
+            arrows: true,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: unlisck
+                }
+            ]
         });
         $('.webdoor_slider .box_slider').slick({
             arrows: false,
