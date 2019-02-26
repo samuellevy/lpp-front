@@ -1,20 +1,53 @@
 .section_projects_mobile{
-    .wrapper{
-        .box-content{
-            .item{
-                .title{
-                    padding: 15px 25px;
-                }
-                .description{
-                    padding: 15px 25px;
-                    display: flex;
-                    border-bottom: solid 1px #E6ECF2;
-                    width: 100%;
-                }
-                .article-box{
-                    padding: 15px 25px;
-                    p{
-                        margin: 10px 0;
+    display: none;
+    @include break-max(768px){
+        display: block;
+        .wrapper{
+            .box-content{
+                .item{
+                    .title{
+                        padding: 15px 25px;
+                        h5{
+                            font-family: 'Teko';
+                            color:#11254D;
+                            font-size: 16px;
+                            text-transform: uppercase;
+                            font-weight: 500;
+                        }
+                        span{
+                            font-family: 'Asap';
+                            font-size: 22px;
+                            color: #3966BF;
+                            font-weight: bold; 
+                        }
+                    }
+                    .description{
+                        padding: 15px 25px;
+                        display: flex;
+                        border-bottom: solid 1px #E6ECF2;
+                        width: 90%;
+                        justify-content: space-between;
+                        h5{
+                            font-family: 'Teko';
+                            color:#11254D;
+                            font-size: 16px;
+                            text-transform: uppercase;
+                            font-weight: 500;
+                        }
+                        span{
+                            font-family: 'Asap';
+                            font-size: 14px;
+                            color: #3966BF;
+                            font-weight: normal; 
+                            display: block;
+                        }
+                    }
+                    .article-box{
+                        padding: 15px 22px;
+                        p{
+                            margin: 10px 0;
+                            color: #525B66;
+                        }
                     }
                 }
             }
