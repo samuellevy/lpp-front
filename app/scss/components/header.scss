@@ -9,10 +9,7 @@
     @include break-max(1025px){
         padding: 0;
     }
-    &.always_active{
-        // position: relative;
-    }
-    &.active, &.always_active{
+    &.active{
         background: linear-gradient(to bottom, rgba(255,255,255,1) 1%,rgba(255,255,255,1) 70%,rgba(255,255,255,1) 70%,transparent 30%,transparent 100%);
         transition: all 0.5s linear;
         @include break-max(1025px){
