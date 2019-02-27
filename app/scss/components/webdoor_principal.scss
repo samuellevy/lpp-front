@@ -46,6 +46,9 @@
             }
             &.left{
                 left: 30px;
+                @include break-max(1024px){
+                    left: 0;
+                }
             }
             &.right{
                 right: 30px;
