@@ -215,7 +215,7 @@ document.addEventListener("DOMContentLoaded", function() {
             responsive: [
                 {
                     breakpoint: 1024,
-                    settings: "unlisck"
+                    settings: "unslick"
                 }
             ]
         });
