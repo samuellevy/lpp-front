@@ -2,6 +2,10 @@
     width: 100%;
     background: #F5F9FC;
     padding: 50px 0;
+    display: block;
+    @include break-max(1025px){
+        display: none;
+    }
     h4{
         text-align: center;
         font-family: 'Teko';
