@@ -53,7 +53,7 @@
                 object-fit: cover;
                 object-position: center;
             }
-            img{
+            > img{
                 object-fit: cover;
                 width: 100vw;
                 height: 768px;
@@ -141,6 +141,31 @@
                         padding: 40px 30px;
                     }
                 }
+            }
+        }
+        .button-play{
+            position: absolute;
+            bottom: 70px;
+            left: calc(100vw / 2 - 272px / 2);
+            z-index: 9999;
+            color: #FFF;
+            border: solid 1px #FFFFFF;
+            padding: 8px 35px 4px 20px;
+            border-radius: 30px;
+            text-align: left;
+            background: #F95B53;
+            cursor: pointer;
+            &:hover{
+                background: #000;
+            }
+            img {
+                float: left;
+                margin-right: 5px;
+            }
+            span {
+                font-family: 'Teko';
+                text-transform: uppercase;
+                font-size: 20px;
             }
         }
     }

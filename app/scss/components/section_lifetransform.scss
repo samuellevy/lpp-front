@@ -1,6 +1,9 @@
 .section_lifetransform{
     background: #FFF;
     padding: 50px 0;
+    @include break-max(1024px){
+        padding: 20px 0;
+    }
     .wrapper{
         h3{
             text-align: center;
@@ -8,6 +11,12 @@
             font-size: 46px;
             color: #1F3B72;
             font-weight: 100;
+            @include break-max(1024px){
+                text-align: left;
+                margin-left: 25px;
+                font-size: 34px;
+                margin-bottom: 10px;
+            }
         }
         .box{
             display: flex;
@@ -15,19 +24,34 @@
             align-items: center;
             margin-bottom: 30px;
             padding: 60px;
+            @include break-max(1024px){
+                display: block;
+                padding: 0;
+            }
             &.inverter{
                 flex-direction: row-reverse;
             }
             .item{
                 width: 50%;
+                @include break-max(1024px){
+                    width: 100%
+                }
                 .media{
                     img{
                         border-radius: 15px;
+                        @include break-max(1024px){
+                            border-radius: 0;
+                        }
                     }
                     
                 }
                 .text{
                     padding: 0 100px;
+                    @include break-max(1024px){
+                        padding: 25px 25px;
+                        display: block;
+                        margin: 0 auto;
+                    }
                     h4{
                         font-family: $teko;
                         font-size: 46px;
@@ -81,6 +105,10 @@
             text-align: center;
             margin: 0 auto;
             display: block;
+            @include break-max(1024px){
+                background: #1CA8E0;
+                margin: 20px auto;
+            }
         }
     }
 }

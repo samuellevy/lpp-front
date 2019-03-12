@@ -7,6 +7,12 @@
             font-weight: normal;
             padding: 70px 0 25px 0;
             text-align: center;
+            @include break-max(768px){
+                color: #1CA8E0;
+                text-align: left;
+                margin-left: 25px;
+                font-size: 34px;
+            }
         }
         .box{
             display: flex;
@@ -14,6 +20,12 @@
             margin: 40px 0;
             flex-wrap: nowrap;
             flex-direction: row;
+            @include break-max(768px){
+                flex-direction: column;
+                flex-wrap: wrap;
+                margin: 40px 0 0 0;
+                display: none;
+            }
             .item{
                 width: 20%;
                 background-color: #000;
@@ -61,6 +73,53 @@
                         font-size: 13px;
                         color: #FFFFFF;
                         font-weight: lighter;
+                    }
+                }
+                @include break-max(768px){
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+        .mobile-box{
+            display: none;
+            @include break-max(768px){
+                display: block;
+                width: 100%;
+                .item{
+                    .top{
+                        padding: 25px 25px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        border: solid 1px #E6ECF2;
+                        border-right: none;
+                        border-left: none;
+                        cursor: pointer;
+                        #arrow{
+                            align-self: center;
+                        }
+                        img{
+                        }
+                        h3{
+                            margin-right: 55px;
+                            color: #1CA8E0;
+                        }
+                    }
+                    .bottom{
+                        padding: 25px 25px;
+                        display: none;
+                        height: 0;
+                        transition: all linear 1s;
+                        &.active{
+                            display: block;
+                            height: auto;
+                            transition: all linear 1s;
+                        }
+                        p{
+                            color: #525B66;
+                            font-size: 14px;
+                        }
                     }
                 }
             }

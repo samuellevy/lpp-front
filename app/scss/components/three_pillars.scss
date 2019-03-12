@@ -3,6 +3,9 @@
         .box{
             display: flex;
             padding: 70px 0;
+            @include break-max(1024px){
+                padding: 30px 0;
+            }
             .item{
                 padding-left: 90px;
                 display: flex;
@@ -37,6 +40,9 @@
                             color: #525B66;
                             font-family: $asap;
                             font-size: 14px;
+                            @include break-max(1024px){
+                                font-size: 13px;
+                            }
                             span{
                                 display: flex;
                                 align-items: center;

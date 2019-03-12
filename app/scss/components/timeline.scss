@@ -21,6 +21,9 @@
     .box{
         background:#8FAECE;
         padding: 50px;
+        @include break-max(1024px){
+            padding: 30px 15px;
+        }
         .slider{
             position: relative;
             display: flex;
@@ -68,6 +71,9 @@
                 box-shadow: -13px 16px 13px -13px rgba(0,0,0,0.5);
                 margin-bottom: 30px;
                 margin-left: 20px;
+                @include break-max(1025px){
+                    margin-left: 3px;
+                }
                 .block_content{
                     display: block;
                     width: 280px;
@@ -116,7 +122,7 @@
                             font-family: $asap;
                             line-height: 22px;
                             padding: 0 !important;
-                            margin-top: 10px;
+                            margin-top: 20px;
                         }
                     }
                 }

@@ -172,7 +172,30 @@ document.addEventListener("DOMContentLoaded", function() {
             $(this).addClass('active');
         });
 
-        //nossos programas
+        //nossos pilares mobile
+                //** */
+        $('.mobile-box .item .bottom#tabs-1').addClass('active');
+        $('.mobile-box .item .top[data-id=tabs-1]').addClass('active');
+        $('.mobile-box .item .top').click(function(event){
+            var data_id = $(this).attr('data-id');
+            $('.mobile-box .item .top').removeClass('active');
+            $('.mobile-box .item .bottom').removeClass('active');
+            $('.mobile-box .item .bottom#'+data_id).addClass('active');
+            $(this).addClass('active');
+        });
+                //nossos programs mobile
+                //** */
+                
+        $('.section_projects_mobile .wrapper .box-content .item .item-content#tabs-1').addClass('active');
+        $('.section_projects_mobile .wrapper .box-content .item .media[data-id=tabs-1]').addClass('active');
+        $('.section_projects_mobile .wrapper .box-content .item .media').click(function(event){
+            var data_id = $(this).attr('data-id');
+            $('.section_projects_mobile .wrapper .box-content .item .media').removeClass('active');
+            $('.section_projects_mobile .wrapper .box-content .item .item-content').removeClass('active');
+            $('.section_projects_mobile .wrapper .box-content .item .item-content#'+data_id).addClass('active');
+            $(this).addClass('active');
+        });
+                //nossos programas
                 //** */
         $('.content_item').hide();
         $('.content_item#tabs-1').show();
@@ -188,7 +211,13 @@ document.addEventListener("DOMContentLoaded", function() {
             infinite: true,
             slidesToShow: 4,
             slidesToScroll: 1,
-            arrows: true
+            arrows: true,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: "unslick"
+                }
+            ]
         });
         // $('.webdoor_slider .box_slider').slick({
         //     arrows: false,

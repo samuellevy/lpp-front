@@ -23,7 +23,16 @@
         .contato {
             width: 470px;
             margin-top: 58px;
-            
+            .success{
+                display: block;
+                margin-bottom:20px;
+                color: #3966BF;
+                font-size: 16px;
+                @include break-max(1024px){
+                    font-size: 15px;
+                    margin-bottom: 10px;
+                }
+            }
             form {
                 .form-pad {
                     padding: 10px;
@@ -106,6 +115,9 @@
                         margin-top: -10px;
                         img{
                             margin: -25px 0 0 75px;
+                            @include break-max (1024px){
+                                margin: -25px 0 0 55px;
+                            }
                         }
                     }
                     .btn-send{

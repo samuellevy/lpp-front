@@ -5,7 +5,8 @@
     height: 768px;
     z-index: 1;
     @include break-max(768px){
-        height: 651px;
+        height: auto;
+        padding: 0;
     }
     img{
         object-fit: cover;
@@ -14,6 +15,7 @@
         position: absolute;
         @include break-max(768px){
             height: 336px;
+            position: relative;
         }
     }
     .filter_bg{
@@ -25,7 +27,7 @@
         opacity: 0.3;
         top: 0;
         @include break-max(768px){
-            height: 336px;
+            height: auto;
         }
     }
     .wrapper{
@@ -38,11 +40,21 @@
             top: 200px;
             border-radius: 10px;
             border-bottom-right-radius: 0px;
+            @include break-max(1024px){
+                position: relative;
+                top: 0;
+            }
             &.left{
                 left: 30px;
+                @include break-max(1024px){
+                    left: 0;
+                }
             }
             &.right{
                 right: 30px;
+                @include break-max(1024px){
+                    right: 0;
+                }
             }
             &.large{
                 width: 550px !important;
@@ -110,7 +122,7 @@
             @include break-max(768px){
                 width: 100%;
                 border-radius: 0px;
-                top: 337px;
+                top: 0;
             }
         }
     }
