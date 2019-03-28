@@ -223,7 +223,7 @@ document.addEventListener("DOMContentLoaded", function() {
             arrows: false,
             dots: true,
             autoplay: true,
-            speed: 3000
+            speed: 2000
         });
         if (window.matchMedia("(max-width: 768px)").matches) {
             /* the viewport is less than 768 pixels wide */
