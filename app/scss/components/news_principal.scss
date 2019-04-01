@@ -1,5 +1,10 @@
 .news {
+    margin-top: 80px;
+    position: relative;
     background-color: #F5F9FC;
+    @include break-max (768px){
+        margin-top: 0;
+    }
     .webdoor_principal{
         img{
             
