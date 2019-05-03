@@ -43,4 +43,275 @@
             }
         }
     }
+    .box-model-choose{
+        background: url("../images/bg-maes.jpg");
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        background-size: cover;
+        .header{
+            display: flex;
+            width: 50%;
+            height: 20%;
+            -ms-flex-pack: center;
+            justify-content: space-between;
+            -ms-flex-align: start;
+            /* align-items: flex-start; */
+            padding-top: 20px;
+            padding-bottom: 5px;
+            align-self: center;
+            .title{
+                width: 50%;
+                margin-bottom: 1vw;
+                margin-right: 40px;
+                h4{
+                    font-family: 'Teko';
+                    padding-top: 1vw;
+                    color: #fff;
+                    text-align: center;
+                    font-size: 3.5vw;
+                    text-transform: uppercase;
+                    font-weight: normal;
+                    background: #ff628a;
+                    border-radius: 60px;
+                    border-bottom-left-radius: 0;
+                }
+            }
+            .description{
+                align-self: center;
+                width: 50%;
+                padding-right: 140px;
+                span {
+                    font-family: 'Asap';
+                    font-size: 16px;
+                    color: #868f99;
+                }
+            }
+        }
+        .mother-choose{
+            display: flex;
+            -ms-flex-pack: center;
+            /* justify-content: center; */
+            width: 50%;
+            align-self: center;
+            .content{
+                display: flex;
+                width: 100%;
+                -ms-flex-pack: center;
+                justify-content: center;
+                #mother1{
+                    a{
+                        display: block;
+                        margin-top: 20px;
+                        font-family: 'Teko';
+                        font-size: 1vw;
+                        text-transform: uppercase;
+                        text-align: center;
+                        span{
+                            color: #fff;
+                            background: #ff628a;
+                            padding: .2vw 2.5vw .1vw;
+                            border-radius: 40px;
+                        }
+                    }
+                }
+                #mother2{
+                    margin-left: 90px;
+                    margin-right: 50px;
+                    a{
+                        display: block;
+                        margin-top: 20px;
+                        font-family: 'Teko';
+                        font-size: 1vw;
+                        text-transform: uppercase;
+                        text-align: center;
+                        span{
+                            color: #fff;
+                            background: #ff628a;
+                            padding: .2vw 2.5vw .1vw;
+                            border-radius: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .box-steps{
+        background: #47316f;
+        display: flex;
+        justify-content: center;
+        padding: 35px 0 35px;
+        .steps-content{
+            display: flex;
+            width: 50%;
+            justify-content: space-between;
+            text-align: left;
+            font-family: 'Teko';
+            font-size: 27px;
+            color: #fff;
+            #passo1{
+                width:33%;
+                text-transform: uppercase;
+                p{
+                    margin-left: 15px;
+                }
+                .bar#active{
+                    width: 95%;
+                    background:#fff;
+                    height: 3px;
+                    margin-top: 3px;
+                }
+            }
+            #passo2{
+                width:33%;
+                text-transform: uppercase;
+                p{
+                    margin-left: 15px;
+                }
+                .bar{
+                    width: 95%;
+                    background:#a095b0;
+                    height: 3px;
+                    margin-top: 3px;
+                }
+            }
+            #passo3{
+                width:33%;
+                text-transform: uppercase;
+                p{
+                    margin-left: 15px;
+                }
+                .bar{
+                    width: 95%;
+                    background:#a095b0;
+                    height: 3px;
+                    margin-top: 3px;
+                }
+            }
+        }
+    }
+    .box-choose-file{
+        background: url("../images/bg-maes.jpg");
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        background-size: cover;
+        padding: 40px 0;
+        -ms-flex-line-pack: center;
+        align-content: center;
+        width: 100%;
+        .box-wrap{
+            display: flex;
+            width: 60%;
+            -ms-flex-item-align: center;
+            align-self: center;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            -ms-flex-align: center;
+            align-items: center;    
+            .media{
+                width: 50%;
+                img{
+                }
+            }
+            .text{
+                width: 55%;
+                padding-right: 125px;
+                padding-left: 40px;
+                p{
+                    font-family: 'Asap';
+                    color: #868f99;
+                    font-size: 16px;
+                }
+                a{
+                    display: block;
+                    margin-top: 60px;
+                    font-family: 'Teko';
+                    font-size: 1vw;
+                    text-transform: uppercase;
+                    text-align: left;
+                    span{
+                        color: #fff;
+                        background: #ff628a;
+                        padding:5px 20px;
+                        border-radius: 40px;
+                    }
+                }
+            }
+        }
+    }
+    .box-card-finish{
+        background: url("../images/bg-maes.jpg");
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        background-size: cover;
+        padding: 40px 0;
+        -ms-flex-line-pack: center;
+        align-content: center;
+        width: 100%;
+        .box-wrap{
+            display: flex;
+            width: 60%;
+            -ms-flex-item-align: center;
+            align-self: center;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            -ms-flex-align: center;
+            align-items: flex-start;    
+            .media{
+                width: 50%;
+                img{
+                }
+            }
+            .text{
+                width: 55%;
+                padding-right: 125px;
+                padding-left: 40px;
+                h4{
+                    font-family: 'Teko';
+                    padding-top: 10px;
+                    color: #fff;
+                    text-align: center;
+                    font-size: 2vw;
+                    text-transform: uppercase;
+                    font-weight: normal;
+                    background: #ff628a;
+                    border-radius: 60px;
+                    border-top-left-radius: 0; 
+                }
+                p{
+                    font-family: 'Asap';
+                    color: #868f99;
+                    font-size: 16px;
+                    padding: 20px;
+                    margin-top: 20px;
+                }
+                a{
+                    display: block;
+                    margin-top: 60px;
+                    font-family: 'Teko';
+                    font-size: 1vw;
+                    text-transform: uppercase;
+                    text-align: center;
+                    span{
+                        color: #fff;
+                        background: #ff628a;
+                        padding:5px 40px;
+                        font-size: 22px;
+                        border-radius: 40px;
+                    }
+                }
+            }
+        }
+    }
 }
