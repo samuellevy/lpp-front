@@ -2,7 +2,7 @@
     .box-content{
         position: relative;
         .introduction_maes{
-            width: 400px;
+            width: 23vw;
             position: absolute;
             left: 42%;
             top: 30%;
@@ -11,13 +11,13 @@
                 border-radius: 60px;
                 border-bottom-left-radius: 0;
                 width: 100%;
-                margin-bottom: 35px;
+                margin-bottom: 1vw;
                 h4{
                     font-family: 'Teko';
-                    padding-top: 20px;
+                    padding-top: 1vw;
                     color: #fff;
                     text-align:center;
-                    font-size: 64px;
+                    font-size: 3vw;
                     text-transform:uppercase;
                     font-weight: normal;
                 }
@@ -26,19 +26,19 @@
         p{
             color: #868f99;
             font-family: 'Asap';
-            font-size: 16px;
+            font-size: .85vw;
         }
         a{
             display: block;
-            margin-top: 90px;
+            margin-top: 3vw;
             font-family: 'Teko';
-            font-size: 22px;
+            font-size: 1vw;
             text-transform: uppercase;
             text-align: center;
             span{
                 color: #fff;
                 background: #ff628a;
-                padding: 5px 50px;
+                padding: .2vw 2.5vw .1vw;
                 border-radius: 40px;
             }
         }
