@@ -83,6 +83,32 @@
             }
         }
     }
+    .click-mobile{
+    display: none;
+    position: absolute;
+    z-index: 999;
+    margin-top: 85px;
+    margin-left: 18px;
+    @include break-max(768px){
+        display: block;
+    }
+    }
+    .bg-mobile{
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 676px;
+        @include break-max(768px){
+            display: block;
+            .bg{
+                background:#4a3678;
+                opacity: 0.7;
+                width: 100%;
+                height: 676px;
+            }
+        }
+
+    }
     .choose_model_container{
         background: url("../images/bg-maes.jpg");
         background-position: 50% 50%;
@@ -155,19 +181,12 @@
                         margin-right: 0;
                         padding-left: 0;
                     }
-                    p{
+                    img{  
                         display: none;
                         @include break-max(768px){
+                            margin-bottom: 4px;
+                            margin-left: 1px;
                             display: block;
-                            background: #ff628a;
-                            padding: 7px;
-                            font-size: 25px;
-                            color: #fff;
-                            font-family: 'Asap';
-                            font-weight: bold;
-                            width: 35px;
-                            border-radius: 50%;
-                            text-align: center;
                         }
                     }
                     span {
@@ -217,7 +236,7 @@
                         span{
                             color: #fff;
                             background: #ff628a;
-                            padding: 5px 60px;
+                            padding: 5px 60px 3px;
                             border-radius: 40px;
                         }
                         @include break-max(768px){
@@ -245,7 +264,7 @@
                         span{
                             color: #fff;
                             background: #ff628a;
-                            padding: 5px 60px;
+                            padding: 5px 60px 3px;
                             border-radius: 40px;
                         }
                         @include break-max(768px){
@@ -280,8 +299,12 @@
                 text-transform: uppercase;
                 p{
                     margin-left: 15px;
+                    font-family: 'Teko';
+                    font-size: 26px;
+                    font-weight: 100;
                     @include break-max(768px){
                         margin-left: 10px;
+                        font-size: 20px;
                     }
                 }
                 .bar#active{
@@ -296,8 +319,12 @@
                 text-transform: uppercase;
                 p{
                     margin-left: 15px;
+                    font-family: 'Teko';
+                    font-size: 26px;
+                    font-weight: 100;
                     @include break-max(768px){
                         margin-left: 10px;
+                        font-size: 20px;
                     }
                 }
                 .bar{
@@ -310,10 +337,15 @@
             #passo3{
                 width:33%;
                 text-transform: uppercase;
+                
                 p{
                     margin-left: 15px;
+                    font-family: 'Teko';
+                    font-size: 26px;
+                    font-weight: 100;
                     @include break-max(768px){
                         margin-left: 10px;
+                        font-size: 20px;
                     }
                 }
                 .bar{
