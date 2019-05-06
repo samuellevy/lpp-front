@@ -1,4 +1,12 @@
 .content_maes{
+    .scenes{
+        section.scene{
+            display: none;
+            &.active{
+                display: block;
+            }
+        }
+    }
     .introduction_container{
         .box_introduction{
             position: relative;

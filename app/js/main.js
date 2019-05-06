@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-
     /** map */
     $('.map-action').hover(function(){
         var id = $(this).attr('id');
@@ -151,11 +150,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 var scrollTop = $(window).scrollTop();
                 if (scrollTop >= 100 ) {
                     $('#header').addClass("active");
-                    console.log('entrou');
+                    // console.log('entrou');
                 }
                 else{
                     $('#header').removeClass("active");
-                    console.log('saiu');
+                    // console.log('saiu');
                 }
             }
         });
@@ -270,3 +269,39 @@ function webdoor_config(){
         }
     });
 }
+
+// especial dia das mães
+var cenaMaes = {
+    scene: 0,
+    nextScene: 1,
+    init: function(){
+        console.log('cena mães iniciado');
+        this.mount();
+        this.listenerButtons();
+    },
+    mount: function(){
+        $('.scene[data-scene='+this.scene+']').addClass('active');
+    },
+    listenerButtons: function(){
+        $('.nextScene').click(function(e){
+            e.preventDefault();
+            cenaMaes.changeScene();
+            console.log('clicked');
+        });
+    },
+    changeScene: function(){
+        $('.scene').removeClass('active');
+        $('.scene[data-scene='+this.nextScene+']').addClass('active');
+        this.nextScene++;
+    },
+    chooseModel: function(){},
+    dragImage: function(){},
+    mergeImage: function(){},
+    sendImage: function(){},
+    sendMerged: function(){},
+    getFinalImage: function(){}
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    cenaMaes.init();
+});
