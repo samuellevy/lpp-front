@@ -1,28 +1,29 @@
 .content_maes
-    .box-content
-        img(src="../images/banner_maes.jpg")
-        .introduction_maes
-            .title
+    .introduction_container
+        .box_introduction
+            .introduction_content
                 h4 Mães Lutadoras
-            p O <strong>Dia das Mães</strong> está chegando e nós queremos<br/> te ajudar a mostrar para o mundo que sua mãe<br/> é uma verdadeira lutadora. Aqui você poderá criar<br/> um cartão para homenageá-la. É muito rápido e fácil. Vamos lá?
-            a(href="#" #start)
-                span Começar
-    .box-model-choose
-        .header
-            .title
-                h4 escolha o modelo
-            .description
-                span Pra começar, escolha qual dos dois modelos é mais parecido com a sua mãe.
-        .mother-choose
-            .content
-                #mother1
-                    img(src="../images/mother01.png", alt="")
-                    a(href="") 
-                        span É esse!
-                #mother2 
-                    img(src="../images/mother02.png", alt="")
-                    a(href="")
-                        span É esse!
+                p O <strong>Dia das Mães</strong> está chegando e nós queremos te ajudar a mostrar para o mundo que sua mãe é uma verdadeira lutadora. Aqui você poderá criar um cartão para homenageá-la. É muito rápido e fácil. Vamos lá?
+                a(href="#" #start)
+                    span Começar
+    .choose_model_container
+        .box-wrap
+            .box_choose_model
+                .title
+                    h4 escolha o modelo
+                .description
+                    span Pra começar, escolha qual dos dois modelos<br/> é mais parecido com a sua mãe.
+                    p ?
+            .mother-choose
+                .content
+                    #mother1
+                        img(src="../images/mother01.png", alt="")
+                        a(href="") 
+                            span É esse!
+                    #mother2 
+                        img(src="../images/mother02.png", alt="")
+                        a(href="")
+                            span É esse!
     .box-steps
         .steps-content
             #passo1
@@ -57,13 +58,15 @@
             #passo3
                 p Passo 3
                 .bar
-    .box-card-finish
+    .box-card-ready
+        .mobile
+            h4 seu cartão está pronto!
         .box-wrap
             .media
                 img(src="../images/mother2-choose.png", alt="")
             .text
                 h4 seu cartão está pronto!
-                p Agora é só salvar e compartilhar pra todo mundo ver. Ah, não se esqueça de usar a hashtag #MãesLutadoras ;)
+                p Agora é só salvar e compartilhar pra todo mundo ver. Ah, não se esqueça de usar a hashtag <strong>#MãesLutadoras</strong> ;)
                 a(href="")
                     span clique aqui
                 p Aproveite e conheça um pouco mais sobre a Luta Pela Paz navegando pelo site.
@@ -80,5 +83,3 @@
             #passo3
                 p Passo 3
                 .bar
-
-            
