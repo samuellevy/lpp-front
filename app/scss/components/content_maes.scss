@@ -92,14 +92,14 @@
         }
     }
     .click-mobile{
-    display: none;
-    position: absolute;
-    z-index: 999;
-    margin-top: 85px;
-    margin-left: 18px;
-    @include break-max(768px){
-        display: block;
-    }
+        display: none;
+        position: absolute;
+        z-index: 999;
+        margin-top: 85px;
+        margin-left: 18px;
+        @include break-max(768px){
+            display: block;
+        }
     }
     .bg-mobile{
         display: none;
@@ -115,7 +115,7 @@
                 height: 676px;
             }
         }
-
+        
     }
     .choose_model_container{
         background: url("../images/bg-maes.jpg");
@@ -133,11 +133,13 @@
         .box-wrap{
             display: flex;
             flex-direction: column;
+            margin: 150px 0;
             @include break-max(768px){
                 display: flex;
                 -ms-flex-direction: column;
                 flex-direction: column;
                 width: 100%;
+                margin: 0;
             }
             .box_choose_model{
                 display: flex;
@@ -365,87 +367,93 @@
             }
         }
     }
-    .box-choose-file{
-        background: url("../images/bg-maes.jpg");
-        display: -ms-flexbox;
-        display: flex;
-        justify-content: center;
-        background-size: cover;
-        padding: 40px 0;
-        align-content: center;
-        background-position: 50% 50%;
-        width: 100%;
-        @include break-max(768px){
-            background: url("../images/bg-clean.png");
-            padding: 0 20px;
-            background-position: 50% 50%;
-            background-size: cover;
-            background-repeat: no-repeat;
-            display: block;
-            padding-bottom: 20px;
-        }
-        .box-wrap{
+    .scene-choose-file{
+        .box-choose-file{
+            background: url("../images/bg-maes.jpg");
             display: flex;
-            width: 60%;
-            -ms-flex-item-align: center;
-            align-self: center;
-            -ms-flex-pack: justify;
-            justify-content: space-between;
-            -ms-flex-align: center;
-            align-items: center;   
+            justify-content: center;
+            background-size: cover;
+            padding: 150px 0;
+            align-content: center;
+            background-position: 50% 50%;
+            width: 100%;
             @include break-max(768px){
-                display: flex;
-                width: 100%;    
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                height: auto;
-                padding-top: 110px;
-            } 
-            .media{
-                width: 50%;
-                flex-shrink: 0;
-                @include break-max(768px){
-                    width: 100%;
-                }
-                img{
-                }
+                background: url("../images/bg-clean.png");
+                padding: 0 20px;
+                background-position: 50% 50%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                display: block;
+                padding-bottom: 20px;
             }
-            .text{
-                width: 50%;
-                margin-left: 90px;
+            .box-wrap{
+                display: flex;
+                width: 60%;
+                -ms-flex-item-align: center;
+                align-self: center;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+                -ms-flex-align: center;
+                align-items: center;   
                 @include break-max(768px){
-                    width: 100%;
-                    margin-left: 0;
-                }
-                p{
-                    font-family: 'Asap';
-                    color: #868f99;
-                    font-size: 16px;
+                    display: flex;
+                    width: 100%;    
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    height: auto;
+                    padding-top: 110px;
+                } 
+                .media{
+                    width: 50%;
+                    flex-shrink: 0;
                     @include break-max(768px){
-                        margin-top: 10px;
-                        padding: 20px;
-                        font-size: 14px;
+                        width: 100%;
+                    }
+                    .model-doll{
+                        display: none;
                     }
                 }
-                a{
-                    display: block;
-                    margin-top: 60px;
-                    font-family: 'Teko';
-                    font-size: 22px;
-                    text-transform: uppercase;
-                    text-align: left;
-                    margin-bottom: 65px;
+                .text{
+                    width: 50%;
+                    margin-left: 90px;
                     @include break-max(768px){
-                        text-align: center;
-                        font-size: 20px;
-                        margin-top: 30px;
+                        width: 100%;
+                        margin-left: 0;
                     }
-                    span{
-                        color: #fff;
-                        background: #ff628a;
-                        padding: 5px 20px;
-                        border-radius: 40px;
+                    p{
+                        font-family: 'Asap';
+                        color: #868f99;
+                        font-size: 16px;
+                        @include break-max(768px){
+                            margin-top: 10px;
+                            padding: 20px;
+                            font-size: 14px;
+                        }
+                    }
+                    a{
+                        display: block;
+                        margin-top: 60px;
+                        font-family: 'Teko';
+                        font-size: 22px;
+                        text-transform: uppercase;
+                        text-align: left;
+                        margin-bottom: 65px;
+                        @include break-max(768px){
+                            text-align: center;
+                            font-size: 20px;
+                            margin-top: 30px;
+                        }
+                        span{
+                            color: #fff;
+                            background: #ff628a;
+                            padding: 5px 20px;
+                            border-radius: 40px;
+                            cursor: pointer;
+                        }
+                    }
+                    #uploadedImage{
+                        display: none;
                     }
                 }
             }

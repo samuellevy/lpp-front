@@ -272,8 +272,9 @@ function webdoor_config(){
 
 // especial dia das mães
 var cenaMaes = {
-    scene: 0,
-    nextScene: 1,
+    scene: 1,
+    nextScene: 2,
+    skinModel: null,
     init: function(){
         console.log('cena mães iniciado');
         this.mount();
@@ -288,13 +289,34 @@ var cenaMaes = {
             cenaMaes.changeScene();
             console.log('clicked');
         });
+        $('.chooseModelBtn').click(function(e){
+            e.preventDefault();
+            var model = $(this).attr('data-model');
+            cenaMaes.chooseModel(model);
+            console.log('choose model btn');
+        });
+        $(".btnChoseImage").click(function() {
+            $("#uploadedImage").click();
+        });
+        $("#uploadedImage").change(function() {
+            console.log('file selected');
+            cenaMaes.mountMergeScene();
+        });
     },
     changeScene: function(){
         $('.scene').removeClass('active');
         $('.scene[data-scene='+this.nextScene+']').addClass('active');
         this.nextScene++;
     },
-    chooseModel: function(){},
+    chooseModel: function(model){
+        this.skinModel = model;
+        $('.model-doll[data-model='+model+']').show();
+        this.changeScene();
+    },
+    mountMergeScene: function(){
+        var output = document.getElementById('uploadedImage');
+        document.getElementById('preview').src = window.URL.createObjectURL(output.files[0])
+    },
     dragImage: function(){},
     mergeImage: function(){},
     sendImage: function(){},

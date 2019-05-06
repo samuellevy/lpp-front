@@ -23,20 +23,24 @@
                     .content
                         #mother1
                             img(src="../images/mother01.png", alt="")
-                            a.nextScene#start(href="#") 
+                            a.chooseModelBtn(href="#" data-model='a') 
                                 span É esse!
                         #mother2 
                             img(src="../images/mother02.png", alt="")
-                            a.nextScene#start(href="#")
+                            a.chooseModelBtn(href="#" data-model='b')
                                 span É esse!
-        section.scene.box-choose-file(data-scene=2)
-            .box-wrap
-                .media
-                    img(src="../images/mother2-choose.png", alt="")
-                .text
-                    p Envie uma foto de sua rainha. Mas atenção, importante que seja uma foto de rosto, para que se encaixe direitinho no cartão, ok?
-                    a(href="")
-                        span Escolher arquivo
+        section.scene.scene-choose-file(data-scene=2)
+            .box-choose-file
+                .box-wrap
+                    .media
+                        img.model-doll(src="../images/mother01.png", alt="", style="width:519px;height:519px;", data-model="a")
+                        img.model-doll(src="../images/mother2-choose.png", alt="", style="width:519px;height:519px;", data-model="b")
+                        img#preview(src="", alt="")
+                    .text
+                        p Envie uma foto de sua rainha. Mas atenção, importante que seja uma foto de rosto, para que se encaixe direitinho no cartão, ok?
+                        a
+                            span.btnChoseImage Escolher arquivo
+                            input#uploadedImage(type="file")
         section.scene.box-card-ready(data-scene=3)
             .mobile
                 h4 seu cartão está pronto!
