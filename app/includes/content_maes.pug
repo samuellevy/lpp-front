@@ -45,10 +45,13 @@
                 .decrease -
                 .increase +
                 .merge pronto
-            .work-box#work-box
-                img#preview.preview(src="", alt="")
-                img#mask(src="../images/diadasmaes/mask.png")
-            canvas#canvas(width="520" height="520")
+                input#rangeSelector(type="range" min="120" max="600" value="400")
+            .box-wrap
+                canvas#canvas(width="530" height="531")
+                .work-box#work-box
+                    img#preview.preview(src="", alt="")
+                    img#mask(src="../images/diadasmaes/mask.png")
+                    img#image-mask(src="../images/diadasmaes/new-mask-black.png")
         section.scene.box-card-ready(data-scene=4)
             .mobile
                 h4 seu cartão está pronto!

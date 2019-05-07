@@ -315,7 +315,12 @@ var cenaMaes = {
     },
     mountMergeScene: function(){
         var output = document.getElementById('uploadedImage');
-        document.getElementById('preview').src = window.URL.createObjectURL(output.files[0])
+        var preview = document.getElementById('preview');
+        preview.src = window.URL.createObjectURL(output.files[0]);
+        preview.addEventListener("load", function(){
+            dragControl.resize();
+        });
+
         this.changeScene();
         this.dragImage();
     },
@@ -325,11 +330,15 @@ var cenaMaes = {
     mergeImage: function(){
         var c = document.getElementById("canvas");
         var ctx = c.getContext("2d");
+        ctx.clearRect(0, 0, c.width, c.height);
         var img = document.getElementById("preview");
         var mask = document.getElementById("mask");
+        var imageLeft = img.style["left"].substr(0, img.style["left"].indexOf("px"));
+        var imageTop = img.style["top"].substr(0, img.style["top"].indexOf("px"));
+        console.log(imageTop);
 
-        ctx.drawImage(img, 10, 10, img.offsetWidth*dragControl.scale, img.offsetHeight*dragControl.scale); 
-        ctx.drawImage(mask, 10, 10); 
+        ctx.drawImage(img, imageLeft, imageTop, img.offsetWidth, img.offsetHeight); 
+        ctx.drawImage(mask, 0, 0, 530, 531); 
     },
     sendImage: function(){},
     sendMerged: function(){},
@@ -349,14 +358,30 @@ var dragControl = {
     image: document.getElementById('preview'),
     workbox: document.getElementById('work-box'),
     scale: 1,
+    range_min_px: 120,
+    range_max_px: 500,
 
     // functions
     init: function(){
         console.log('initialized');
-        document.addEventListener('mousedown', this.startDrag);
-        document.addEventListener('mouseup', this.endDrag);
-        document.addEventListener('mousemove', this.dragging);
+        var workbox = document.getElementById('work-box');
+        workbox.addEventListener('mousedown', this.startDrag);
+        workbox.addEventListener('mouseup', this.endDrag);
+        workbox.addEventListener('mousemove', this.dragging);
+
+        $(document).on("touchstart", function(){
+            dragControl.startDrag();
+        });
+
+        $(document).on("touchend", function(){
+            dragControl.endDrag();
+        });
         
+        $(document).on("touchmove", function(e){
+            e.preventDefault();
+            dragControl.dragging();
+        });
+     
         $(".decrease").click(function() {
             dragControl.decrease();
         });
@@ -366,6 +391,20 @@ var dragControl = {
         $(".merge").click(function() {
             dragControl.merge();
         });
+
+        $("#rangeSelector").change(function(){
+            var rangeSelector = $('#rangeSelector');
+            var preview = document.getElementById('preview');
+            preview.style['width']=(rangeSelector.val())+'px';
+            dragControl.merge();
+        });
+        
+        dragControl.merge();
+    },
+    resize: function(){
+        var preview = document.getElementById('preview');
+        preview.style['width']=400+'px';
+        dragControl.merge();
     },
     startDrag: function(e){
         dragControl.draggable = true;
@@ -373,11 +412,19 @@ var dragControl = {
         restMouseY = e.clientY;
         image_left = dragControl.image.offsetLeft;
         image_top = dragControl.image.offsetTop;
+
+        cenaMaes.mergeImage();
         console.log(e.clientX);
+
+        // $('.mask').addClass('disabled');
+        // $('.preview').removeClass('disabled');
     },
     endDrag: function(e){
         dragControl.draggable = false;
+        dragControl.merge();
         console.log('can`t drag');
+
+        // $('.preview').addClass('disabled');
     },
     dragging: function(e){
         e.preventDefault();
@@ -393,7 +440,8 @@ var dragControl = {
             
             dragControl.image.style["left"] = (image_left + deltaX) + 'px';
             dragControl.image.style["top"] = (image_top + deltaY) + 'px';
-
+            
+            cenaMaes.mergeImage();
             console.log(mouseX + ' - ' + image_left);
         } else {
 
@@ -402,17 +450,22 @@ var dragControl = {
     decrease: function(){
         console.log('decreased');
         dragControl.scale = dragControl.scale - 0.05;
-        dragControl.image.style["transform"] = 'scale('+dragControl.scale+')';
+        dragControl.image.style["width"] = (dragControl.image.offsetWidth * dragControl.scale)+"px";
+        dragControl.image.style["height"] = (dragControl.image.offsetHeight * dragControl.scale)+"px";
+        cenaMaes.mergeImage();
     },
     increase: function(){
         console.log('increased');
         dragControl.scale = dragControl.scale + 0.05;
-        dragControl.image.style["transform"] = 'scale('+dragControl.scale+')';
+        dragControl.image.style["width"] = (dragControl.image.offsetWidth * dragControl.scale)+"px";
+        dragControl.image.style["height"] = (dragControl.image.offsetHeight * dragControl.scale)+"px";
+        cenaMaes.mergeImage();
     },
     merge: function(){
         cenaMaes.mergeImage();
     }
 }
+
 
 
 document.addEventListener("DOMContentLoaded", function() {
