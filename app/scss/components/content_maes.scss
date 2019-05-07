@@ -7,7 +7,7 @@
             }
         }
     }
-    .introduction_container{
+    section.introduction_container{
         .box_introduction{
             position: relative;
             background: url("../images/bg-banner.png");
@@ -117,7 +117,7 @@
         }
         
     }
-    .choose_model_container{
+    section.choose_model_container{
         background: url("../images/bg-maes.jpg");
         background-position: 50% 50%;
         background-size: cover;
@@ -367,7 +367,7 @@
             }
         }
     }
-    .scene-choose-file{
+    section.scene-choose-file{
         .box-choose-file{
             background: url("../images/bg-maes.jpg");
             display: flex;
@@ -459,7 +459,57 @@
             }
         }
     }
-    .box-card-ready{
+    section.setSize{
+        background: url("../images/bg-maes.jpg");
+        display: flex;
+        justify-content: center;
+        background-size: cover;
+        padding: 150px 0;
+        align-content: center;
+        background-position: 50% 50%;
+        width: 100%;
+        position: relative;
+        .work-tools{
+            width: 100%;
+            display: flex;
+            background-color: #e2e2e2;
+            justify-content: center;
+            .increase{
+                width: 60px;
+                height: 60px;
+                background-color: tomato;
+            }
+            .decrease{
+                width: 60px;
+                height: 60px;
+                background-color: purple;
+            }
+            .merge{
+                width: 60px;
+                height: 60px;
+                background-color: green;
+            }
+        }
+        .work-box{
+            max-width: 1000px;
+            position: relative;
+            margin: 70px auto;
+            min-height: 530px;
+            img#preview{
+                position: absolute;
+                top: 0; left: 0;
+            }
+            img#mask{
+                position: absolute;
+                top: 0; left: 0;
+                // background: url("../images/diadasmaes/mask.png");
+                width: 530px;
+                height: 530px;
+                opacity: 0.2;
+            }
+        }
+    }
+    section.box-card-ready{
         background: url("../images/bg-maes.jpg");
         display: flex;
         background-position: 50% 50%;

@@ -272,8 +272,8 @@ function webdoor_config(){
 
 // especial dia das mães
 var cenaMaes = {
-    scene: 1,
-    nextScene: 2,
+    scene: 2,
+    nextScene: 3,
     skinModel: null,
     init: function(){
         console.log('cena mães iniciado');
@@ -316,13 +316,104 @@ var cenaMaes = {
     mountMergeScene: function(){
         var output = document.getElementById('uploadedImage');
         document.getElementById('preview').src = window.URL.createObjectURL(output.files[0])
+        this.changeScene();
+        this.dragImage();
     },
-    dragImage: function(){},
-    mergeImage: function(){},
+    dragImage: function(){
+        dragControl.init();
+    },
+    mergeImage: function(){
+        var c = document.getElementById("canvas");
+        var ctx = c.getContext("2d");
+        var img = document.getElementById("preview");
+        var mask = document.getElementById("mask");
+
+        ctx.drawImage(img, 10, 10, img.offsetWidth*dragControl.scale, img.offsetHeight*dragControl.scale); 
+        ctx.drawImage(mask, 10, 10); 
+    },
     sendImage: function(){},
     sendMerged: function(){},
     getFinalImage: function(){}
 }
+
+var dragControl = {
+    // enable drag
+    draggable: false,
+
+    // movement
+    movement: true,
+    mouseX: 0,
+    mouseY: 0,
+    restMouseX: 0,
+    restMouseY: 0,
+    image: document.getElementById('preview'),
+    workbox: document.getElementById('work-box'),
+    scale: 1,
+
+    // functions
+    init: function(){
+        console.log('initialized');
+        document.addEventListener('mousedown', this.startDrag);
+        document.addEventListener('mouseup', this.endDrag);
+        document.addEventListener('mousemove', this.dragging);
+        
+        $(".decrease").click(function() {
+            dragControl.decrease();
+        });
+        $(".increase").click(function() {
+            dragControl.increase();
+        });
+        $(".merge").click(function() {
+            dragControl.merge();
+        });
+    },
+    startDrag: function(e){
+        dragControl.draggable = true;
+        restMouseX = e.clientX;
+        restMouseY = e.clientY;
+        image_left = dragControl.image.offsetLeft;
+        image_top = dragControl.image.offsetTop;
+        console.log(e.clientX);
+    },
+    endDrag: function(e){
+        dragControl.draggable = false;
+        console.log('can`t drag');
+    },
+    dragging: function(e){
+        e.preventDefault();
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+
+        if(dragControl.draggable){
+            console.log('draggable');
+            deltaX = mouseX - restMouseX;
+            deltaY = mouseY - restMouseY;
+            image_width = dragControl.image.offsetWidth;
+            image_height = dragControl.image.offsetHeight;
+            
+            dragControl.image.style["left"] = (image_left + deltaX) + 'px';
+            dragControl.image.style["top"] = (image_top + deltaY) + 'px';
+
+            console.log(mouseX + ' - ' + image_left);
+        } else {
+
+        }
+    },
+    decrease: function(){
+        console.log('decreased');
+        dragControl.scale = dragControl.scale - 0.05;
+        dragControl.image.style["transform"] = 'scale('+dragControl.scale+')';
+    },
+    increase: function(){
+        console.log('increased');
+        dragControl.scale = dragControl.scale + 0.05;
+        dragControl.image.style["transform"] = 'scale('+dragControl.scale+')';
+    },
+    merge: function(){
+        cenaMaes.mergeImage();
+    }
+}
+
 
 document.addEventListener("DOMContentLoaded", function() {
     cenaMaes.init();
