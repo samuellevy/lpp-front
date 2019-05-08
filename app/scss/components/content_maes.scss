@@ -511,7 +511,7 @@ html,body{
             }
             #canvas{
                 @include break-max (768px){
-                    // display: none;
+                    display: none;
                 }
             }
             .work-container{

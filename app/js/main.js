@@ -390,21 +390,23 @@ var dragControl = {
         workbox.addEventListener('mouseup', this.endDrag);
         workbox.addEventListener('mousemove', this.dragging);
 
-        workbox.addEventListener("touchstart", this.startTouch, false);
-        workbox.addEventListener('touchmove', this.touching, false);
+        workbox.addEventListener("touchstart", this.startTouch, true);
+        workbox.addEventListener('touchmove', this.touching, true);
+        workbox.addEventListener('touchend', this.endTouch, true);
+        workbox.addEventListener('touchcancel', this.endTouch, true);
 
-        $(document).on("touchstart", function(){
-            dragControl.startDrag();
-        });
+        // $(document).on("touchstart", function(){
+        //     dragControl.startDrag();
+        // });
 
-        $(document).on("touchend", function(){
-            dragControl.endDrag();
-        });
+        // $(document).on("touchend", function(){
+        //     dragControl.endDrag();
+        // });
         
-        $(document).on("touchmove", function(e){
-            e.preventDefault();
-            dragControl.dragging();
-        });
+        // $(document).on("touchmove", function(e){
+        //     e.preventDefault();
+        //     dragControl.dragging();
+        // });
      
         $(".decrease").click(function() {
             dragControl.decrease();
@@ -438,8 +440,6 @@ var dragControl = {
         image_top = dragControl.image.offsetTop;
 
         cenaMaes.mergeImage();
-        console.log(e.clientX);
-
         // $('.mask').addClass('disabled');
         // $('.preview').removeClass('disabled');
     },
@@ -451,11 +451,7 @@ var dragControl = {
         // $('.preview').addClass('disabled');
     },
     dragging: function(e){
-        
-        var x = event.touches[0].clientX;
-        var y = event.touches[0].clientY;
         console.log('foi');
-
         mouseX = e.clientX;
         mouseY = e.clientY;
 
@@ -475,13 +471,13 @@ var dragControl = {
 
         }
     },
-    startTouch: function(){
+    startTouch: function(e){
         console.log('starting touch');
         dragControl.draggable = true;
-        restMouseX = e.touches[0].clientX;
-        restMouseY = e.touches[0].clientY;
-        image_left = dragControl.image.offsetLeft;
-        image_top = dragControl.image.offsetTop;
+        dragControl.restMouseX = e.touches[0].clientX;
+        dragControl.restMouseY = e.touches[0].clientY;
+        dragControl.image_left = dragControl.image.offsetLeft;
+        dragControl.image_top = dragControl.image.offsetTop;
 
         cenaMaes.mergeImage();
         console.log(e.touches[0].clientX);
@@ -494,19 +490,26 @@ var dragControl = {
 
         if(dragControl.draggable){
             console.log('draggable');
-            deltaX = mouseX - restMouseX;
-            deltaY = mouseY - restMouseY;
+            deltaX = mouseX - dragControl.restMouseX;
+            deltaY = mouseY - dragControl.restMouseY;
             image_width = dragControl.image.offsetWidth;
             image_height = dragControl.image.offsetHeight;
             
-            dragControl.image.style["left"] = (image_left + deltaX) + 'px';
-            dragControl.image.style["top"] = (image_top + deltaY) + 'px';
+            dragControl.image.style["left"] = (dragControl.image_left + deltaX) + 'px';
+            dragControl.image.style["top"] = (dragControl.image_top + deltaY) + 'px';
             
             cenaMaes.mergeImage();
-            console.log(mouseX + ' - ' + image_left);
+            console.log(mouseX + ' - ' + dragControl.image_left);
         } else {
 
         }
+    },
+    endTouch: function(e){
+        dragControl.draggable = false;
+        dragControl.merge();
+        console.log('can`t drag');
+
+        // $('.preview').addClass('disabled');
     },
     decrease: function(){
         console.log('decreased');

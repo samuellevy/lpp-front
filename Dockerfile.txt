@@ -1,0 +1,14 @@
+FROM mhart/alpine-node:10
+
+WORKDIR /usr/app
+
+COPY package*.json ./
+RUN npm install -g gulp
+RUN npm install
+COPY . .
+
+RUN npm install gulp --save-dev
+
+EXPOSE 3000
+
+CMD ["gulp"]
