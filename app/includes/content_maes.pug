@@ -1,4 +1,4 @@
-.content_maes
+.content_maes(ondragstart="return false;" ondrop="return false;")
     .scenes
         section.scene.introduction_container(data-scene=0)
             .box_introduction
@@ -35,13 +35,29 @@
                     .media
                         img.model-doll(src="../images/mother01.png", alt="", style="width:519px;height:519px;", data-model="a")
                         img.model-doll(src="../images/mother2-choose.png", alt="", style="width:519px;height:519px;", data-model="b")
-                        img#preview(src="", alt="")
                     .text
                         p Envie uma foto de sua rainha. Mas atenção, importante que seja uma foto de rosto, para que se encaixe direitinho no cartão, ok?
                         a
                             span.btnChoseImage Escolher arquivo
                             input#uploadedImage(type="file")
-        section.scene.box-card-ready(data-scene=3)
+        section.scene.setSize(data-scene=3)
+            .work-tools
+                .decrease -
+                .increase +
+                .merge pronto
+            .box-wrap
+                canvas#canvas(width="530" height="531")
+                .work-container
+                    .work-box#work-box
+                        img#preview.preview(src="", alt="")
+                        img#mask(src="../images/diadasmaes/mask.png")
+                        img#image-mask(src="../images/diadasmaes/new-mask-black.png")
+                        .description use a barra abaixo <br/>para ajustar a foto no cartão
+                    .box-ranger
+                        input#rangeSelector(type="range" min="120" max="600" value="400")
+                    a.nextScene
+                        span Assim!
+        section.scene.box-card-ready(data-scene=4)
             .mobile
                 h4 seu cartão está pronto!
             .box-wrap

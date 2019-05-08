@@ -272,8 +272,8 @@ function webdoor_config(){
 
 // especial dia das mães
 var cenaMaes = {
-    scene: 1,
-    nextScene: 2,
+    scene: 2,
+    nextScene: 3,
     skinModel: null,
     init: function(){
         console.log('cena mães iniciado');
@@ -315,14 +315,158 @@ var cenaMaes = {
     },
     mountMergeScene: function(){
         var output = document.getElementById('uploadedImage');
-        document.getElementById('preview').src = window.URL.createObjectURL(output.files[0])
+        var preview = document.getElementById('preview');
+        preview.src = window.URL.createObjectURL(output.files[0]);
+        preview.addEventListener("load", function(){
+            dragControl.resize();
+        });
+
+        this.changeScene();
+        this.dragImage();
     },
-    dragImage: function(){},
-    mergeImage: function(){},
+    dragImage: function(){
+        dragControl.init();
+    },
+    mergeImage: function(){
+        var c = document.getElementById("canvas");
+        var ctx = c.getContext("2d");
+        ctx.clearRect(0, 0, c.width, c.height);
+        var img = document.getElementById("preview");
+        var mask = document.getElementById("mask");
+        var imageLeft = img.style["left"].substr(0, img.style["left"].indexOf("px"));
+        var imageTop = img.style["top"].substr(0, img.style["top"].indexOf("px"));
+        console.log(imageTop);
+
+        ctx.drawImage(img, imageLeft, imageTop, img.offsetWidth, img.offsetHeight); 
+        ctx.drawImage(mask, 0, 0, 530, 531); 
+    },
     sendImage: function(){},
     sendMerged: function(){},
     getFinalImage: function(){}
 }
+
+var dragControl = {
+    // enable drag
+    draggable: false,
+
+    // movement
+    movement: true,
+    mouseX: 0,
+    mouseY: 0,
+    restMouseX: 0,
+    restMouseY: 0,
+    image: document.getElementById('preview'),
+    workbox: document.getElementById('work-box'),
+    scale: 1,
+    range_min_px: 120,
+    range_max_px: 500,
+
+    // functions
+    init: function(){
+        console.log('initialized');
+        var workbox = document.getElementById('image-mask');
+        workbox.addEventListener('mousedown', this.startDrag);
+        workbox.addEventListener('mouseup', this.endDrag);
+        workbox.addEventListener('mousemove', this.dragging);
+
+        $(document).on("touchstart", function(){
+            dragControl.startDrag();
+        });
+
+        $(document).on("touchend", function(){
+            dragControl.endDrag();
+        });
+        
+        $(document).on("touchmove", function(e){
+            e.preventDefault();
+            dragControl.dragging();
+        });
+     
+        $(".decrease").click(function() {
+            dragControl.decrease();
+        });
+        $(".increase").click(function() {
+            dragControl.increase();
+        });
+        $(".merge").click(function() {
+            dragControl.merge();
+        });
+
+        $("#rangeSelector").change(function(){
+            var rangeSelector = $('#rangeSelector');
+            var preview = document.getElementById('preview');
+            preview.style['width']=(rangeSelector.val())+'px';
+            dragControl.merge();
+        });
+        
+        dragControl.merge();
+    },
+    resize: function(){
+        var preview = document.getElementById('preview');
+        preview.style['width']=400+'px';
+        dragControl.merge();
+    },
+    startDrag: function(e){
+        dragControl.draggable = true;
+        restMouseX = e.clientX;
+        restMouseY = e.clientY;
+        image_left = dragControl.image.offsetLeft;
+        image_top = dragControl.image.offsetTop;
+
+        cenaMaes.mergeImage();
+        console.log(e.clientX);
+
+        // $('.mask').addClass('disabled');
+        // $('.preview').removeClass('disabled');
+    },
+    endDrag: function(e){
+        dragControl.draggable = false;
+        dragControl.merge();
+        console.log('can`t drag');
+
+        // $('.preview').addClass('disabled');
+    },
+    dragging: function(e){
+        e.preventDefault();
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+
+        if(dragControl.draggable){
+            console.log('draggable');
+            deltaX = mouseX - restMouseX;
+            deltaY = mouseY - restMouseY;
+            image_width = dragControl.image.offsetWidth;
+            image_height = dragControl.image.offsetHeight;
+            
+            dragControl.image.style["left"] = (image_left + deltaX) + 'px';
+            dragControl.image.style["top"] = (image_top + deltaY) + 'px';
+            
+            cenaMaes.mergeImage();
+            console.log(mouseX + ' - ' + image_left);
+        } else {
+
+        }
+    },
+    decrease: function(){
+        console.log('decreased');
+        dragControl.scale = dragControl.scale - 0.05;
+        dragControl.image.style["width"] = (dragControl.image.offsetWidth * dragControl.scale)+"px";
+        dragControl.image.style["height"] = (dragControl.image.offsetHeight * dragControl.scale)+"px";
+        cenaMaes.mergeImage();
+    },
+    increase: function(){
+        console.log('increased');
+        dragControl.scale = dragControl.scale + 0.05;
+        dragControl.image.style["width"] = (dragControl.image.offsetWidth * dragControl.scale)+"px";
+        dragControl.image.style["height"] = (dragControl.image.offsetHeight * dragControl.scale)+"px";
+        cenaMaes.mergeImage();
+    },
+    merge: function(){
+        cenaMaes.mergeImage();
+    }
+}
+
+
 
 document.addEventListener("DOMContentLoaded", function() {
     cenaMaes.init();

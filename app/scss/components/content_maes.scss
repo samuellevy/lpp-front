@@ -7,7 +7,7 @@
             }
         }
     }
-    .introduction_container{
+    section.introduction_container{
         .box_introduction{
             position: relative;
             background: url("../images/bg-banner.png");
@@ -98,7 +98,7 @@
         margin-top: 85px;
         margin-left: 18px;
         @include break-max(768px){
-            display: block;
+            display: none;
         }
     }
     .bg-mobile{
@@ -107,17 +107,16 @@
         width: 100%;
         height: 676px;
         @include break-max(768px){
-            display: block;
+            display: none;
             .bg{
-                background:#4a3678;
-                opacity: 0.7;
+                background:rgba(74,54,120,.7);
                 width: 100%;
                 height: 676px;
             }
         }
         
     }
-    .choose_model_container{
+    section.choose_model_container{
         background: url("../images/bg-maes.jpg");
         background-position: 50% 50%;
         background-size: cover;
@@ -367,7 +366,7 @@
             }
         }
     }
-    .scene-choose-file{
+    section.scene-choose-file{
         .box-choose-file{
             background: url("../images/bg-maes.jpg");
             display: flex;
@@ -459,13 +458,152 @@
             }
         }
     }
-    .box-card-ready{
+    section.setSize{
+        background: url("../images/bg-maes.jpg");
+        display: flex;
+        justify-content: center;
+        background-size: cover;
+        padding: 150px 0;
+        align-content: center;
+        background-position: 50% 50%;
+        width: 100%;
+        position: relative;
+        
+        .work-tools{
+            width: 100%;
+            display: flex;
+            background-color: #e2e2e2;
+            justify-content: center;
+            display: none;
+            .increase{
+                width: 60px;
+                height: 60px;
+                background-color: tomato;
+            }
+            .decrease{
+                width: 60px;
+                height: 60px;
+                background-color: purple;
+            }
+            .merge{
+                width: 60px;
+                height: 60px;
+                background-color: green;
+            }
+        }
+        
+        .box-wrap{
+            position: relative;
+            margin: 0 auto;
+            max-width: 1000px;
+            display: flex;
+            .work-container{
+                position: relative;
+                width: 465px;
+                overflow: hidden;
+                .work-box{
+                    width: 346px;
+                    position: relative;
+                    max-height: 372px;
+                    overflow: hidden;
+                    margin: 0 60px;
+                    height: 370px;
+                    img{
+                        max-width: none;
+                    }
+                    img#preview{
+                        position: absolute;
+                        top: 0px; left: 0px;
+                        opacity: 1;
+                        overflow: hidden;
+                        &.disabled{
+                            // opacity: 0;
+                        }
+                    }
+                    img#mask{
+                        position: absolute;
+                        top: 0px; left: 0px;
+                        // background: url("../images/diadasmaes/mask.png");
+                        width: 530px;
+                        height: 531px;
+                        opacity: 0;
+                        &.disabled{
+                            // opacity: 0;
+                        }
+                    }
+                    img#image-mask{
+                        position: absolute;
+                        top: -18px;
+                        left: -3px;
+                    }
+                    .description{
+                        color: #ff628a;
+                        font-family: 'Teko';
+                        font-size: 27px;
+                        line-height: 27px;
+                        text-transform: uppercase;
+                        text-align: center;
+                        position: absolute;
+                        bottom: 110px;
+                        width: 100%;
+                    }
+                }
+                .box-ranger{
+                    width: 195px;
+                    position: absolute;
+                    height: 70px;
+                    bottom: 160px;
+                    right: 144px;
+                    #rangeSelector{
+                        position: absolute;
+                        bottom: 45px;
+                        z-index: 100;
+                        -webkit-appearance: none;
+                        height: 3px;
+                        border-radius: 5px;
+                        background: #ff628a;
+                        outline: none;
+                        opacity: 0.7;
+                        -webkit-transition: opacity .15s ease-in-out;
+                        transition: opacity .15s ease-in-out;
+                        &::-moz-range-thumb {
+                            width: 35px;
+                            height: 35px;
+                            background: #FFFFFF;
+                            border-radius: 50px;
+                            border: #ff628a 2px solid;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                a{
+                    display: block;
+                    font-family: 'Teko';
+                    font-size: 22px;
+                    text-transform: uppercase;
+                    text-align: center;
+                    margin: 40px auto;
+                    cursor: pointer;
+                    span{
+                        color: #fff;
+                        background: #ff628a;
+                        padding: 5px 60px 3px;
+                        border-radius: 40px;
+                    }
+                }
+                canvas{
+                    
+                }
+            }
+        }
+    }
+    section.box-card-ready{
         background: url("../images/bg-maes.jpg");
         display: flex;
         background-position: 50% 50%;
         justify-content: center;
         background-size: cover;
-        padding: 40px 0;
+        padding: 180px 0;
         align-content: center;
         width: 100%;
         @include break-max(768px){
@@ -505,10 +643,6 @@
             @include break-max(768px){
                 flex-direction: column;
                 padding: 0 20px;
-            }
-            .media{
-                img{
-                }
             }
             .text{
                 width: 30%;
