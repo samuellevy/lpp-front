@@ -272,8 +272,8 @@ function webdoor_config(){
 
 // especial dia das mães
 var cenaMaes = {
-    scene: 2,
-    nextScene: 3,
+    scene: 0,
+    nextScene: 1,
     skinModel: null,
     init: function(){
         console.log('cena mães iniciado');
@@ -293,7 +293,7 @@ var cenaMaes = {
             e.preventDefault();
             var model = $(this).attr('data-model');
             cenaMaes.chooseModel(model);
-            console.log('choose model btn');
+            console.log('choose model btn');     
         });
         $(".btnChoseImage").click(function() {
             $("#uploadedImage").click();
@@ -301,6 +301,11 @@ var cenaMaes = {
         $("#uploadedImage").change(function() {
             console.log('file selected');
             cenaMaes.mountMergeScene();
+        });
+        $('#sendScene').click(function(e){
+            e.preventDefault();
+            cenaMaes.sendImage();
+            console.log('send imagel btn');
         });
     },
     changeScene: function(){
@@ -311,6 +316,11 @@ var cenaMaes = {
     chooseModel: function(model){
         this.skinModel = model;
         $('.model-doll[data-model='+model+']').show();
+        var mask = document.getElementById('mask');
+        mask.src = '../images/diadasmaes/mask-'+model+'.png';
+
+        var maskImage = document.getElementById('image-mask');
+        maskImage.src = '../images/diadasmaes/new-mask-'+model+'.png';
         this.changeScene();
     },
     mountMergeScene: function(){
@@ -340,7 +350,18 @@ var cenaMaes = {
         ctx.drawImage(img, imageLeft, imageTop, img.offsetWidth, img.offsetHeight); 
         ctx.drawImage(mask, 0, 0, 530, 531); 
     },
-    sendImage: function(){},
+    sendImage: function(){
+        var canvas = document.getElementById("canvas");
+        var finalImage = document.getElementById('finalImage');
+        finalImage.src = canvas.toDataURL();
+        cenaMaes.saveFile();
+        cenaMaes.changeScene();
+    },
+    saveFile: function(){
+        var canvas = document.getElementById("canvas");
+        var saveFileBtn = document.getElementById("saveFile");
+        saveFileBtn.href = canvas.toDataURL('image/png');
+    },
     sendMerged: function(){},
     getFinalImage: function(){}
 }
@@ -368,6 +389,9 @@ var dragControl = {
         workbox.addEventListener('mousedown', this.startDrag);
         workbox.addEventListener('mouseup', this.endDrag);
         workbox.addEventListener('mousemove', this.dragging);
+
+        workbox.addEventListener("touchstart", this.startTouch, false);
+        workbox.addEventListener('touchmove', this.touching, false);
 
         $(document).on("touchstart", function(){
             dragControl.startDrag();
@@ -427,9 +451,46 @@ var dragControl = {
         // $('.preview').addClass('disabled');
     },
     dragging: function(e){
-        e.preventDefault();
+        
+        var x = event.touches[0].clientX;
+        var y = event.touches[0].clientY;
+        console.log('foi');
+
         mouseX = e.clientX;
         mouseY = e.clientY;
+
+        if(dragControl.draggable){
+            console.log('draggable');
+            deltaX = mouseX - restMouseX;
+            deltaY = mouseY - restMouseY;
+            image_width = dragControl.image.offsetWidth;
+            image_height = dragControl.image.offsetHeight;
+            
+            dragControl.image.style["left"] = (image_left + deltaX) + 'px';
+            dragControl.image.style["top"] = (image_top + deltaY) + 'px';
+            
+            cenaMaes.mergeImage();
+            console.log(mouseX + ' - ' + image_left);
+        } else {
+
+        }
+    },
+    startTouch: function(){
+        console.log('starting touch');
+        dragControl.draggable = true;
+        restMouseX = e.touches[0].clientX;
+        restMouseY = e.touches[0].clientY;
+        image_left = dragControl.image.offsetLeft;
+        image_top = dragControl.image.offsetTop;
+
+        cenaMaes.mergeImage();
+        console.log(e.touches[0].clientX);
+    },
+    touching: function(e){
+        e.preventDefault();
+        mouseX = e.touches[0].clientX;
+        mouseY = e.touches[0].clientY;
+        console.log(mouseX);
 
         if(dragControl.draggable){
             console.log('draggable');

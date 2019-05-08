@@ -22,19 +22,19 @@
                 .mother-choose
                     .content
                         #mother1
-                            img(src="../images/mother01.png", alt="")
                             a.chooseModelBtn(href="#" data-model='a') 
+                                img(src="../images/mother01.png", alt="")
                                 span É esse!
                         #mother2 
-                            img(src="../images/mother02.png", alt="")
                             a.chooseModelBtn(href="#" data-model='b')
+                                img(src="../images/mother02.png", alt="")
                                 span É esse!
         section.scene.scene-choose-file(data-scene=2)
             .box-choose-file
                 .box-wrap
                     .media
-                        img.model-doll(src="../images/mother01.png", alt="", style="width:519px;height:519px;", data-model="a")
-                        img.model-doll(src="../images/mother2-choose.png", alt="", style="width:519px;height:519px;", data-model="b")
+                        img.model-doll(src="../images/diadasmaes/model-a.png", alt="", style="width:519px;", data-model="a")
+                        img.model-doll(src="../images/diadasmaes/model-b.png", alt="", style="width:519px;", data-model="b")
                     .text
                         p Envie uma foto de sua rainha. Mas atenção, importante que seja uma foto de rosto, para que se encaixe direitinho no cartão, ok?
                         a
@@ -55,18 +55,18 @@
                         .description use a barra abaixo <br/>para ajustar a foto no cartão
                     .box-ranger
                         input#rangeSelector(type="range" min="120" max="600" value="400")
-                    a.nextScene
+                    a#sendScene
                         span Assim!
         section.scene.box-card-ready(data-scene=4)
             .mobile
                 h4 seu cartão está pronto!
             .box-wrap
                 .media
-                    img(src="../images/mother2-choose.png", alt="")
+                    img#finalImage(src="../images/mother2-choose.png", alt="")
                 .text
                     h4 seu cartão está pronto!
                     p Agora é só salvar e compartilhar pra todo mundo ver. Ah, não se esqueça de usar a hashtag <strong>#MãesLutadoras</strong> ;)
-                    a(href="")
+                    a#saveFile(href="", download="Minha-Mae.png")
                         span clique aqui
                     p Aproveite e conheça um pouco mais sobre a Luta Pela Paz navegando pelo site.
         .box-steps
