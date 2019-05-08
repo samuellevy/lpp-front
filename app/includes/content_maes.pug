@@ -45,13 +45,18 @@
                 .decrease -
                 .increase +
                 .merge pronto
-                input#rangeSelector(type="range" min="120" max="600" value="400")
             .box-wrap
                 canvas#canvas(width="530" height="531")
-                .work-box#work-box
-                    img#preview.preview(src="", alt="")
-                    img#mask(src="../images/diadasmaes/mask.png")
-                    img#image-mask(src="../images/diadasmaes/new-mask-black.png")
+                .work-container
+                    .work-box#work-box
+                        img#preview.preview(src="", alt="")
+                        img#mask(src="../images/diadasmaes/mask.png")
+                        img#image-mask(src="../images/diadasmaes/new-mask-black.png")
+                        .description use a barra abaixo <br/>para ajustar a foto no cartão
+                    .box-ranger
+                        input#rangeSelector(type="range" min="120" max="600" value="400")
+                    a.nextScene
+                        span Assim!
         section.scene.box-card-ready(data-scene=4)
             .mobile
                 h4 seu cartão está pronto!

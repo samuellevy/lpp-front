@@ -364,7 +364,7 @@ var dragControl = {
     // functions
     init: function(){
         console.log('initialized');
-        var workbox = document.getElementById('work-box');
+        var workbox = document.getElementById('image-mask');
         workbox.addEventListener('mousedown', this.startDrag);
         workbox.addEventListener('mouseup', this.endDrag);
         workbox.addEventListener('mousemove', this.dragging);
