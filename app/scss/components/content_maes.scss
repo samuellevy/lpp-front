@@ -539,15 +539,10 @@ html,body{
                         }
                     }
                     img.mask{
-                        position: absolute;
-                        top: 0px; left: 0px;
-                        // background: url("../images/diadasmaes/mask.png");
-                        width: 530px;
-                        height: 531px;
-                        opacity: 0;
-                        &.disabled{
-                            // opacity: 0;
-                        }
+                        display: none;
+                    }
+                    img.image-mask{
+                        display: none;
                     }
                     img#image-mask{
                         position: absolute;

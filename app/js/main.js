@@ -316,11 +316,28 @@ var cenaMaes = {
     chooseModel: function(model){
         this.skinModel = model;
         $('.model-doll[data-model='+model+']').show();
-        var mask = document.getElementById('mask');
-        mask.src = '../images/diadasmaes/mask-'+model+'.png';
+        var mask_a = document.getElementById('mask_a');
+        var mask_b = document.getElementById('mask_b');
 
+        var image_mask_a = document.getElementById('image-mask-a');
+        var image_mask_b = document.getElementById('image-mask-b');
+
+        var mask = document.getElementById('mask');
         var maskImage = document.getElementById('image-mask');
-        maskImage.src = '../images/diadasmaes/new-mask-'+model+'.png';
+
+        console.log(model);
+        console.log(image_mask_a.src);
+
+        if(model=="a"){
+            mask.src = mask_a.src;
+            maskImage.src = image_mask_a.src;
+            console.log(model);
+            console.log(mask.src);
+        }else{
+            mask.src = mask_b.src;
+            maskImage.src = image_mask_b.src;
+        }
+
         this.changeScene();
     },
     mountMergeScene: function(){
