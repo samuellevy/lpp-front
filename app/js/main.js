@@ -403,6 +403,10 @@ var dragControl = {
     init: function(){
         console.log('initialized');
         var workbox = document.getElementById('image-mask');
+
+        dragControl.image=document.getElementById('preview');
+        dragControl.workbox=document.getElementById('work-box');
+        
         workbox.addEventListener('mousedown', this.startDrag);
         workbox.addEventListener('mouseup', this.endDrag);
         workbox.addEventListener('mousemove', this.dragging);
@@ -471,6 +475,9 @@ var dragControl = {
         console.log('foi');
         mouseX = e.clientX;
         mouseY = e.clientY;
+
+        dragControl.image=document.getElementById('preview');
+        dragControl.workbox=document.getElementById('work-box');
 
         if(dragControl.draggable){
             console.log('draggable');
