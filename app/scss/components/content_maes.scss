@@ -549,14 +549,12 @@
                     }
                 }
                 .box-ranger{
-                    width: 195px;
+                    width: 100%;
                     position: absolute;
                     height: 70px;
                     bottom: 160px;
-                    right: 144px;
+                    text-align: center;
                     #rangeSelector{
-                        position: absolute;
-                        bottom: 45px;
                         z-index: 100;
                         -webkit-appearance: none;
                         height: 3px;
@@ -567,6 +565,16 @@
                         -webkit-transition: opacity .15s ease-in-out;
                         transition: opacity .15s ease-in-out;
                         &::-moz-range-thumb {
+                            width: 35px;
+                            height: 35px;
+                            background: #FFFFFF;
+                            border-radius: 50px;
+                            border: #ff628a 2px solid;
+                            cursor: pointer;
+                        }
+                        &::-webkit-slider-thumb {
+                            -webkit-appearance: none;
+                            appearance: none;
                             width: 35px;
                             height: 35px;
                             background: #FFFFFF;
