@@ -91,6 +91,32 @@
                     &.right{
                         right: 0;
                     }
+                    &.pink{
+                        background: #ff5088;
+                        border-bottom-left-radius: 0px;
+                        border-bottom-right-radius: 10px;
+                        width: 570px;
+                        h2{
+                            color: #fff;
+                            text-transform: uppercase;
+                        }
+                        p{
+                            color:#fff;
+                            text-transform: uppercase;
+                            font-size: 23px;
+                            line-height: 32px;
+                        }
+                        a{
+                            background: #621756;
+                            font-size: 30px;
+                            margin: 0 auto;
+                            padding: 10px 25px 5px;
+
+                        }
+                        &.right{
+                            right: 0;
+                        }
+                    }
                     h2{
                         color: #3966BF;
                         font-size: 46px;
