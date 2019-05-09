@@ -157,17 +157,19 @@ var dragControl = {
     range_min_px: 120,
     range_max_px: 500,
     canvas: document.getElementById("canvas"),
-    ctx: document.getElementById("canvas").getContext('2d'),
+    // ctx: document.getElementById("canvas").getContext('2d'),
     rotate_value: 90,
     counter:0,
     
     canvas_b:document.getElementById("canvas_temp"),
-    ctx_b:document.getElementById("canvas_temp").getContext("2d"),
+    // ctx_b:document.getElementById("canvas_temp").getContext("2d"),
     
     // functions
     init: function(){
         //console.log('initialized');
         var workbox = document.getElementById('image-mask');
+        this.ctx = document.getElementById("canvas").getContext('2d');
+        this.ctx_b = document.getElementById("canvas_temp").getContext("2d");
         
         dragControl.image=document.getElementById('preview');
         dragControl.workbox=document.getElementById('work-box');
