@@ -46,6 +46,7 @@
                 .increase +
                 .merge pronto
             .box-wrap
+                canvas#canvas_temp(width="530" height="531")
                 canvas#canvas(width="530" height="531")
                 .work-container
                     .work-box#work-box
@@ -59,6 +60,8 @@
                         img.image-mask#image-mask-b(src="../images/diadasmaes/new-mask-b.png")
                         img#image-mask(src="../images/diadasmaes/new-mask-black.png")
                         .description use a barra abaixo <br/>para ajustar a foto no cartão
+                    #rotate.rotate-btn
+                        img(src="../images/diadasmaes/rotate.png")
                     .box-ranger
                         input#rangeSelector(type="range" min="120" max="600" value="400")
                     a#sendScene

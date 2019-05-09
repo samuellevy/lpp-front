@@ -1,10 +1,10 @@
 // especial dia das mães
 var cenaMaes = {
-    scene: 0,
-    nextScene: 1,
+    scene: 2,
+    nextScene: 3,
     skinModel: null,
     init: function(){
-        console.log('cena mães iniciado');
+        //console.log('cena mães iniciado');
         this.mount();
         this.listenerButtons();
     },
@@ -15,25 +15,25 @@ var cenaMaes = {
         $('.nextScene').click(function(e){
             e.preventDefault();
             cenaMaes.changeScene();
-            console.log('clicked');
+            //console.log('clicked');
         });
         $('.chooseModelBtn').click(function(e){
             e.preventDefault();
             var model = $(this).attr('data-model');
             cenaMaes.chooseModel(model);
-            console.log('choose model btn');     
+            //console.log('choose model btn');     
         });
         $(".btnChoseImage").click(function() {
             $("#uploadedImage").click();
         });
         $("#uploadedImage").change(function() {
-            console.log('file selected');
+            //console.log('file selected');
             cenaMaes.mountMergeScene();
         });
         $('#sendScene').click(function(e){
             e.preventDefault();
             cenaMaes.sendImage();
-            console.log('send imagel btn');
+            //console.log('send imagel btn');
         });
     },
     changeScene: function(){
@@ -53,14 +53,14 @@ var cenaMaes = {
         var mask = document.getElementById('mask');
         var maskImage = document.getElementById('image-mask');
         
-        console.log(model);
-        console.log(image_mask_a.src);
+        //console.log(model);
+        //console.log(image_mask_a.src);
         
         if(model=="a"){
             mask.src = mask_a.src;
             maskImage.src = image_mask_a.src;
-            console.log(model);
-            console.log(mask.src);
+            //console.log(model);
+            //console.log(mask.src);
         }else{
             mask.src = mask_b.src;
             maskImage.src = image_mask_b.src;
@@ -73,7 +73,7 @@ var cenaMaes = {
         var preview = document.getElementById('preview');
         preview.src = window.URL.createObjectURL(output.files[0]);
         preview.addEventListener("load", function(){
-            dragControl.resize();
+            // dragControl.resize();
         });
         
         this.changeScene();
@@ -90,7 +90,7 @@ var cenaMaes = {
         var mask = document.getElementById("mask");
         var imageLeft = img.style["left"].substr(0, img.style["left"].indexOf("px"));
         var imageTop = img.style["top"].substr(0, img.style["top"].indexOf("px"));
-        console.log(imageTop);
+        //console.log(imageTop);
         
         ctx.drawImage(img, imageLeft, imageTop, img.offsetWidth, img.offsetHeight); 
         ctx.drawImage(mask, 0, 0, 530, 531); 
@@ -126,10 +126,17 @@ var dragControl = {
     scale: 1,
     range_min_px: 120,
     range_max_px: 500,
+    canvas: document.getElementById("canvas"),
+    ctx: document.getElementById('canvas').getContext('2d'),
+    rotate_value: 90,
+    counter:0,
+
+    canvas_b:document.getElementById("canvas_temp"),
+    ctx_b:document.getElementById("canvas_temp").getContext("2d"),
     
     // functions
     init: function(){
-        console.log('initialized');
+        //console.log('initialized');
         var workbox = document.getElementById('image-mask');
         
         dragControl.image=document.getElementById('preview');
@@ -144,36 +151,23 @@ var dragControl = {
         workbox.addEventListener('touchend', this.endTouch, true);
         workbox.addEventListener('touchcancel', this.endTouch, true);
         
-        // $(document).on("touchstart", function(){
-        //     dragControl.startDrag();
-        // });
-        
-        // $(document).on("touchend", function(){
-        //     dragControl.endDrag();
-        // });
-        
-        // $(document).on("touchmove", function(e){
-        //     e.preventDefault();
-        //     dragControl.dragging();
-        // });
-        
-        $(".decrease").click(function() {
-            dragControl.decrease();
-        });
-        $(".increase").click(function() {
-            dragControl.increase();
-        });
-        $(".merge").click(function() {
-            dragControl.merge();
-        });
-        
         $("#rangeSelector").change(function(){
             var rangeSelector = $('#rangeSelector');
             var preview = document.getElementById('preview');
             preview.style['width']=(rangeSelector.val())+'px';
             dragControl.merge();
         });
+        $('#rotate').click(function(e){
+            e.preventDefault();
+            dragControl.rotate();
+            //console.log('send imagel btn');
+        });
         
+        var image = document.getElementById("preview");
+        image.onload = function(){
+            dragControl.draw();
+        }
+
         dragControl.merge();
     },
     resize: function(){
@@ -188,19 +182,19 @@ var dragControl = {
         image_left = dragControl.image.offsetLeft;
         image_top = dragControl.image.offsetTop;
         
-        cenaMaes.mergeImage();
-        // $('.mask').addClass('disabled');
+        // dragControl.draw();
+        $('#image-mask').addClass('transparent');
         // $('.preview').removeClass('disabled');
     },
     endDrag: function(e){
         dragControl.draggable = false;
-        dragControl.merge();
-        console.log('can`t drag');
+        // dragControl.merge();
+        //console.log('can`t drag');
         
-        // $('.preview').addClass('disabled');
+        $('#image-mask').removeClass('transparent');
     },
     dragging: function(e){
-        console.log('foi');
+        //console.log('foi');
         mouseX = e.clientX;
         mouseY = e.clientY;
         
@@ -208,7 +202,7 @@ var dragControl = {
         dragControl.workbox=document.getElementById('work-box');
         
         if(dragControl.draggable){
-            console.log('draggable');
+            //console.log('draggable');
             deltaX = mouseX - restMouseX;
             deltaY = mouseY - restMouseY;
             image_width = dragControl.image.offsetWidth;
@@ -217,31 +211,31 @@ var dragControl = {
             dragControl.image.style["left"] = (image_left + deltaX) + 'px';
             dragControl.image.style["top"] = (image_top + deltaY) + 'px';
             
-            cenaMaes.mergeImage();
-            console.log(mouseX + ' - ' + image_left);
+            dragControl.draw();
+            //console.log(mouseX + ' - ' + image_left);
         } else {
             
         }
     },
     startTouch: function(e){
-        console.log('starting touch');
+        //console.log('starting touch');
         dragControl.draggable = true;
         dragControl.restMouseX = e.touches[0].clientX;
         dragControl.restMouseY = e.touches[0].clientY;
         dragControl.image_left = dragControl.image.offsetLeft;
         dragControl.image_top = dragControl.image.offsetTop;
         
-        cenaMaes.mergeImage();
-        console.log(e.touches[0].clientX);
+        dragControl.draw();
+        //console.log(e.touches[0].clientX);
     },
     touching: function(e){
         e.preventDefault();
         mouseX = e.touches[0].clientX;
         mouseY = e.touches[0].clientY;
-        console.log(mouseX);
+        //console.log(mouseX);
         
         if(dragControl.draggable){
-            console.log('draggable');
+            //console.log('draggable');
             deltaX = mouseX - dragControl.restMouseX;
             deltaY = mouseY - dragControl.restMouseY;
             image_width = dragControl.image.offsetWidth;
@@ -250,8 +244,8 @@ var dragControl = {
             dragControl.image.style["left"] = (dragControl.image_left + deltaX) + 'px';
             dragControl.image.style["top"] = (dragControl.image_top + deltaY) + 'px';
             
-            cenaMaes.mergeImage();
-            console.log(mouseX + ' - ' + dragControl.image_left);
+            dragControl.draw();
+            //console.log(mouseX + ' - ' + dragControl.image_left);
         } else {
             
         }
@@ -259,26 +253,83 @@ var dragControl = {
     endTouch: function(e){
         dragControl.draggable = false;
         dragControl.merge();
-        console.log('can`t drag');
+        //console.log('can`t drag');
         
         // $('.preview').addClass('disabled');
     },
     decrease: function(){
-        console.log('decreased');
+        //console.log('decreased');
         dragControl.scale = dragControl.scale - 0.05;
         dragControl.image.style["width"] = (dragControl.image.offsetWidth * dragControl.scale)+"px";
         dragControl.image.style["height"] = (dragControl.image.offsetHeight * dragControl.scale)+"px";
-        cenaMaes.mergeImage();
+        dragControl.draw();
     },
     increase: function(){
-        console.log('increased');
+        //console.log('increased');
         dragControl.scale = dragControl.scale + 0.05;
         dragControl.image.style["width"] = (dragControl.image.offsetWidth * dragControl.scale)+"px";
         dragControl.image.style["height"] = (dragControl.image.offsetHeight * dragControl.scale)+"px";
-        cenaMaes.mergeImage();
+        dragControl.draw();
     },
     merge: function(){
-        cenaMaes.mergeImage();
+        dragControl.draw();
+    },
+    rotate: function(){
+        var width = dragControl.image.width;
+        var height = dragControl.image.height;
+
+        dragControl.ctx_b.clearRect(0,0,500,500);
+        dragControl.ctx_b.fillStyle = "rgba(255, 255, 255, 1)";
+        dragControl.ctx_b.fillRect(0, 0, dragControl.canvas_b.width, dragControl.canvas_b.height);
+        dragControl.ctx_b.save();
+        //console.log(dragControl.counter);
+        switch(dragControl.counter){
+            case 0:
+                dragControl.ctx_b.translate( height, 0 );
+            break;
+            case 1:
+                dragControl.ctx_b.translate( width, height );
+            break;
+            case 2:
+                dragControl.ctx_b.translate( 0, width );
+            break;
+            case 3:
+                dragControl.ctx_b.translate( 0, 0 );
+            break;
+        }
+        dragControl.ctx_b.rotate( 90 );
+        dragControl.ctx_b.drawImage( dragControl.image, 0, 0 );
+        // dragControl.draw();
+        dragControl.ctx.restore();
+
+        this.rotate_value += 90;
+        if(dragControl.counter < 3){
+            dragControl.counter++;
+        }else{
+            dragControl.counter=0;
+        }
+        //console.log(dragControl.image.width);
+        // dragControl.duplicate();
+    },
+    duplicate: function(){
+        var image = document.getElementById("preview");
+        image.src = dragControl.canvas_b.toDataURL("image/png");
+        image.onload = function(){
+            // dragControl.draw();
+        }
+    },
+    draw: function(){
+        var c = document.getElementById("canvas");
+        var ctx = c.getContext("2d");
+        ctx.clearRect(0, 0, c.width, c.height);
+        var img = document.getElementById("preview");
+        var mask = document.getElementById("mask");
+        var imageLeft = img.style["left"].substr(0, img.style["left"].indexOf("px"));
+        var imageTop = img.style["top"].substr(0, img.style["top"].indexOf("px"));
+        //console.log(imageTop);
+        
+        ctx.drawImage(img, imageLeft, imageTop, img.offsetWidth, img.offsetHeight); 
+        ctx.drawImage(mask, 0, 0, 530, 531); 
     }
 }
 
