@@ -311,7 +311,7 @@ html,body{
             @include break-max(768px){
                 width: 100%;
             }
-            #passo1{
+            .passo{
                 width:33%;
                 text-transform: uppercase;
                 p{
@@ -324,52 +324,14 @@ html,body{
                         font-size: 20px;
                     }
                 }
-                .bar#active{
+                .bar{
                     width: 95%;
+                    background:#a095b0;
+                    height: 3px;
+                    margin-top: 3px;
+                }
+                &.active .bar{
                     background:#fff;
-                    height: 3px;
-                    margin-top: 3px;
-                }
-            }
-            #passo2{
-                width:33%;
-                text-transform: uppercase;
-                p{
-                    margin-left: 15px;
-                    font-family: 'Teko';
-                    font-size: 26px;
-                    font-weight: 100;
-                    @include break-max(768px){
-                        margin-left: 10px;
-                        font-size: 20px;
-                    }
-                }
-                .bar{
-                    width: 95%;
-                    background:#a095b0;
-                    height: 3px;
-                    margin-top: 3px;
-                }
-            }
-            #passo3{
-                width:33%;
-                text-transform: uppercase;
-                
-                p{
-                    margin-left: 15px;
-                    font-family: 'Teko';
-                    font-size: 26px;
-                    font-weight: 100;
-                    @include break-max(768px){
-                        margin-left: 10px;
-                        font-size: 20px;
-                    }
-                }
-                .bar{
-                    width: 95%;
-                    background:#a095b0;
-                    height: 3px;
-                    margin-top: 3px;
                 }
             }
         }
@@ -516,7 +478,7 @@ html,body{
                 }
             }
             #canvas_temp{
-                // display: none;
+                display: none;
             }
             .work-container{
                 position: relative;
@@ -540,6 +502,9 @@ html,body{
                         top: 0px; left: 0px;
                         opacity: 1;
                         overflow: hidden;
+                    }
+                    img#photoOriginal{
+                        display: none;
                     }
                     //#image-mask = real mask || .image-mask = temporary mask processor; 
                     img.mask{

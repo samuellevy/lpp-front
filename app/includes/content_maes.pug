@@ -51,6 +51,7 @@
                 .work-container
                     .work-box#work-box
                         img#preview.preview(src="", alt="")
+                        img#photoOriginal.photoOriginal(src="", alt="")
                         
                         img.mask#mask_a(src="../images/diadasmaes/mask-a.png")
                         img.mask#mask_b(src="../images/diadasmaes/mask-b.png")
@@ -80,14 +81,15 @@
                     p Aproveite e conheça um pouco mais sobre a Luta Pela Paz navegando pelo site.
         .box-steps
             .steps-content
-                #passo1
+                .passo(data-id=1)
                     p Passo 1
-                    .bar#active
+                    .bar
                         span
-                #passo2
+                .passo(data-id=2)
                     p Passo 2
-                    .bar#active
+                    .bar
                         span
-                #passo3
+                .passo(data-id=3)
                     p Passo 3
                     .bar
+                        span

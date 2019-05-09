@@ -1,10 +1,14 @@
 // especial dia das mães
 var cenaMaes = {
-    scene: 2,
-    nextScene: 3,
+    scene: 0,
+    nextScene: 1,
     skinModel: null,
+    step_1: document.querySelector("div[class='passo'][data-id='1']"),
+    step_2: document.querySelector("div[class='passo'][data-id='2']"),
+    step_3: document.querySelector("div[class='passo'][data-id='3']"),
     init: function(){
         //console.log('cena mães iniciado');
+        this.step_1.classList.add('active');
         this.mount();
         this.listenerButtons();
     },
@@ -39,7 +43,25 @@ var cenaMaes = {
     changeScene: function(){
         $('.scene').removeClass('active');
         $('.scene[data-scene='+this.nextScene+']').addClass('active');
+        console.log("actual scene: " + this.scene);
+        
+        switch(this.scene){
+            case 0:
+                this.step_1.classList.remove('active');
+                this.step_2.classList.add('active');
+            break;
+            case 1:
+                this.step_2.classList.remove('active');
+                this.step_3.classList.add('active');
+            break;
+            default:
+                this.step_2.classList.remove('active');
+                this.step_3.classList.add('active');
+            break;
+        }
+        
         this.nextScene++;
+        this.scene++;
     },
     chooseModel: function(model){
         this.skinModel = model;
@@ -72,6 +94,8 @@ var cenaMaes = {
         var output = document.getElementById('uploadedImage');
         var preview = document.getElementById('preview');
         preview.src = window.URL.createObjectURL(output.files[0]);
+        var photoOriginal = document.getElementById('photoOriginal');
+        photoOriginal.src = window.URL.createObjectURL(output.files[0]);
         preview.addEventListener("load", function(){
             // dragControl.resize();
         });
@@ -107,6 +131,12 @@ var cenaMaes = {
         var saveFileBtn = document.getElementById("saveFile");
         saveFileBtn.href = canvas.toDataURL('image/png');
     },
+    changeStep: function(){
+        switch(this.scene){
+            case 0:
+            break;
+        }
+    },
     sendMerged: function(){},
     getFinalImage: function(){}
 }
@@ -130,7 +160,7 @@ var dragControl = {
     ctx: document.getElementById('canvas').getContext('2d'),
     rotate_value: 90,
     counter:0,
-
+    
     canvas_b:document.getElementById("canvas_temp"),
     ctx_b:document.getElementById("canvas_temp").getContext("2d"),
     
@@ -167,7 +197,7 @@ var dragControl = {
         image.onload = function(){
             dragControl.draw();
         }
-
+        
         dragControl.merge();
     },
     resize: function(){
@@ -274,48 +304,39 @@ var dragControl = {
     merge: function(){
         dragControl.draw();
     },
+    drawTemp: function(){
+        dragControl.ctx_b.drawImage( document.getElementById("photoOriginal"), 0, 0 );
+    },
+    clearTemp: function(){
+        dragControl.ctx_b.clearRect(0,0,dragControl.canvas_b.width,dragControl.canvas_b.height);
+    },
     rotate: function(){
-        var width = dragControl.image.width;
-        var height = dragControl.image.height;
-
-        dragControl.ctx_b.clearRect(0,0,500,500);
-        dragControl.ctx_b.fillStyle = "rgba(255, 255, 255, 1)";
-        dragControl.ctx_b.fillRect(0, 0, dragControl.canvas_b.width, dragControl.canvas_b.height);
-        dragControl.ctx_b.save();
-        //console.log(dragControl.counter);
+        this.clearTemp();
+        var width = document.getElementById("photoOriginal").width;
+        var height = document.getElementById("photoOriginal").height;
         switch(dragControl.counter){
             case 0:
-                dragControl.ctx_b.translate( height, 0 );
+            dragControl.ctx_b.translate( height, 0 );
             break;
             case 1:
-                dragControl.ctx_b.translate( width, height );
+            dragControl.ctx_b.translate( width, height );
             break;
             case 2:
-                dragControl.ctx_b.translate( 0, width );
+            dragControl.ctx_b.translate( 0, width );
             break;
             case 3:
-                dragControl.ctx_b.translate( 0, 0 );
+            dragControl.ctx_b.translate( 0, 0 );
             break;
         }
-        dragControl.ctx_b.rotate( 90 );
-        dragControl.ctx_b.drawImage( dragControl.image, 0, 0 );
-        // dragControl.draw();
-        dragControl.ctx.restore();
-
-        this.rotate_value += 90;
-        if(dragControl.counter < 3){
-            dragControl.counter++;
-        }else{
-            dragControl.counter=0;
-        }
-        //console.log(dragControl.image.width);
-        // dragControl.duplicate();
+        dragControl.ctx_b.rotate( 90*Math.PI/180 );
+        this.drawTemp();
+        this.duplicate();
     },
     duplicate: function(){
         var image = document.getElementById("preview");
         image.src = dragControl.canvas_b.toDataURL("image/png");
         image.onload = function(){
-            // dragControl.draw();
+            dragControl.draw();
         }
     },
     draw: function(){
