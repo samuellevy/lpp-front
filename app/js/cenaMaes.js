@@ -157,12 +157,12 @@ var dragControl = {
     range_min_px: 120,
     range_max_px: 500,
     canvas: document.getElementById("canvas"),
-    // ctx: document.getElementById("canvas").getContext('2d'),
+    ctx: '',
     rotate_value: 90,
     counter:0,
     
     canvas_b:document.getElementById("canvas_temp"),
-    // ctx_b:document.getElementById("canvas_temp").getContext("2d"),
+    ctx_b:'',
     
     // functions
     init: function(){
