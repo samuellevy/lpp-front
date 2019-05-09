@@ -3,12 +3,12 @@ var cenaMaes = {
     scene: 0,
     nextScene: 1,
     skinModel: null,
-    step_1: document.querySelector("div[class='passo'][data-id='1']"),
-    step_2: document.querySelector("div[class='passo'][data-id='2']"),
-    step_3: document.querySelector("div[class='passo'][data-id='3']"),
+    // step_1: document.querySelector("div[class='passo'][data-id='1']"),
+    // step_2: document.querySelector("div[class='passo'][data-id='2']"),
+    // step_3: document.querySelector("div[class='passo'][data-id='3']"),
     init: function(){
         //console.log('cena mães iniciado');
-        this.step_1.classList.add('active');
+        // this.step_1.classList.add('active');
         this.mount();
         this.listenerButtons();
     },
@@ -45,20 +45,20 @@ var cenaMaes = {
         $('.scene[data-scene='+this.nextScene+']').addClass('active');
         console.log("actual scene: " + this.scene);
         
-        switch(this.scene){
-            case 0:
-                this.step_1.classList.remove('active');
-                this.step_2.classList.add('active');
-            break;
-            case 1:
-                this.step_2.classList.remove('active');
-                this.step_3.classList.add('active');
-            break;
-            default:
-                this.step_2.classList.remove('active');
-                this.step_3.classList.add('active');
-            break;
-        }
+        // switch(this.scene){
+        //     case 0:
+        //         this.step_1.classList.remove('active');
+        //         this.step_2.classList.add('active');
+        //     break;
+        //     case 1:
+        //         this.step_2.classList.remove('active');
+        //         this.step_3.classList.add('active');
+        //     break;
+        //     default:
+        //         this.step_2.classList.remove('active');
+        //         this.step_3.classList.add('active');
+        //     break;
+        // }
         
         this.nextScene++;
         this.scene++;
