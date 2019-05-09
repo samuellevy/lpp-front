@@ -161,13 +161,14 @@ var dragControl = {
     rotate_value: 90,
     counter:0,
     
-    canvas_b:document.getElementById("canvas_temp"),
+    canvas_b:'',
     ctx_b:'',
     
     // functions
     init: function(){
         //console.log('initialized');
         var workbox = document.getElementById('image-mask');
+        this.canvas_b=document.getElementById("canvas_temp");
         this.ctx = document.getElementById("canvas").getContext('2d');
         this.ctx_b = document.getElementById("canvas_temp").getContext("2d");
         
