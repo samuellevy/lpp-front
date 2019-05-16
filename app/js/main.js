@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", function() {
         $('.transparency .box .slide-title .slider_transparencia').slick({
             infinite: true,
             slidesToShow: 4,
-            slidesToScroll: 1,
+            slidesToScroll: 4,
             arrows: true,
             responsive: [
                 {
