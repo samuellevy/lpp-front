@@ -43,6 +43,12 @@
             @include break-max(1024px){
                 position: relative;
                 top: 0;
+                &.green{
+                    background: #62CFCF;
+                }
+                &.orange{
+                    background: #F47249;
+                }
             }
             &.left{
                 left: 30px;
