@@ -85,11 +85,48 @@
                     top: 200px;
                     border-radius: 10px;
                     border-bottom-right-radius: 0px;
+                    @include break-max(1024px){
+                        height: 432px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                    }
                     &.left{
                         left: 0;
                     }
                     &.right{
                         right: 0;
+                    }
+                    &.green{
+                        h2{
+                            color: #62CFCF;
+                        }
+                        a{
+                            background: #62CFCF;
+                        }
+                        @include break-max(1024px){
+                            background: #62CFCF;
+                            h2{
+                                color: #fff;
+                            }
+                            p{
+                                color: #fff;
+                            }
+                        }
+                    }
+                    &.orange{
+                        h2{
+                            color: #F47249;
+                        }   
+                        a{
+                            background: #F47249;
+                        }
+                        @include break-max(1024px){
+                            background: #F47249;
+                            h2{
+                                color: #fff;
+                            }
+                        }
                     }
                     &.pink{
                         background: #ff5088;
@@ -153,10 +190,10 @@
                         margin-top: 10px;
                         @include break-max(768px){
                             font-size: 18px;
-                            border: 1px solid #fff;
+                            border: 2px solid #fff;
                             letter-spacing: 1.5px;
-                            width: 70%;
-                            margin: 93px auto 0;
+                            width: 100%;
+                            margin: 80px auto 0;
                         }
                     }
                     @include break-max(768px){
@@ -164,7 +201,7 @@
                         border-radius: 0px;
                         top: 336px;
                         background: #3966BF;
-                        padding: 40px 30px;
+                        padding: 25px 30px 30px;
                     }
                 }
             }

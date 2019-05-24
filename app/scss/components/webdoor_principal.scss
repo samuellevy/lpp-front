@@ -45,9 +45,21 @@
                 top: 0;
                 &.green{
                     background: #62CFCF;
+                    h2{
+                        color: #fff;
+                    }
+                    p{
+                        color: #fff;
+                    }
                 }
                 &.orange{
                     background: #F47249;
+                    h2{
+                        color: #fff;
+                    }
+                    p{
+                        color: #fff;
+                    }
                 }
             }
             &.left{
